@@ -1,4 +1,5 @@
 import { defineUserConfig } from "vuepress";
+
 import theme from "./theme";
 
 export default defineUserConfig({
@@ -8,5 +9,19 @@ export default defineUserConfig({
 
   base: "/personal-site/",
 
+  head: [
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
+      },
+    ],
+  ],
+
   theme,
+
+  plugins: [
+    
+  ],
 });

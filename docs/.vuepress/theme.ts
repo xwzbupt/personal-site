@@ -1,4 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { searchPlugin } from "@vuepress/plugin-search";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -6,11 +7,11 @@ export default hopeTheme({
   hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
 
   author: {
-    name: "Mr.Hope",
+    name: "Weiser",
     url: "https://mrhope.site",
   },
 
-  iconAssets: "//at.alicdn.com/t/font_2410206_a0xb9hku9iu.css",
+  iconPrefix: "iconfont icon-",
 
   logo: "/logo.svg",
 
@@ -109,5 +110,7 @@ export default hopeTheme({
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
     },
+
   },
+
 });
