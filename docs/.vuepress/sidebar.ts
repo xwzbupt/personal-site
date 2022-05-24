@@ -71,7 +71,7 @@ export default sidebar([
   },
   {
     text: "MySQL",
-    icon: "note",
+    icon: "mysql",
     prefix: "/MySQL/",
     collapsable: true,
     children: [
