@@ -1,5 +1,4 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { searchPlugin } from "@vuepress/plugin-search";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -8,7 +7,7 @@ export default hopeTheme({
 
   author: {
     name: "Weiser",
-    url: "https://mrhope.site",
+    url: "https://www.baidu.com",
   },
 
   iconPrefix: "iconfont icon-",

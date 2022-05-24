@@ -84,7 +84,8 @@ export default sidebar([
         [
           "基础架构-SQL查询语句的执行", 
           "日志系统-SQL更新语句的执行", 
-          "article4"],
+          "article4"
+        ],
       },
       // {
       //   text: "实践篇",
