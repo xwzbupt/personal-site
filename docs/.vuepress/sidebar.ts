@@ -14,6 +14,7 @@ export default sidebar([
   {
     text: "文章",
     icon: "note",
+    collapsable: true,
     prefix: "/posts/",
     children: [
       {
@@ -68,4 +69,30 @@ export default sidebar([
       "17.笔试题"
     ]
   },
+  {
+    text: "MySQL",
+    icon: "note",
+    prefix: "/MySQL/",
+    collapsable: true,
+    children: [
+      {
+        text: "基础篇",
+        icon: "note",
+        collapsable: true,
+        prefix: "基础篇/",
+        children: 
+        [
+          "基础架构-SQL查询语句的执行", 
+          "日志系统-SQL更新语句的执行", 
+          "article4"],
+      },
+      // {
+      //   text: "实践篇",
+      //   icon: "note",
+      //   collapsable: true,
+      //   prefix: "article/",
+      //   children: ["article1", "article2", "article3", "article4"],
+      // },
+    ],
+  }
 ]);

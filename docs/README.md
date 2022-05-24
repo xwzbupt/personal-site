@@ -3,8 +3,9 @@ home: true
 layout: Blog
 icon: home
 title: 博客主页
-heroImage: /logo.svg
+heroImage: /640.png
 heroText: Weiser的个站
+bgImage: /test.jpg
 heroFullScreen: true
 tagline: 你可以在这里放置你的口号与标语
 projects:
