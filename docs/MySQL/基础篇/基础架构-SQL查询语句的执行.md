@@ -103,7 +103,6 @@ ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that 
 
 ```
 mysql> select * from t1 join t2 using(ID)  where t1.c=10 and t2.d=20;
-复制代码
 ```
 
 - 既可以先从表 t1 里面取出 c=10 的记录的 ID 值，再根据 ID 值关联到表 t2，再判断 t2 里面 d 的值是否等于 20。
