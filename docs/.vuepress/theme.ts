@@ -14,9 +14,9 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "xwzbupt/personal-site",
 
-  docsDir: "demo/src",
+  docsDir: "docs/",
 
   // navbar
   navbar: navbar,
