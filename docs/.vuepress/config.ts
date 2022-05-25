@@ -4,7 +4,7 @@ import theme from "./theme";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "主题演示",
+  title: "Weiser",
   description: "vuepress-theme-hope 的演示",
 
   base: "/personal-site/",
