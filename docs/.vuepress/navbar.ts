@@ -32,7 +32,7 @@ export default navbar([
     text: "MySQL",
     icon: "mysql",
     prefix: "/MySQL/",
-    link: "/MySQL/基础篇/基础架构-SQL查询语句的执行"
+    link: "/MySQL/基础篇/1基础架构-SQL查询语句的执行"
   },
   {
     text: "主题文档",
