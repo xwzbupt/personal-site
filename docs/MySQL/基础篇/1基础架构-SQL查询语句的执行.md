@@ -15,7 +15,7 @@ mysql> select * from T where ID=10；
 
 我们看到的只是输入一条语句，返回一个结果，却不知道这条语句在 MySQL 内部的执行过程。
 
-![MySQL逻辑架构图](./img/MySQL逻辑架构图.png)
+![MySQL逻辑架构图](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/MySQL%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 
 从图中不难看出，不同的存储引擎共用一个**Server 层**，也就是从连接器到执行器的部分。你可以先对每个组件的名字有个印象，接下来我会结合开头提到的那条 SQL 语句，带你走一遍整个执行流程，依次看下每个组件的作用。
 
@@ -38,7 +38,7 @@ mysql -h$ip -P$port -u$user -p
 
 连接完成后，如果你没有后续的动作，这个连接就处于空闲状态，你可以在 show processlist 命令中看到它。文本中这个图是 show processlist 的结果，其中的 Command 列显示为“Sleep”的这一行，就表示现在系统里面有一个空闲连接。
 
-![下载](./img/下载.png)
+![下载](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/%E4%B8%8B%E8%BD%BD.png)
 
 客户端如果太长时间没动静，连接器就会自动将它断开。这个时间是由参数 wait_timeout 控制的，默认值是 8 小时。
 
