@@ -7,8 +7,8 @@ export default defineUserConfig({
   title: "Weiser",
   description: "vuepress-theme-hope 的演示",
 
-  base: "/personal-site/",
-
+  //base: "/personal-site/",
+  base: "/",
   head: [
     [
       "link",
