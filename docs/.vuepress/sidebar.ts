@@ -52,13 +52,19 @@ export const sidebarConfig = sidebar({
             "8事务到底是隔离的还是不隔离的"
           ],
         },
-        // {
-        //   text: "实践篇",
-        //   icon: "note",
-        //   collapsable: true,
-        //   prefix: "article/",
-        //   children: ["article1", "article2", "article3", "article4"],
-        // },
+        {
+          text: "实践篇",
+          icon: "note",
+          collapsable: true,
+          prefix: "实践篇/",
+          children: 
+          [
+            "普通索引和唯一索引的选择", 
+            // "article2", 
+            // "article3", 
+            // "article4"
+          ],
+        },
       ],
     }
   ],
