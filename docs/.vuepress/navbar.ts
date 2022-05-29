@@ -33,23 +33,23 @@ export const navbarConfig = navbar([
       },
     ],
   },
-  // {
-  //   text: "面向招聘",
-  //   icon: "strong",
-  //   prefix: "/basics/",
-  //   children: [
-  //     {
-  //       text: "算法",
-  //       icon: "rank",
-  //       link: "algorithm/"
-  //     },
-  //     {
-  //       text: "MySQL数据库",
-  //       icon: "mysql",
-  //       link: "MySQL/",
-  //     }
-  //   ],
-  // },
+  {
+    text: "面向招聘",
+    icon: "strong",
+    prefix: "/recruitment/",
+    children: [
+      {
+        text: "校招",
+        icon: "group",
+        link: "campus/tipsFromBYRForum"
+      },
+      {
+        text: "社招",
+        icon: "mysql",
+        link: "/",
+      }
+    ],
+  },
   {
     text: "关于",
     icon: "info",
