@@ -5,7 +5,7 @@ icon: home
 title: 博客主页
 heroImage: /640.png
 heroText: Weiser的个站
-bgImage: /test.jpg
+bgImage: /sea.jpg
 heroFullScreen: true
 tagline: 你可以在这里放置你的口号与标语
 projects:

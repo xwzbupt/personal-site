@@ -21,6 +21,18 @@ export const navbarConfig = navbar([
       }
     ],
   },
+  {
+    text: "工具",
+    icon: "rool",
+    prefix: "/tools/",
+    children: [
+      {
+        text: "git",
+        icon: "git",
+        link: "git"
+      },
+    ],
+  },
   // {
   //   text: "面向招聘",
   //   icon: "strong",
