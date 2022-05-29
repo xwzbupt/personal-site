@@ -1,9 +1,9 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const sidebarConfig = sidebar({
-  "/algorithm": [
+  "/basics/algorithm": [
     {
-      text: "指南",
+      text: "算法",
       icon: "creative",
       collapsable: true,
       children: [
@@ -28,11 +28,10 @@ export const sidebarConfig = sidebar({
     },
   ],
 
-  "/MySQL/": [
+  "/basics/MySQL/": [
     {
       text: "MySQL",
       icon: "mysql",
-      prefix: "/MySQL/",
       collapsable: true,
       children: [
         {

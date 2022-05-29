@@ -1,5 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import navbar from "./navbar";
+import {navbarConfig} from "./navbar";
 import {sidebarConfig} from "./sidebar";
 
 export default hopeTheme({
@@ -19,7 +19,7 @@ export default hopeTheme({
   docsDir: "docs/",
 
   // navbar
-  navbar: navbar,
+  navbar: navbarConfig,
 
   // sidebar
   sidebar: sidebarConfig,
@@ -53,13 +53,13 @@ export default hopeTheme({
       // Linkedin: "https://example.com",
       // Pinterest: "https://example.com",
       // Pocket: "https://example.com",
-      QQ: "https://example.com",
+      QQ: "http://wpa.qq.com/msgrd?v=3&uin=1134685563&site=qq&menu=yes",
       // Qzone: "https://example.com",
       // Reddit: "https://example.com",
       // Rss: "https://example.com",
       // Steam: "https://example.com",
       // Twitter: "https://example.com",
-      Wechat: "https://example.com",
+      Wechat: "general/wechat",
       // Weibo: "https://example.com",
       // Whatsapp: "https://example.com",
       // Youtube: "https://example.com",
