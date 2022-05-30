@@ -7,7 +7,7 @@ heroImage: /640.png
 heroText: Weiser的个站
 bgImage: /sea.jpg
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: 一个有纸、笔、橡皮擦并且坚持严格的行为准则的人，实质上就是一台通用图灵机。
 projects:
   - icon: project
     name: 项目名称
