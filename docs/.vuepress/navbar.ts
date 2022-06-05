@@ -23,7 +23,7 @@ export const navbarConfig = navbar([
   },
   {
     text: "工具",
-    icon: "rool",
+    icon: "tool",
     prefix: "/tools/",
     children: [
       {

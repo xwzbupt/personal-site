@@ -6,23 +6,22 @@ heroImage: /logo.svg
 heroText: Weiser的个站
 tagline: 算法、MySQL
 actions:
-  - text: 使用指南 💡
-    link: /guide/
-
   - text: 博客主页 🏠
     link: /
     type: secondary
 
 features:
   - title: 算法
-    icon: markdown
+    icon: rank
     details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
-    link: ./algorithm/
+    link: /basics/algorithm/
 
   - title: MySQL
     icon: mysql
     details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
-    link: /MySQL/基础篇/1基础架构-SQL查询语句的执行
+    link: /basics/MySQL/
+
+  
  
 copyright: false
 footer: MIT Licensed | Copyright © 2019-present Mr.Hope
