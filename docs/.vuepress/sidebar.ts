@@ -35,7 +35,6 @@ export const sidebarConfig = sidebar({
       children: [
         {
           text: "基础篇",
-          icon: "note",
           collapsable: true,
           prefix: "基础篇/",
           children: 
@@ -52,7 +51,6 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "实践篇",
-          icon: "note",
           collapsable: true,
           prefix: "实践篇/",
           children: 
@@ -69,12 +67,11 @@ export const sidebarConfig = sidebar({
     {
       prefix: "design-patterns",
       text: "设计模式",
-      icon: "mysql",
+      icon: "repair",
       collapsable: true,
       children: [
         {
           text: "创建者模式",
-          icon: "note",
           collapsable: true,
           prefix: "creational-patterns/",
           children: 
