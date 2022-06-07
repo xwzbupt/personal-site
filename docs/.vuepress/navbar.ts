@@ -18,7 +18,12 @@ export const navbarConfig = navbar([
         text: "MySQL数据库",
         icon: "mysql",
         link: "MySQL/",
-      }
+      },
+      {
+        text: "设计模式",
+        icon: "design",
+        link: "design-patterns/",
+      },
     ],
   },
   {

@@ -1,8 +1,9 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const sidebarConfig = sidebar({
-  "/basics/algorithm": [
+  "/basics/": [
     {
+      prefix: "algorithm/",
       text: "算法",
       icon: "creative",
       collapsable: true,
@@ -26,10 +27,8 @@ export const sidebarConfig = sidebar({
         "17.笔试题"
       ],
     },
-  ],
-
-  "/basics/MySQL/": [
     {
+      prefix: "MySQL/",
       text: "MySQL",
       icon: "mysql",
       collapsable: true,
@@ -66,6 +65,80 @@ export const sidebarConfig = sidebar({
           ],
         },
       ],
+    },
+    {
+      prefix: "design-patterns",
+      text: "设计模式",
+      icon: "mysql",
+      collapsable: true,
+      children: [
+        {
+          text: "创建者模式",
+          icon: "note",
+          collapsable: true,
+          prefix: "creational-patterns/",
+          children: 
+          [
+            "singleton", 
+            "factory-method", 
+          ],
+        },
+        // {
+        //   text: "实践篇",
+        //   icon: "note",
+        //   collapsable: true,
+        //   prefix: "实践篇/",
+        //   children: 
+        //   [
+        //     "9普通索引和唯一索引的选择", 
+        //     "10为什么有时会选错索引", 
+        //     "11给字符串加字段索引", 
+        //     "12为什么我的MySQL会抖一下", 
+        //     "13表数据删掉一半，为什么表文件大小不变", 
+        //   ],
+        // },
+      ],
     }
   ],
+
+  // "/basics/MySQL/": [
+  //   {
+  //     text: "MySQL",
+  //     icon: "mysql",
+  //     collapsable: true,
+  //     children: [
+  //       {
+  //         text: "基础篇",
+  //         icon: "note",
+  //         collapsable: true,
+  //         prefix: "基础篇/",
+  //         children: 
+  //         [
+  //           "1基础架构-SQL查询语句的执行", 
+  //           "2日志系统-SQL更新语句的执行", 
+  //           "3事务隔离",
+  //           "4索引（上）",
+  //           "5索引（下）",
+  //           "6全局锁和表锁",
+  //           "7行锁",
+  //           "8事务到底是隔离的还是不隔离的"
+  //         ],
+  //       },
+  //       {
+  //         text: "实践篇",
+  //         icon: "note",
+  //         collapsable: true,
+  //         prefix: "实践篇/",
+  //         children: 
+  //         [
+  //           "9普通索引和唯一索引的选择", 
+  //           "10为什么有时会选错索引", 
+  //           "11给字符串加字段索引", 
+  //           "12为什么我的MySQL会抖一下", 
+  //           "13表数据删掉一半，为什么表文件大小不变", 
+  //         ],
+  //       },
+  //     ],
+  //   }
+  // ],
 });
