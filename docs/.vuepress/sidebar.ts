@@ -82,20 +82,18 @@ export const sidebarConfig = sidebar({
             "prototype"
           ],
         },
-        // {
-        //   text: "实践篇",
-        //   icon: "note",
-        //   collapsable: true,
-        //   prefix: "实践篇/",
-        //   children: 
-        //   [
-        //     "9普通索引和唯一索引的选择", 
-        //     "10为什么有时会选错索引", 
-        //     "11给字符串加字段索引", 
-        //     "12为什么我的MySQL会抖一下", 
-        //     "13表数据删掉一半，为什么表文件大小不变", 
-        //   ],
-        // },
+        {
+          text: "结构型模式",
+          collapsable: true,
+          prefix: "structural-patterns/",
+          children: 
+          [
+            "Proxy",
+            "Bridge",
+            "Decorator",
+            "Adapter",
+          ],
+        },
       ],
     }
   ],
