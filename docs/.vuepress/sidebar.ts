@@ -92,6 +92,9 @@ export const sidebarConfig = sidebar({
             "Bridge",
             "Decorator",
             "Adapter",
+            "Facade",
+            "Composite",
+            "Flyweight"
           ],
         },
       ],
