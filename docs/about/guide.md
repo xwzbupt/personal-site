@@ -99,5 +99,9 @@ git clone git@github.com:xwzbupt/personal-site.git
 
 >有三种布署项目的方式：
 >
->1. CentOS上开发
+>1. CentOS上开发和构建，并布署在云服务器上
+>1. 在本地操作系统开发和构建，将build后的dist目录中的内容布署到云服务器上
+>1. 在本地操作系统开发，利用Github Actions在Github上构建，并将build后的dist目录放到gh-pages分支上。此时可以选择布署到Github Pages上，也可以在云服务器上拉取该分支内容并部署到该云服务器上。
+
+### 4.1 CentOS上开发、构建和布署
 
