@@ -78,7 +78,8 @@ export const sidebarConfig = sidebar({
           [
             "singleton", 
             "factory-method", 
-            "builder"
+            "builder",
+            "prototype"
           ],
         },
         // {
