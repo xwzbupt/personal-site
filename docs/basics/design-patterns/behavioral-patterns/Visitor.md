@@ -370,7 +370,7 @@ Allows for one or more operation to be applied to a set of objects at runtime, d
 
 定义比较简单，结合前面的例子不难理解，我就不过多解释了。对于访问者模式的代码实现，实际上，在上面例子中，经过层层重构之后的最终代码，就是标准的访问者模式的实现代码。这里，我又总结了一张类图，贴在了下面，你可以对照着前面的例子代码一块儿来看一下。
 
-![image-20220610135550476](C:/Users/Weiser/AppData/Roaming/Typora/typora-user-images/image-20220610135550476.png)
+![image-20220610135550476](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/image-20220610135550476.png)
 
 最后，我们再来看下，访问者模式的应用场景。
 
@@ -640,7 +640,7 @@ public class SingleDispatchClass {
 >调用demo.overloadFunction(p);时，会根据重载特性调用函数
 >```java
 >public void overloadFunction(ParentClass p){
->  p.f();
+>  	p.f();
 >}
 >```
 >
