@@ -70,12 +70,14 @@ export const sidebarConfig = sidebar({
       icon: "repair",
       collapsable: true,
       children: [
+        "",
         {
           text: "创建者模式",
           collapsable: true,
           prefix: "creational-patterns/",
           children: 
           [
+            "",
             "singleton", 
             "factory-method", 
             "builder",
@@ -88,6 +90,7 @@ export const sidebarConfig = sidebar({
           prefix: "structural-patterns/",
           children: 
           [
+            "",
             "Proxy",
             "Bridge",
             "Decorator",
@@ -103,6 +106,7 @@ export const sidebarConfig = sidebar({
           prefix: "behavioral-patterns/",
           children: 
           [
+            "",
             "Observer",
             "Template-method",
             "Strategy",
