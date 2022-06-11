@@ -21,8 +21,18 @@ export const navbarConfig = navbar([
       },
       {
         text: "设计模式",
-        icon: "design",
+        icon: "repair",
         link: "design-patterns/",
+      },
+      {
+        text: "面向对象",
+        icon: "people",
+        link: "OOP/OOP",
+      },
+      {
+        text: "设计思想和原则",
+        icon: "people",
+        link: "design-principles/S",
       },
     ],
   },
