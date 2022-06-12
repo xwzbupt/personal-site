@@ -48,9 +48,10 @@ jobs:
           folder: docs/.vuepress/dist
 
       - name: Deploy to Aliyun Server
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           SOURCE: ${{ secrets.REMOTE_PATH }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.USER_NAME }}
+          
