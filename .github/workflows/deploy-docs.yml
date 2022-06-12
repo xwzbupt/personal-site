@@ -47,3 +47,10 @@ jobs:
           branch: gh-pages
           folder: docs/.vuepress/dist
 
+      - name: Deploy to Aliyun Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          SOURCE: ${{ REMOTE_PATH }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.USER_NAME }}
