@@ -49,7 +49,9 @@ jobs:
 
       # 切换分支
       - name: Checkout
-        uses: actions/checkout@gh-pages
+        uses: actions/checkout@master
+        with:
+          ref: gh-pages
 
       - name: Deploy to Aliyun Server
         uses: easingthemes/ssh-deploy@v2.1.5
