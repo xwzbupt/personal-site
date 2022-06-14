@@ -2,7 +2,7 @@
 category: 设计原则和思想
 ---
 
-# 复的代码就一定违背DRY吗？如何提高代码的复用性？
+# 复用的代码就一定违背DRY吗？如何提高代码的复用性？
 
 ## DRY 原则（Don’t Repeat Yourself）
 
