@@ -157,4 +157,29 @@ export const sidebarConfig = sidebar({
       ],
     },
   ],
+  "/language/": [
+    {
+      prefix: "Java/",
+      text: "Java",
+      icon: "java",
+      collapsable: true,
+      children: [
+        {
+          text: "Java基础",
+          collapsable: true,
+          prefix: "basics/",
+          children: [
+            {
+              prefix: "grammar/",
+              text: "Java语法",
+              collapsable: true,
+              children: [
+                "8.String",
+              ]
+            }
+          ]
+        },
+      ],
+    },
+  ]
 });

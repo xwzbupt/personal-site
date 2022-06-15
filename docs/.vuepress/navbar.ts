@@ -37,6 +37,18 @@ export const navbarConfig = navbar([
     ],
   },
   {
+    text: "语言",
+    icon: "language",
+    prefix: "/language/",
+    children: [
+      {
+        text: "Java",
+        icon: "java",
+        link: "Java/basics/grammar/8.String"
+      },
+    ],
+  },
+  {
     text: "工具",
     icon: "tool",
     prefix: "/tools/",
