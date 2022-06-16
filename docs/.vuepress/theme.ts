@@ -70,8 +70,8 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/guide/encrypt.html": ["1234"],
-      "/about/cv": ["xuweize"],
-      "/language/Java": ["woshishabi"]
+      "/about/cv": ["weiser-cv"],
+      "/language/Java": ["weiser-java"]
     },
   },
 
