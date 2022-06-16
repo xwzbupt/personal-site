@@ -44,7 +44,7 @@ export const navbarConfig = navbar([
       {
         text: "Java",
         icon: "java",
-        link: "Java/basics/grammar/8.String"
+        link: "Java/"
       },
     ],
   },
