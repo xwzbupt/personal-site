@@ -185,7 +185,20 @@ export const sidebarConfig = sidebar({
                 "9.class",
                 "10.多态"
               ]
-            }
+            },
+            {
+              prefix: "container/",
+              text: "容器",
+              collapsable: true,
+              children: [
+                "11.container",
+                "12.tool",
+                "13.HashMap1",
+                "14.HashMap2",
+                "15.LinkedHashMap",
+                "16.Iterator",
+              ]
+            },
           ]
         },
       ],
