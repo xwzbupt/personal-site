@@ -174,7 +174,16 @@ export const sidebarConfig = sidebar({
               text: "Java语法",
               collapsable: true,
               children: [
+                "1.program",
+                "2.基础语法",
+                "3.引用",
+                "4.基本类型",
+                "5.bit",
+                "6.float",
+                "7.character",
                 "8.String",
+                "9.class",
+                "10.多态"
               ]
             }
           ]
