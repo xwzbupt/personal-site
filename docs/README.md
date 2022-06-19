@@ -39,6 +39,9 @@ projects:
     desc: 自定义详细介绍
     link: https://你的自定义链接
 
-footer: Weiser的个站
+footer: <a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">由
+            <img src='/又拍云logo.png' alt="又拍云" style="zoom:8%;" padding-top:10px />
+            提供CDN服务
+        </a>
 ---
 
