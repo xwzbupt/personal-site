@@ -47,13 +47,13 @@ footer: <div align="left">
 
 copyright: <div align="left"> 
               <a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">由
-            <img src='/又拍云logo.png' alt="又拍云" style="zoom:8%;" padding-top:10px />
-            提供CDN服务
-          </a>
-          </br>
-          </br>
+                <img src='/又拍云logo.png' alt="又拍云" style="zoom:8%;" padding-top:10px />
+                提供CDN服务
+              </a>
+              </br>
+              </br>
               友情链接：</br>
-                &nbsp;&nbsp;&nbsp; <a href="https://128bit.top"> 嘉年 </a> </br>
+                &nbsp;&nbsp;&nbsp; <a href="https://128bit.top"> Dixeran </a> </br>
                 &nbsp;&nbsp;&nbsp; <a href="https://ddadaal.me"> 俊达ddadaal </a> </br>
             </div>              
 ---
