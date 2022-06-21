@@ -54,7 +54,7 @@ copyright: <div align="left">
               </br>
               友情链接：</br>
                 &nbsp;&nbsp;&nbsp; <a href="https://128bit.top"> Dixeran </a> </br>
-                &nbsp;&nbsp;&nbsp; <a href="https://ddadaal.me"> 俊达ddadaal </a> </br>
+                &nbsp;&nbsp;&nbsp; <a href="https://ddadaal.me"> ddadaal </a> </br>
             </div>              
 ---
 
