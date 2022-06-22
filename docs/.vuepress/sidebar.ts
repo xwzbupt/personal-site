@@ -164,6 +164,7 @@ export const sidebarConfig = sidebar({
       icon: "java",
       collapsable: true,
       children: [
+        "",
         {
           text: "Java基础",
           collapsable: true,

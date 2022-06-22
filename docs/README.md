@@ -41,7 +41,7 @@ projects:
 
 footer: <div align="left">
           <a href="https://beian.miit.gov.cn">
-            京ICP备2022016439号
+          京ICP备2022016439号
           </a>
         </div>
 
