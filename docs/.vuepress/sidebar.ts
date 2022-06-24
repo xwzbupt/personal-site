@@ -200,6 +200,45 @@ export const sidebarConfig = sidebar({
                 "16.Iterator",
               ]
             },
+            {
+              prefix: "exception/",
+              text: "异常",
+              collapsable: true,
+              children: [
+                "17.exception",
+                "18.exception",
+              ]
+            },
+            {
+              prefix: "io/",
+              text: "IO",
+              collapsable: true,
+              children: [
+                "19.io",
+                "20.nio",
+                "21.高速io",
+                "22.高速io",
+              ]
+            },
+            {
+              prefix: "generic/",
+              text: "泛型",
+              collapsable: true,
+              children: [
+                "23.generic"
+              ]
+            },
+            {
+              prefix: "code/",
+              text: "动态与函数式编程",
+              collapsable: true,
+              children: [
+                "24.reflection",
+                "25.annotation",
+                "26.dynamic-proxy",
+                "27.lamda",
+              ]
+            }
           ]
         },
       ],
