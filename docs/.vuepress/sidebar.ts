@@ -184,7 +184,7 @@ export const sidebarConfig = sidebar({
                 "7.character",
                 "8.String",
                 "9.class",
-                "10.多态"
+                "10.keyWords"
               ]
             },
             {
