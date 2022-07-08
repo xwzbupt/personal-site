@@ -1,5 +1,7 @@
 # Leetcode Hot 100
 
+[TOC]
+
 ## 139.单词拆分
 
 > 该题最优解应该是方法三：动态规划
@@ -193,10 +195,144 @@ class Solution {
 
 $dp[i,j] = min(dp[i-1,j],dp[i,j-1],dp[i-1,j-1])+1$
 
-也就是说，若某格子值为 `1`，则以此为**右下角**的正方形的、最大边长为：上面的正方形、左面的正方形或左上的正方形中，最小的那个，再加上此格。
+也就是说，若某格子值为 `1`，则以此为**右下角**的正方形的最大边长为：上面的正方形、左面的正方形或左上的正方形中，最小的那个，再加上此格。
 
-
+为何不是 `dp[i][j]`，为了代码简洁，我们 **假设补充** 了多一行全 `'0'`、多一列全 `'0'`
 
 ```java
+class Solution {
+    public int maximalSquare(char[][] matrix) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int maxEdge = Integer.MIN_VALUE;
+        int dp[][] = new int[m + 1][n + 1];
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (matrix[i - 1][j - 1] == '1') {
+                    int min = Math.min(dp[i - 1][j], dp[i][j - 1]);
+                    min = Math.min(min, dp[i - 1][j - 1]);
+                    dp[i][j] = min + 1;
+                    maxEdge = Math.max(maxEdge, dp[i][j]);
+                }
+            }
+        }
+        return maxEdge * maxEdge;
+    }
+}
 ```
+
+## 279.完全平方数
+
+给你一个整数 `n` ，返回 *和为 `n` 的完全平方数的最少数量* 。
+
+**完全平方数** 是一个整数，其值等于另一个整数的平方；换句话说，其值等于一个整数自乘的积。例如，`1`、`4`、`9` 和 `16` 都是完全平方数，而 `3` 和 `11` 不是。
+
+**示例 ：**
+
+```
+输入：n = 12
+输出：3 
+解释：12 = 4 + 4 + 4
+```
+
+动态转移方程为：`dp[i] = MIN(dp[i], dp[i - j * j] + 1)`，`i` 表示当前数字，`j*j` 表示平方数，j从1到$\sqrt{i}$。
+
+```java
+class Solution {
+    public int numSquares(int n) {
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n ;i++) {
+            dp[i] = i;
+            for (int j = 1; i - j * j >= 0;j++) {
+                dp[i] = Math.min(dp[i], dp[i - j * j] + 1);
+            }
+        }
+        return dp[n];
+    }
+}
+```
+
+## **283.移动零**
+
+给定一个数组 `nums`，编写一个函数将所有 `0` 移动到数组的末尾，同时保持非零元素的相对顺序。
+
+**请注意** ，必须在不复制数组的情况下原地对数组进行操作。
+
+**示例 :**
+
+```
+输入: nums = [0,1,0,3,12]
+输出: [1,3,12,0,0]
+```
+
+`left`指向已经处理好的序列的尾部，`right`指向还没有处理好的序列的头部。右指针不断向右移动，每次右指针指向非零数，则将左右指针对应的数交换，同时左指针右移。
+
+注意到以下性质：
+
+1. 左指针左边均为非零数；
+2. 右指针左边直到左指针处均为零。
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int n = nums.length;
+        int left = 0, right = 0;
+
+        while (right < n) {
+            if (nums[right] != 0) {
+                swap(nums, left, right);
+                left++;
+            }
+            right++;
+        }
+    }
+
+    public void swap(int[] nums, int left, int right) {
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
+    }
+}
+```
+
+## 287.寻找重复数
+
+给定一个包含 `n + 1` 个整数的数组 `nums` ，其数字都在 `[1, n]` 范围内（包括 `1` 和 `n`），可知至少存在一个重复的整数。
+
+假设 `nums` 只有 **一个重复的整数** ，返回 **这个重复的数** 。
+
+你设计的解决方案必须 **不修改** 数组 `nums` 且只用常量级 `O(1)` 的额外空间。
+
+**示例 ：**
+
+```
+输入：nums = [1,3,4,2,2]
+输出：2
+```
+
+**方法一：参考剑指offer的解法，但是该方法修改了原数组**
+
+```java
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int i = 0;
+        while (i < nums.length) {
+            if (i + 1 == nums[i]) {
+                i++;
+            } else {
+                if (nums[i] != nums[nums[i] - 1]) {
+                    swap(nums, i, nums[i] - 1);
+                } else {
+                    return nums[i];
+                }
+            }
+        }
+        return -1;
+    }
+}
+```
+
+**方法二：环形链表、快慢指针**
+
+类似于142题
 
