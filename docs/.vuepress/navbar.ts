@@ -58,6 +58,11 @@ export const navbarConfig = navbar([
         icon: "git",
         link: "git"
       },
+      {
+        text: "git",
+        icon: "git",
+        link: "linux命令"
+      },
     ],
   },
   {
