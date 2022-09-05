@@ -44,7 +44,7 @@ export const sidebarConfig = sidebar({
             "3_索引",
             "4_事务",
             "5_锁",
-            "6_优化",
+            "6_优化"
           ],
         },
         {
