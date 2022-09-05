@@ -34,6 +34,20 @@ export const sidebarConfig = sidebar({
       collapsable: true,
       children: [
         {
+          text: "面试篇",
+          collapsable: true,
+          prefix: "interview/",
+          children: 
+          [
+            "1_架构", 
+            "2_日志", 
+            "3_索引",
+            "4_事务",
+            "5_锁",
+            "6_优化",
+          ],
+        },
+        {
           text: "基础篇",
           collapsable: true,
           prefix: "基础篇/",
