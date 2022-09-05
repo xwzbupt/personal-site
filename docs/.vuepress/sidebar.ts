@@ -81,6 +81,20 @@ export const sidebarConfig = sidebar({
       ],
     },
     {
+      prefix: "distribute",
+      text: "分布式",
+      icon: "repair",
+      collapsable: true,
+      children: [
+        "CAP&BASE.md",
+        "2阶段和3阶段提交.md",
+        "Paxos.md",
+        "Raft.md",
+        "一致性哈希.md",
+        "分布式事务.md",
+      ],
+    },
+    {
       prefix: "design-principles",
       text: "设计原则和思想",
       icon: "repair",
