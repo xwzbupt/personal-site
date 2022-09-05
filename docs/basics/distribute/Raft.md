@@ -24,7 +24,7 @@
 
 共识算法允许一组节点像一个整体一样一起工作，即使其中的一些节点出现故障也能够继续工作下去，其正确性主要是源于复制状态机的性质：一组`Server`的状态机计算相同状态的副本，即使有一部分的`Server`宕机了它们仍然能够继续运行。
 
-![rsm-architecture.png](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/paxos-rsm-architecture.png)
+![rsm-architecture.png](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/paxos-rsm-architecture.png)
 
 一般通过使用复制日志来实现复制状态机。每个`Server`存储着一份包括命令序列的日志文件，状态机会按顺序执行这些命令。因为每个日志包含相同的命令，并且顺序也相同，所以每个状态机处理相同的命令序列。由于状态机是确定性的，所以处理相同的状态，得到相同的输出。
 
@@ -49,11 +49,11 @@
 
 在正常的情况下，只有一个服务器是 Leader，剩下的服务器是 Follower。Follower 是被动的，它们不会发送任何请求，只是响应来自 Leader 和 Candidate 的请求。
 
-![img](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/paxos-server-state.png)
+![img](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/paxos-server-state.png)
 
 ### 任期
 
-![img](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/github/javaguide/paxos-term.png)
+![img](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/paxos-term.png)
 
 如上图 所示，raft 算法将时间划分为任意长度的任期（term），任期用连续的数字表示，看作当前 term 号。每一个任期的开始都是一次选举，在选举开始时，一个或多个 Candidate 会尝试成为 Leader。如果一个 Candidate 赢得了选举，它就会在该任期内担任 Leader。如果没有选出 Leader，将会开启另一个任期，并立刻开始下一次选举。raft 算法保证在给定的一个任期最少要有一个 Leader。
 

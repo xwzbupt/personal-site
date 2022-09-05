@@ -83,7 +83,7 @@ export const sidebarConfig = sidebar({
     {
       prefix: "distribute",
       text: "分布式",
-      icon: "repair",
+      icon: "snow",
       collapsable: true,
       children: [
         "CAP&BASE.md",

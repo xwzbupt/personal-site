@@ -34,6 +34,11 @@ export const navbarConfig = navbar([
         icon: "people",
         link: "design-principles/S",
       },
+      {
+        text: "分布式",
+        icon: "snow",
+        link: "distribute/CAP&BASE",
+      },
     ],
   },
   {

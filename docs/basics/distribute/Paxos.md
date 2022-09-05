@@ -28,10 +28,8 @@
 
 - (1a) leader的节点给所有其他acceptor节点发送消息"proposal(n)"---n是该节点为这个提议选择的一个数字, 姑且理解为一个方案编号. 并期待该提议获得所有节点中的简单多数(Paxos的Quorum)的许可. 
 - (1b) 每一个接受到proposal的acceptor节点: 如果这是它接受到的第一个proposal, 回答"promise". 代表该节点**许诺**将会保持承认该proposal发送方为leader, 除非收到其他优先级更高的proposal; 如果已经有接收到并accepted(注: 这是下一阶段可能会发生的动作)其他的proposal(n',v')--n'是该proposal的方案号而v'是提议的共识:
-
-​                  \* 如果 n < n', 之前accept的提议有更高优先级, 对新接受的提议回答"reject", 以兑现之前的许诺.
-
-​                  \* 如果 n > n', 回答"promise"的并同时附上旧的提议,proposal(n', v'). 这样在认可新的leader身份的同时, 也告诉了新的leader过去的被简单多数认可过的提议
+  - 如果 n < n', 之前accept的提议有更高优先级, 对新接受的提议回答"reject", 以兑现之前的许诺.
+  - 如果 n > n', 回答"promise"的并同时附上旧的提议,proposal(n', v'). 这样在认可新的leader身份的同时, 也告诉了新的leader过去的被简单多数认可过的提议
 
 - (1c) 如果proposer的提议受到了简单多数的"reject", 竞争leader宣告失败, 可以放弃这一提议; 如果接受到了简单多数的"promise", 则该proposer成为leader, 它需要从收到的promise里附带的之前accepted的提议中选取方案号(n值)最高的对应的共识; 如果历史上没有被accept过的提议, leader可以自己选取一个共识v.
 
