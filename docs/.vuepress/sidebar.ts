@@ -271,5 +271,34 @@ export const sidebarConfig = sidebar({
         },
       ],
     },
+  ],
+  "/project/": [
+    {
+      prefix: "lottery/",
+      text: "lottery",
+      icon: "java",
+      collapsable: true,
+      children: [
+        "lottery-design-patterns",
+        // {
+        //   text: "lottery中的设计模式",
+        //   collapsable: true,
+        //   prefix: "basics/",
+        //   children: [
+        //     {
+        //       prefix: "code/",
+        //       text: "动态与函数式编程",
+        //       collapsable: true,
+        //       children: [
+        //         "24.reflection",
+        //         "25.annotation",
+        //         "26.dynamic-proxy",
+        //         "27.lamda",
+        //       ]
+        //     }
+        //   ]
+        // },
+      ],
+    },
   ]
 });

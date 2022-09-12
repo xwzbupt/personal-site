@@ -71,6 +71,18 @@ export const navbarConfig = navbar([
     ],
   },
   {
+    text: "项目",
+    icon: "strong",
+    prefix: "/project/",
+    children: [
+      {
+        text: "Lottery",
+        icon: "group",
+        link: "lottery/lottery-design-patterns"
+      },
+    ],
+  },
+  {
     text: "面向招聘",
     icon: "strong",
     prefix: "/recruitment/",
