@@ -64,8 +64,8 @@ export const navbarConfig = navbar([
         link: "git"
       },
       {
-        text: "git",
-        icon: "git",
+        text: "linux命令",
+        icon: "linux",
         link: "linux命令"
       },
     ],
@@ -76,7 +76,7 @@ export const navbarConfig = navbar([
     prefix: "/project/",
     children: [
       {
-        text: "Lottery",
+        text: "lottery抽奖系统",
         icon: "group",
         link: "lottery/lottery-design-patterns"
       },
