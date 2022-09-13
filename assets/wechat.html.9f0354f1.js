@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as t,c,a as s}from"./app.251b3b23.js";const o={},a=s("img",{src:"https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/wechat.jpg",alt:"wechat",style:{zoom:"25%"}},null,-1),n=[a];function r(_,i){return t(),c("div",null,n)}const h=e(o,[["render",r],["__file","wechat.html.vue"]]);export{h as default};
