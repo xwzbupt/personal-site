@@ -4,13 +4,13 @@ specifiers:
   '@vuepress/client': ^2.0.0-beta.51
   vue: ^3.2.39
   vuepress: 2.0.0-beta.51
-  vuepress-theme-hope: 2.0.0-beta.98
+  vuepress-theme-hope: 2.0.0-beta.99
 
 devDependencies:
   '@vuepress/client': 2.0.0-beta.51
   vue: 3.2.39
   vuepress: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
-  vuepress-theme-hope: 2.0.0-beta.98
+  vuepress-theme-hope: 2.0.0-beta.99
 
 packages:
 
@@ -4955,7 +4955,7 @@ packages:
       - supports-color
     dev: true
 
-  /vuepress-theme-hope/2.0.0-beta.98:
+  /vuepress-theme-hope/2.0.0-beta.99:
     resolution: {integrity: sha512-WF83HKtDCWkF9qGpC7RhXfvmS4TxFdTKVxr8+homSSAk/HYwmUlXplJ9a8Lx3zNxiEQoBeH78ganb7tfF09oWg==}
     peerDependencies:
       sass-loader: ^13.0.0
