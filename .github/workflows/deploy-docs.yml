@@ -34,7 +34,9 @@ jobs:
 
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
-        run: pnpm install -g typescript
+      
+      - name: 安装typescript
+        run: pnpm install -g typeScript
 
       - name: 构建文档
         env:
