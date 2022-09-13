@@ -36,7 +36,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       
       - name: 安装typescript
-        run: pnpm install vue@next typescript -D
+        run: pnpm install typescript
 
       - name: 构建文档
         env:
