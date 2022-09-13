@@ -855,9 +855,83 @@ public void test_alterState() {
 
 当活动的状态需要变化时，调用stateHandler中的方法，传入活动id和活动的当前状态，判断是否可以跳转。
 
-## **组合模式**
+## **5. 组合模式**
+
+**组合模式的设计思路，与其说是一种设计模式，倒不如说是对业务场景的一种数据结构和算法的抽象。** 其中，数据可以表示成树这种数据结构，业务需求可以通过在树上的算法来实现，递归或迭代。
+
+组合模式，将一组对象组织成树形结构，将单个对象和组合对象都看做树中的节点，以统一处理逻辑，并且它利用树形结构的特点，递归地处理每个子树，依次简化代码实现。使用组合模式的前提在于，你的业务场景必须能够表示成树形结构。所以，组合模式的应用场景也比较局限，它并不是一种很常用的设计模式。
+
+**常见的场景有：单位的组织架构、军队的建制编排、操作系统的文件目录、决策树。**
+
+### **5.1 决策树表结构描述**
+
+3张表共同描述了决策树的结构，分别为：
+
+- 表`rule_tree`代表了决策树的根节点，也可以唯一地确定一棵树，其中`tree_root_node_id`字段是规则树根ID，代表了根节点。
+- 表`rule_tree_node`代表了决策树的所有节点，其中`node_type`字段用于区分是否为叶子节点，如果是叶子节点，则给出来决策结果；`rule_key`字段表示规则key，例如可以是性别或年龄等；`node_value`在当`nodeType`为叶子节点时，代表了叶子节点的值，即为该用户可以参加的活动号。
+- 表`rule_tree_node_line`代表了节点和子节点之间的连线。其中`node_id_from`字段表示父节点，`node_id_to`表示子节点。`rule_limit_type`表示从该父节点到子节点需要满足的约束条件，比如相等的关系，`rule_limit_value`表示限定值，只有满足和限定值的约束条件，才可以从from节点跳到to这个子节点。
 
 
 
-## **门面模式**
+### **5.2 决策树代码逻辑描述**
+
+![抽奖系统决策树](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/%E6%8A%BD%E5%A5%96%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E6%A0%91.png)
+
+上图左上角的小图表示了一颗决策树，从根节点开始，到叶子节点可以给出一个决策结果。
+
+#### **5.2.1 树结构组织关系**
+
+`LogicFilter`是一个规则过滤器接口类，有两个接口方法：
+
+- filter，传入决策值和决策节点，给出下一个节点的ID；
+
+- matterValue，传入决策请求，给出决策值。
+
+`BaseLogic`是一个基础抽象类，实现了`LogicFilter`接口类，类的方法实现了接口类中的接口方法。另外实现了逻辑对比的方法，决定是否能跳转到下一个节点。
+
+`UserAgeFilter`和`UserGenderFilter`是树节点逻辑实现类，继承于`BaseLogic`。实现了`matterValue`方法，获取该节点的值。
+
+#### **5.2.2 树结构执行引擎**
+
+前面讲了决策树对应的数据库表结构以及决策树对应的内存结构，内存结构还包括了节点包含的key和value，还有边的约束关系。但是还需要用树的遍历算法执行决策树，这就是树结构的执行引擎。
+
+`EngineBase`是规则引擎基础类，其中最核心的函数是`engineDecisionMaker`，它的作用是对于某个决策树，从根节点走到到叶节点，最后给出决策结果。
+
+```java
+public class EngineBase extends EngineConfig implements EngineFilter {
+
+    private Logger logger = LoggerFactory.getLogger(EngineBase.class);
+
+    @Override
+    public EngineResult process(DecisionMatterReq matter) {
+        throw new RuntimeException("未实现规则引擎服务");
+    }
+
+    protected TreeNodeVO engineDecisionMaker(TreeRuleRich treeRuleRich, DecisionMatterReq matter) {
+        TreeRootVO treeRoot = treeRuleRich.getTreeRoot();
+        Map<Long, TreeNodeVO> treeNodeMap = treeRuleRich.getTreeNodeMap();
+
+        // 规则树根ID
+        Long rootNodeId = treeRoot.getTreeRootNodeId();
+        TreeNodeVO treeNodeInfo = treeNodeMap.get(rootNodeId);
+
+        // 节点类型[NodeType]；1子叶、2果实
+        while (Constants.NodeType.STEM.equals(treeNodeInfo.getNodeType())) {
+            String ruleKey = treeNodeInfo.getRuleKey();
+            LogicFilter logicFilter = logicFilterMap.get(ruleKey);
+            String matterValue = logicFilter.matterValue(matter);
+            Long nextNode = logicFilter.filter(matterValue, treeNodeInfo.getTreeNodeLineInfoList());
+            treeNodeInfo = treeNodeMap.get(nextNode);
+            logger.info("决策树引擎=>{} userId：{} treeId：{} treeNode：{} ruleKey：{} matterValue：{}", treeRoot.getTreeName(), matter.getUserId(), matter.getTreeId(), treeNodeInfo.getTreeNodeId(), ruleKey, matterValue);
+        }
+
+        return treeNodeInfo;
+    }
+
+}
+```
+
+`RuleEngineHandle`是规则引擎处理器，继承了规则引擎处理类，重写了`process`方法，这是实际给出决策的方法。该方法调用`engineDecisionMaker`获得决策结果，将决策结果和其他信息进行包装一起返回。
+
+## **6. 门面模式**
 

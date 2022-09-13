@@ -7,7 +7,7 @@ export default hopeTheme({
 
   author: {
     name: "Weiser",
-    url: "https://www.baidu.com",
+    url: "https://github.com/xwzbupt",
   },
 
   iconPrefix: "iconfont icon-",
