@@ -13,12 +13,12 @@ actions:
 features:
   - title: 算法
     icon: rank
-    details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
+    details: 正数、数组、二叉树、等内容
     link: /basics/algorithm/
 
   - title: MySQL
     icon: mysql
-    details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
+    details: 分为面试篇、基础篇和实战篇。部分内容转载于极客时间MySQL45讲
     link: /basics/MySQL/
 
   
