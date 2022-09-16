@@ -223,7 +223,6 @@ export const sidebarConfig = sidebar({
                 "11.container",
                 "12.tool",
                 "13.HashMap1",
-                "14.HashMap2",
                 "15.LinkedHashMap",
                 "16.Iterator",
               ]
