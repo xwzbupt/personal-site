@@ -280,9 +280,10 @@ export const sidebarConfig = sidebar({
               children: [
                 "thread",
                 "JMM",
+                "thread-safe"
               ]
             },
-            
+
           ]
         },
       ],
