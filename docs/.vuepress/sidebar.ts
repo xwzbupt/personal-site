@@ -268,6 +268,23 @@ export const sidebarConfig = sidebar({
             }
           ]
         },
+        {
+          text: "Java多线程",
+          collapsable: true,
+          prefix: "multithreading/",
+          children: [
+            {
+              prefix: "basic/",
+              text: "基础理论",
+              collapsable: true,
+              children: [
+                "thread",
+                "JMM",
+              ]
+            },
+            
+          ]
+        },
       ],
     },
   ],
