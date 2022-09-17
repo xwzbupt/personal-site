@@ -283,7 +283,15 @@ export const sidebarConfig = sidebar({
                 "thread-safe"
               ]
             },
-
+            {
+              prefix: "lock/",
+              text: "互斥锁",
+              collapsable: true,
+              children: [
+                "Synchronized",
+                "lock",
+              ]
+            },
           ]
         },
       ],
