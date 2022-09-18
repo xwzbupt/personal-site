@@ -3,9 +3,9 @@ home: true
 layout: Blog
 icon: home
 title: 博客主页
-heroImage: /640.png
+# heroImage: /640.png
 heroText: Weiser的个站
-bgImage: /sea.jpg
+bgImage: /mountain.jpg
 heroFullScreen: true
 tagline: 一个有纸、笔、橡皮擦并且坚持严格的行为准则的人，实质上就是一台通用图灵机。
 projects:
