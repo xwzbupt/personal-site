@@ -7,6 +7,8 @@ category: Java
 
 ::: tip
 
+**线程释放锁之后，如何通知其他线程获取锁？**
+
 上一节提到，解决多线程执行非原子操作，导致的线程不安全问题，其中最常用的解决方案便是加锁。Java语言提供了两种类型的锁，一种是synchronized关键字，一种是Lock工具类。在JDK1.5及其以前版本中，synchronized的实现比较简陋，性能没有后起之秀Lock高，但是，在JDK1.6及其之后的版本中，Java对synchronized做了大量优化，其基本实现原理跟Lock的基本实现原理趋于一致，因此，在性能方面，两者也就相差无几了。
 
 接下来我们先重点讲解synchronized。其中，本节课讲解synchronized的基本用法，以及重量级锁的实现原理，下一节讲解Java对synchronized的各种优化，包括偏向锁、轻量级锁、自旋锁、锁粗化、锁消除等。
@@ -517,6 +519,8 @@ void unpark() {
 ## **Synchronized优化**
 
 ::: tip
+
+**Java对synchronized进行了哪些性能优化？**
 
 上一节，我们讲解了synchronized底层用到的重量级锁的实现原理，重量级锁要维护等待队列（_cxq、_EntryList），并且还要调用操作系统的系统调用（例如pthread_mutext_lock、pthread_cond_wait、pthread_cond_signal、pthread_mutext_unlock）来阻塞和唤醒线程，涉及到用户态和内核态的切换，因此，加锁、解锁比较耗时。在JDK1.6版本中，Java对synchronized做了较大的优化，引入了偏向锁、轻量级锁、锁粗化、锁消除等优化手段，进一步提高了加锁、解锁的性能。本节，我们就来详细讲解一下这些优化手段。
 

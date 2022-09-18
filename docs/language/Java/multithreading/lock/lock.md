@@ -9,6 +9,8 @@ category: Java
 
 ::: tip
 
+**相对Java synchronized，JUC Lock有何优势?**
+
 尽管synchronized的底层原理比较复杂，但是使用起来却非常简单。从本节开始，我们来学习另外一种互斥锁：JUC并发包提供的Lock锁。相对于synchronized内置锁，JUC Lock锁提供了更加丰富的特性，比如支持公平锁、可中断锁、非阻塞锁、可超时锁等。本节，我们就详细介绍一下JUC Lock锁的各种特性及其用法。下一节，我们再结合AQS，对这些特性的实现原理做深入讲解。
 
 :::
@@ -244,6 +246,8 @@ public class Demo {
 ## **JUC Lock底层原理**
 
 ::: tip
+
+**如何使用AQS（抽象队列同步器）实现JUC Lock？**
 
 上一节，我们讲解了JUC Lock的各种特性，比如支持重入锁、公平锁、可中断锁、非阻塞锁、可超时锁。本节，我们就来讲一下JUC Lock的底层实现原理。JUC Lock底层主要依赖AQS来实现。AQS也是JUC中非常重要的基础组件。JUC中很多锁（Lock、ReadWriteLock）和同步工具（Condition、Semaphore、CountDownLatch）都是基于AQS来实现的。因此，在讲解JUC Lock的底层实现原理时，我们会重点讲解AQS。
 
@@ -756,6 +760,8 @@ void park() {
 ## **读写锁和StampedLock**
 
 ::: tip
+
+**ReadWriteLock的锁升级与锁降级及其底层实现原理**
 
 在上上节中，我们讲到，JUC提供的锁有三类：普通互斥锁（Lock和ReentrantLock）、读写锁（ReadWriteLock和ReentrantReadWriteLock）、StampedLock、上两节，我们介绍了JUC中的Lock，并且讲解了其底层实现原理，特别是AQS。本节，我们讲解读写锁和StampedLock。
 

@@ -290,6 +290,10 @@ export const sidebarConfig = sidebar({
               children: [
                 "Synchronized",
                 "lock",
+                "CAS",
+                "Atomic",
+                "LongAdder",
+                "deadlock"
               ]
             },
           ]
