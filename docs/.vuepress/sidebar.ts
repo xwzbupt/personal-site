@@ -296,6 +296,22 @@ export const sidebarConfig = sidebar({
                 "deadlock"
               ]
             },
+            {
+              prefix: "lock/",
+              text: "同步工具类",
+              collapsable: true,
+              children: [
+                
+              ]
+            },
+            {
+              prefix: "lock/",
+              text: "线程管理",
+              collapsable: true,
+              children: [
+                
+              ]
+            },
           ]
         },
       ],
