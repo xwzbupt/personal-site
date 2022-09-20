@@ -290,22 +290,40 @@ export const sidebarConfig = sidebar({
               children: [
                 "Synchronized",
                 "lock",
-                "CAS",
-                "Atomic",
-                "LongAdder",
                 "deadlock"
               ]
             },
             {
-              prefix: "lock/",
+              prefix: "lockless/",
+              text: "无锁编程",
+              collapsable: true,
+              children: [
+                "CAS",
+                "Atomic",
+                "LongAdder",
+                "ThreadLocal"
+              ]
+            },
+            {
+              prefix: "sync-tool/",
               text: "同步工具类",
+              collapsable: true,
+              children: [
+                "conditionalVariable",
+                "Semaphore",
+                "Latch-Barrier",
+              ]
+            },
+            {
+              prefix: "current-container/",
+              text: "并发容器",
               collapsable: true,
               children: [
                 
               ]
             },
             {
-              prefix: "lock/",
+              prefix: "thread-manage/",
               text: "线程管理",
               collapsable: true,
               children: [
