@@ -10,14 +10,14 @@ heroFullScreen: true
 tagline: 一个有纸、笔、橡皮擦并且坚持严格的行为准则的人，实质上就是一台通用图灵机。
 projects:
   - icon: project
-    name: 项目名称
-    desc: 项目详细描述
-    link: https://你的项目链接
+    name: pdai
+    desc: Java全栈知识体系
+    link: https://www.pdai.tech/
 
-  - icon: link
-    name: 链接名称
-    desc: 链接详细描述
-    link: https://链接地址
+  - icon: project
+    name: JavaGuide
+    desc: 计算机基础知识扫盲
+    link: https://javaguide.cn
 
   - icon: book
     name: 书籍名称
