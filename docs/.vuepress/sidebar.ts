@@ -319,7 +319,8 @@ export const sidebarConfig = sidebar({
               text: "并发容器",
               collapsable: true,
               children: [
-                
+                "currentContainer",
+                "CopyOnWrite",
               ]
             },
             {
