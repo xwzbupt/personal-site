@@ -60,7 +60,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          # ARGS: "-avz --delete"
+          ARGS: "-rlgoDzvc --delete"
           SOURCE: ${{ secrets.SOURCE }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.USER_NAME }}
