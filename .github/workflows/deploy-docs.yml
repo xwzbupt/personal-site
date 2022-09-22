@@ -57,7 +57,7 @@ jobs:
           ref: gh-pages
 
       - name: Deploy to Aliyun Server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v2.2.11
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           ARGS: "-avz --delete"

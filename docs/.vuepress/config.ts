@@ -8,6 +8,7 @@ export default defineUserConfig({
   title: "Weiser",
   description: "vuepress-theme-hope 的演示",
 
+  //如果是使用gh-pages布署，base应该用仓库名
   //base: "/personal-site/",
   base: "/",
   head: [
