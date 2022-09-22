@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+import { commentPlugin } from "vuepress-plugin-comment2";
 import theme from "./theme";
 
 export default defineUserConfig({
@@ -22,6 +23,14 @@ export default defineUserConfig({
   theme,
 
   plugins: [
+    commentPlugin({
+      provider: "Giscus",
+      repo: "xwzbupt/personal-site-comment",
+      repoId: "R_kgDOHdLpkQ",
+      category: "Announcements",
+      categoryId: "DIC_kwDOHdLpkc4CPfmK",
+    }),
+
     mdEnhancePlugin({
       // 启用自定义容器
       align: true,
@@ -60,7 +69,6 @@ export default defineUserConfig({
       sub: true,
       sup: true,
       tabs: true,
-      tex: true,
       vpre: true,
       vuePlayground: true,
     }),

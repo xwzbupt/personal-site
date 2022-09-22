@@ -1,5 +1,7 @@
 ---
-
+category: Java
+tag: 
+  多线程
 ---
 
 # 写时复制
