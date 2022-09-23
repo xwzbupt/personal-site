@@ -12,6 +12,7 @@ export default hopeTheme({
 
   iconPrefix: "iconfont icon-",
 
+  // 更新cdn缓存
   logo: "/logo.png",
 
   repo: "xwzbupt/personal-site",
