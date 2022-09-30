@@ -114,7 +114,7 @@ public ThreadPoolExecutor(int corePoolSize,
 
 
 
-**4）BlockingQueue <Runnable> workQueue**
+**4）BlockingQueue \<Runnable> workQueue**
 
 workQueue用来存储任务。当有新的任务请求线程处理时，如果核心线程池已满，那么，新来的任务将放入workQueue中，等待线程处理。workQueue是阻塞队列。在前面章节中，我们讲到，JUC提供的阻塞队列有很多种，比如，ArrayBlockingQueue、LinkedBlockingQueue、PriorityBlockingQueue、SynchronousQueue等等，这些阻塞队列都可以用于workQueue。
 
@@ -200,7 +200,7 @@ public static class DiscardOldestPolicy implements RejectedExecutionHandler {
 
 
 
-我们将execute()函数的上述执行过程，用图表示出来，如下所示。图中的1~4编号分别对应上述的1)~4)这4种不同的处理方式。
+我们将execute()函数的上述执行过程，用图表示出来，如下所示。图中的1\~4编号分别对应上述的1)~4)这4种不同的处理方式。
 
 ![img](http://wechatapppro-1252524126.file.myqcloud.com/appnvnpyonz2273/image/ueditor/30662200_1662512149.png)
 
