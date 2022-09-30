@@ -330,7 +330,10 @@ export const sidebarConfig = sidebar({
               text: "线程管理",
               collapsable: true,
               children: [
-                
+                "thread-state",
+                "thread-interrupt",
+                "threadpool",
+                "executor"
               ]
             },
           ]
