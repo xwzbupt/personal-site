@@ -344,11 +344,12 @@ export const sidebarConfig = sidebar({
           prefix: "JVM/",
           children: [
             {
-              prefix: "basic/",
+              prefix: "compile/",
               text: "编译执行",
               collapsable: true,
               children: [
-
+                "summary",
+                "JIT"
               ]
             },
           ]
