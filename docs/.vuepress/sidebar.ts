@@ -6,7 +6,7 @@ export const sidebarConfig = sidebar({
       prefix: "algorithm/",
       text: "算法",
       icon: "creative",
-      collapsable: true,
+      collapsible: true,
       children: [
         "1.整数专题",
         "2.数组专题",
@@ -31,11 +31,11 @@ export const sidebarConfig = sidebar({
       prefix: "MySQL/",
       text: "MySQL",
       icon: "mysql",
-      collapsable: true,
+      collapsible: true,
       children: [
         {
           text: "面试篇",
-          collapsable: true,
+          collapsible: true,
           prefix: "interview/",
           children: 
           [
@@ -49,7 +49,7 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "基础篇",
-          collapsable: true,
+          collapsible: true,
           prefix: "基础篇/",
           children: 
           [
@@ -65,7 +65,7 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "实践篇",
-          collapsable: true,
+          collapsible: true,
           prefix: "实践篇/",
           children: 
           [
@@ -82,7 +82,7 @@ export const sidebarConfig = sidebar({
       prefix: "OOP",
       text: "面向对象",
       icon: "repair",
-      collapsable: true,
+      collapsible: true,
       children: [
         "OOP",
         "封装-抽象-继承-多态",
@@ -98,7 +98,7 @@ export const sidebarConfig = sidebar({
       prefix: "distribute",
       text: "分布式",
       icon: "snow",
-      collapsable: true,
+      collapsible: true,
       children: [
         "CAP&BASE.md",
         "2阶段和3阶段提交.md",
@@ -112,7 +112,7 @@ export const sidebarConfig = sidebar({
       prefix: "design-principles",
       text: "设计原则和思想",
       icon: "repair",
-      collapsable: true,
+      collapsible: true,
       children: [
         "S",
         "O",
@@ -130,12 +130,12 @@ export const sidebarConfig = sidebar({
       prefix: "design-patterns",
       text: "设计模式",
       icon: "repair",
-      collapsable: true,
+      collapsible: true,
       children: [
         "",
         {
           text: "创建者模式",
-          collapsable: true,
+          collapsible: true,
           prefix: "creational-patterns/",
           children: 
           [
@@ -148,7 +148,7 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "结构型模式",
-          collapsable: true,
+          collapsible: true,
           prefix: "structural-patterns/",
           children: 
           [
@@ -164,7 +164,7 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "行为型模式",
-          collapsable: true,
+          collapsible: true,
           prefix: "behavioral-patterns/",
           children: 
           [
@@ -190,18 +190,18 @@ export const sidebarConfig = sidebar({
       prefix: "Java/",
       text: "Java",
       icon: "java",
-      collapsable: true,
+      collapsible: true,
       children: [
         "",
         {
           text: "Java基础",
-          collapsable: true,
+          collapsible: true,
           prefix: "basics/",
           children: [
             {
               prefix: "grammar/",
               text: "Java语法",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "1.program",
                 "2.基础语法",
@@ -218,7 +218,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "container/",
               text: "容器",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "11.container",
                 "12.tool",
@@ -230,7 +230,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "exception/",
               text: "异常",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "17.exception",
                 "18.exception",
@@ -239,7 +239,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "io/",
               text: "IO",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "19.io",
                 "20.nio",
@@ -250,7 +250,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "generic/",
               text: "泛型",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "23.generic"
               ]
@@ -258,7 +258,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "code/",
               text: "动态与函数式编程",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "24.reflection",
                 "25.annotation",
@@ -270,13 +270,13 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "Java多线程",
-          collapsable: true,
+          collapsible: true,
           prefix: "multithreading/",
           children: [
             {
               prefix: "basic/",
               text: "基础理论",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "thread",
                 "JMM",
@@ -286,7 +286,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "lock/",
               text: "互斥锁",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "Synchronized",
                 "lock",
@@ -296,7 +296,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "lockless/",
               text: "无锁编程",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "CAS",
                 "Atomic",
@@ -307,7 +307,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "sync-tool/",
               text: "同步工具类",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "conditionalVariable",
                 "Semaphore",
@@ -317,7 +317,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "current-container/",
               text: "并发容器",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "currentContainer",
                 "CopyOnWrite",
@@ -328,7 +328,7 @@ export const sidebarConfig = sidebar({
             {
               prefix: "thread-manage/",
               text: "线程管理",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "thread-state",
                 "thread-interrupt",
@@ -340,13 +340,13 @@ export const sidebarConfig = sidebar({
         },
         {
           text: "JVM",
-          collapsable: true,
+          collapsible: true,
           prefix: "JVM/",
           children: [
             {
               prefix: "compile/",
               text: "编译执行",
-              collapsable: true,
+              collapsible: true,
               children: [
                 "summary",
                 "JIT"
