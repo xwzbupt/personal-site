@@ -25,9 +25,9 @@ projects:
     link: https://你的书籍链接
 
   - icon: article
-    name: 文章名称
-    desc: 文章详细描述
-    link: https://你的文章链接
+    name: qinglong
+    desc: 定时任务面板
+    link: /funny/qinglong
 
   - icon: friend
     name: 伙伴名称
