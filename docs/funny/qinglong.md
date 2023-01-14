@@ -69,6 +69,8 @@ ql repo https://git.metauniverse-cn.com/https://github.com/shufflewzc/faker3.git
 
 :::
 
+在拉库之前，需要修改配置文件中的一个字段。点击配置文件，设置GithubProxyUrl=""。
+
 进入面板后，点击`定时任务`，点击`新建任务`，然后在命令那里输入拉取脚本库的命令，定时规则笔者设置的是`45 23 * * *`，即每天的23：45再次执行该脚本拉取脚本库。
 
 ![image-20221217002751812](https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/image-20221217002751812.png)
