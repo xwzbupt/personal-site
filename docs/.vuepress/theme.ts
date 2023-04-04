@@ -88,6 +88,9 @@ export default hopeTheme({
     blog: {
       
     },
-  },
+    comment: {},
+    mdEnhance: {}
 
+  },
+  
 });
