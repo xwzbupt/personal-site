@@ -89,8 +89,11 @@ export default hopeTheme({
       
     },
     comment: {
-      // @ts-ignore
-      provider: 'Waline',
+      provider: "Giscus",
+      repo: "xwzbupt/personal-site-comment",
+      repoId: "R_kgDOHdLpkQ",
+      category: "Announcements",
+      categoryId: "DIC_kwDOHdLpkc4CPfmK",
     },
 
     // Disable features you don’t want here
