@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-af066eb0","path":"/language/Java/multithreading/thread-manage/","title":"Thread Manage","lang":"zh-CN","frontmatter":{"title":"Thread Manage","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null}');export{e as data};

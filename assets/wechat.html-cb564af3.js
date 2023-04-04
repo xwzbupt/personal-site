@@ -1,1 +1,0 @@
-import{_ as e,V as t,W as c,$ as s}from"./framework-bda32edb.js";const o={},a=s("img",{src:"https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/wechat.jpg",alt:"wechat",style:{zoom:"25%"}},null,-1),n=[a];function _(l,r){return t(),c("div",null,n)}const h=e(o,[["render",_],["__file","wechat.html.vue"]]);export{h as default};
