@@ -10,6 +10,8 @@ export default hopeTheme({
     url: "https://github.com/xwzbupt",
   },
 
+  iconAssets: 'https://at.alicdn.com/t/c/font_3842071_t6f58r5ylwk.css',
+
   iconPrefix: "iconfont icon-",
 
   logo: "/logo.png",
@@ -84,7 +86,7 @@ export default hopeTheme({
 
   plugins: {
     blog: {
-      autoExcerpt: true,
+      
     },
   },
 

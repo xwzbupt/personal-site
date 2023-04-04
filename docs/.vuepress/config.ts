@@ -44,9 +44,9 @@ export default defineUserConfig({
       echarts: true,
       flowchart: true,
       gfm: true,
-      imageSize: true,
+
       include: true,
-      lazyLoad: true,
+
       mark: true,
       mermaid: true,
       playground: {
@@ -71,7 +71,6 @@ export default defineUserConfig({
       sub: true,
       sup: true,
       tabs: true,
-      vpre: true,
       vuePlayground: true,
     }),
   ],
