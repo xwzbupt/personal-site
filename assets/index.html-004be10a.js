@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-703c8a63","path":"/language/Java/basics/grammar/","title":"Grammar","lang":"zh-CN","frontmatter":{"title":"Grammar","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{a as data};

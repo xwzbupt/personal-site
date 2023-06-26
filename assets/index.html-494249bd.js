@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-7fdaf943","path":"/language/Java/multithreading/lock/","title":"Lock","lang":"zh-CN","frontmatter":{"title":"Lock","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null}');export{e as data};

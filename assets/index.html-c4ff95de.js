@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-ac4aa8ce","path":"/language/Java/JVM/compile/","title":"Compile","lang":"zh-CN","frontmatter":{"title":"Compile","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":null}');export{e as data};

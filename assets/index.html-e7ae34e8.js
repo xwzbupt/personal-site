@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3b38f3ba","path":"/language/Java/multithreading/current-container/","title":"Current Container","lang":"zh-CN","frontmatter":{"title":"Current Container","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{e as data};

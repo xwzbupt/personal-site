@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0bd5acc7","path":"/language/Java/basics/code/","title":"Code","lang":"zh-CN","frontmatter":{"title":"Code","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{e as data};

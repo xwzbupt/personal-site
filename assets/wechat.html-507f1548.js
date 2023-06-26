@@ -1,1 +1,0 @@
-import{_ as e,W as t,X as c,a0 as s}from"./framework-d14ea875.js";const o={},a=s("img",{src:"https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/wechat.jpg",alt:"wechat",style:{zoom:"25%"}},null,-1),n=[a];function _(l,r){return t(),c("div",null,n)}const h=e(o,[["render",_],["__file","wechat.html.vue"]]);export{h as default};
