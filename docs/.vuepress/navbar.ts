@@ -99,6 +99,18 @@ export const navbarConfig = navbar([
     ],
   },
   {
+    text: "交易",
+    icon: "money",
+    prefix: "/trade/",
+    children: [
+      {
+        text: "交易基础",
+        icon: "group",
+        link: "basics"
+      },
+    ],
+  },
+  {
     text: "关于",
     icon: "info",
     prefix: "/about/",

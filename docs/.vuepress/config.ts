@@ -4,10 +4,9 @@ import theme from "./theme";
 export default defineUserConfig({
   lang: "zh-CN",
   title: "Weiser",
-  description: "vuepress-theme-hope 的演示",
+  description: "weiser的个人网站",
 
   //如果是使用gh-pages布署，base应该用仓库名
-  //base: "/personal-site/",
   //base: "/personal-site/",
   // 如果你使用了自定义域名，必须是 /
   base: "/",

@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import {navbarConfig} from "./navbar";
-import {sidebarConfig} from "./sidebar";
+import { navbarConfig } from "./navbar";
+import { sidebarConfig } from "./sidebar";
 
 export default hopeTheme({
   hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
@@ -68,7 +68,7 @@ export default hopeTheme({
       // Rss: "https://example.com",
       // Steam: "https://example.com",
       // Twitter: "https://example.com",
-      Wechat: "general/wechat",
+      Wechat: "/general/wechat",
       // Weibo: "https://example.com",
       // Whatsapp: "https://example.com",
       // Youtube: "https://example.com",
@@ -86,7 +86,7 @@ export default hopeTheme({
 
   plugins: {
     blog: {
-      
+
     },
     comment: {
       provider: "Giscus",
@@ -140,4 +140,6 @@ export default hopeTheme({
       vuePlayground: true,
     },
   },
+  //侧边栏热更新
+  // hotReload: true
 });

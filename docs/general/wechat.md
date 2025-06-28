@@ -19,4 +19,4 @@ footer: false
 backtotop: false
 ---
 
-<img src="https://personal-site-pictures.oss-cn-beijing.aliyuncs.com/img/wechat.jpg" alt="wechat" style="zoom: 25%;" />
+微信号：**`_weiser`**，联系时请注明来意。
