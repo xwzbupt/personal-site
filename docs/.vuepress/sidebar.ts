@@ -179,7 +179,8 @@ export const sidebarConfig = sidebar({
       icon: "repair",
       collapsible: true,
       children: [
-        "交易理念"
+        "交易理念",
+        "仓位管理"
       ]
     },
   ]
