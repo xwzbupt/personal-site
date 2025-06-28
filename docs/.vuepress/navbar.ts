@@ -106,7 +106,7 @@ export const navbarConfig = navbar([
       {
         text: "交易基础",
         icon: "group",
-        link: "basics"
+        link: ""
       },
     ],
   },

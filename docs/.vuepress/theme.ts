@@ -1,8 +1,10 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { navbarConfig } from "./navbar";
 import { sidebarConfig } from "./sidebar";
+import { viteBundler } from '@vuepress/bundler-vite'
 
 export default hopeTheme({
+  bundler: viteBundler(),
   hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
 
   author: {
@@ -31,14 +33,6 @@ export default hopeTheme({
   displayFooter: true,
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
-
-  themeColor: {
-    blue: "#2196f3",
-    red: "#f26d6d",
-    green: "#3eaf7c",
-    orange: "#fb9b5f",
-  },
-
   blog: {
     description: "一个不断学习的人",
     intro: "/intro.html",

@@ -1,11 +1,15 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
+import { viteBundler } from "@vuepress/bundler-vite";
 
 export default defineUserConfig({
   lang: "zh-CN",
   title: "Weiser",
   description: "weiser的个人网站",
-
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
   //如果是使用gh-pages布署，base应该用仓库名
   //base: "/personal-site/",
   // 如果你使用了自定义域名，必须是 /
