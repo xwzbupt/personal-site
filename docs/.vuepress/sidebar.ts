@@ -181,6 +181,7 @@ export const sidebarConfig = sidebar({
       children: [
         "trading-mindset",
         "trading-management",
+        "xauusd",
         "options"
       ]
     },
