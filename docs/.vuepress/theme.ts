@@ -32,6 +32,7 @@ export default hopeTheme({
 
   displayFooter: true,
 
+
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {
     description: "一个不断学习的人",
@@ -89,6 +90,101 @@ export default hopeTheme({
       category: "Announcements",
       categoryId: "DIC_kwDOHdLpkc4CPfmK",
     },
+    markdown: {
+      alert: true,
+      align: true,
+      attrs: true,
+      codeTabs: true,
+      component: true,
+      figure: true,
+      gfm: true,
+      imgLazyload: true,
+      imgMark: true,
+      imgSize: true,
+      math: true,
+      mark: true,
+      preview: true,
+      revealjs: {
+        plugins: ["highlight", "math", "search", "notes", "zoom"],
+        themes: [
+          "auto",
+          "beige",
+          "black",
+          "blood",
+          "league",
+          "moon",
+          "night",
+          "serif",
+          "simple",
+          "sky",
+          "solarized",
+          "white",
+        ],
+      },
+      spoiler: true,
+      stylize: [
+        {
+          matcher: "Recommended",
+          replacer: ({
+            tag,
+          }): {
+            tag: string;
+            attrs: Record<string, string>;
+            content: string;
+          } | void => {
+            if (tag === "em")
+              return {
+                tag: "Badge",
+                attrs: { type: "tip" },
+                content: "Recommended",
+              };
+          },
+        },
+      ],
+      sub: true,
+      sup: true,
+      tabs: true,
+      tasklist: true,
+      vPre: true,
+
+      highlighter: {
+        type: "shiki",
+        lineNumbers: 15,
+        collapsedLines: 20,
+        notationDiff: true,
+        notationErrorLevel: true,
+        notationFocus: true,
+        notationHighlight: true,
+        // notationWordHighlight: true,
+        whitespace: true,
+        themes: {
+          light: "one-light",
+          dark: "one-dark-pro",
+        },
+        twoslash: {
+          twoslashOptions: {
+            compilerOptions: {
+              moduleResolution: /* bundler */ 100,
+            },
+          },
+        },
+      },
+
+      chartjs: true,
+      demo: true,
+      echarts: true,
+      flowchart: true,
+      kotlinPlayground: true,
+      markmap: true,
+      mermaid: true,
+      plantuml: true,
+      playground: {
+        presets: ["ts", "vue", "unocss"],
+      },
+      sandpack: true,
+      vuePlayground: true,
+    },
+
 
     // Disable features you don’t want here
     mdEnhance: {

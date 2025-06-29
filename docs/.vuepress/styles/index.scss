@@ -1,0 +1,18 @@
+// .page,
+// .theme-default-content {
+//   font-family: 'SourceHanSerifCN', "Noto Serif SC", "宋体", serif;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+
+body {
+  font-family: 'Noto Serif SC', Georgia, serif !important;
+  font-size: 16.5px; /* 默认是 16px，略微加大 */
+  font-weight: 400; /* 更粗一点，400是正常，700是加粗 */
+  line-height: 1.75; /* 提高可读性 */
+  color: #000000; /* 更深一点的灰，提升清晰度 */
+}
+
+strong, b {
+  font-weight: 800;       // 加粗字重
+}
