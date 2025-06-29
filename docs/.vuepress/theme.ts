@@ -12,13 +12,10 @@ export default hopeTheme({
     url: "https://github.com/xwzbupt",
   },
 
-  iconAssets: 'https://at.alicdn.com/t/c/font_3842071_t6f58r5ylwk.css',
-
-  iconPrefix: "iconfont icon-",
-
   logo: "/logo.png",
 
-  repo: "xwzbupt/personal-site",
+  //删除个人网站的仓库链接按钮，防止有人进入窃取我的文章。
+  // repo: "xwzbupt/personal-site",
 
   docsDir: "docs/",
 
@@ -44,7 +41,7 @@ export default hopeTheme({
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
       // Dribbble: "https://example.com",
-      Email: "xwze@bupt.cn",
+      Email: "mailto:xwze@bupt.cn",
       // Evernote: "https://example.com",
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
@@ -52,7 +49,7 @@ export default hopeTheme({
       GitHub: "https://github.com/xwzbupt",
       // Gitlab: "https://example.com",
       // Gmail: "https://example.com",
-      // Instagram: "https://example.com",
+      // Instagram: "https://exampl.com",
       // Lines: "https://example.com",
       // Linkedin: "https://example.com",
       // Pinterest: "https://example.com",
@@ -75,7 +72,8 @@ export default hopeTheme({
     config: {
       "/guide/encrypt.html": ["1234"],
       "/about/cv": ["weiser-cv"],
-      "/language/Java": ["weiser-java"]
+      "/language/Java": ["weiser-java"],
+      "/trade/basics/xauusd.html": ["xauusd"],
     },
   },
 
