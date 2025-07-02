@@ -13,6 +13,18 @@ body {
   color: #000000; /* 更深一点的灰，提升清晰度 */
 }
 
+/* 黑暗模式下字体颜色变浅色（如白色或亮灰） */
+[data-theme="dark"] body {
+  color: #f5f5f5; /* 或者 white，也可以用 #ddd 更柔和 */
+}
+
+/* 粗体字统一设置 */
 strong, b {
-  font-weight: 800;       // 加粗字重
+  font-weight: 800;
+}
+
+/* 暗色模式下粗体字颜色 */
+[data-theme="dark"] strong,
+[data-theme="dark"] b {
+  color: #ffffff;
 }

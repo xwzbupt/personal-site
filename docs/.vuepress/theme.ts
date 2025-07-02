@@ -29,8 +29,9 @@ export default hopeTheme({
 
   displayFooter: true,
 
+  darkmode: "switch",
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word"],
   blog: {
     description: "一个不断学习的人",
     intro: "/intro.html",

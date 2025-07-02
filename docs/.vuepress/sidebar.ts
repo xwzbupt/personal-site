@@ -185,5 +185,14 @@ export const sidebarConfig = sidebar({
         "options"
       ]
     },
+    {
+      prefix: "tools/",
+      text: "交易工具",
+      icon: "tool",
+      collapsible: true,
+      children: [
+        "ali-ac",
+      ]
+    },
   ]
 });
