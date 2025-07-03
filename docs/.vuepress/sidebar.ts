@@ -186,6 +186,15 @@ export const sidebarConfig = sidebar({
       ]
     },
     {
+      prefix: "price_action/",
+      text: "价格行为",
+      icon: "repair",
+      collapsible: true,
+      children: [
+        "K",
+      ]
+    },
+    {
       prefix: "tools/",
       text: "交易工具",
       icon: "tool",
