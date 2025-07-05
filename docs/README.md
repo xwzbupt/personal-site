@@ -30,9 +30,9 @@ projects:
     link: /funny/qinglong
 
   - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+    name: 陈俊达
+    desc: 北大硕士，就职于微软
+    link: https://ddadaal.me/
 
   - icon: /logo.svg
     name: 自定义项目
