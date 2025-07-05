@@ -192,6 +192,7 @@ export const sidebarConfig = sidebar({
       icon: "repair",
       collapsible: true,
       children: [
+        "learning-path",
         "K",
         "bull-bear-power"
       ]

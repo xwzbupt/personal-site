@@ -4,7 +4,6 @@ import { sidebarConfig } from "./sidebar";
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default hopeTheme({
-  bundler: viteBundler(),
   hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
 
   author: {
@@ -30,6 +29,101 @@ export default hopeTheme({
   displayFooter: true,
 
   darkmode: "switch",
+
+  markdown: {
+    alert: true,
+    align: true,
+    attrs: true,
+    codeTabs: true,
+    component: true,
+    figure: true,
+    gfm: true,
+    imgLazyload: true,
+    imgMark: true,
+    imgSize: true,
+    math: true,
+    mark: true,
+    preview: true,
+    revealjs: {
+      plugins: ["highlight", "math", "search", "notes", "zoom"],
+      themes: [
+        "auto",
+        "beige",
+        "black",
+        "blood",
+        "league",
+        "moon",
+        "night",
+        "serif",
+        "simple",
+        "sky",
+        "solarized",
+        "white",
+      ],
+    },
+    spoiler: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({
+          tag,
+        }): {
+          tag: string;
+          attrs: Record<string, string>;
+          content: string;
+        } | void => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tabs: true,
+    tasklist: true,
+    vPre: true,
+
+    highlighter: {
+      type: "shiki",
+      lineNumbers: 15,
+      collapsedLines: 20,
+      notationDiff: true,
+      notationErrorLevel: true,
+      notationFocus: true,
+      notationHighlight: true,
+      // notationWordHighlight: true,
+      whitespace: true,
+      themes: {
+        light: "one-light",
+        dark: "one-dark-pro",
+      },
+      twoslash: {
+        twoslashOptions: {
+          compilerOptions: {
+            moduleResolution: /* bundler */ 100,
+          },
+        },
+      },
+    },
+
+    chartjs: true,
+    demo: true,
+    echarts: true,
+    flowchart: true,
+    kotlinPlayground: true,
+    markmap: true,
+    mermaid: true,
+    plantuml: true,
+    playground: {
+      presets: ["ts", "vue", "unocss"],
+    },
+    sandpack: true,
+    vuePlayground: true,
+  },
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word"],
   blog: {
@@ -89,146 +183,10 @@ export default hopeTheme({
       category: "Announcements",
       categoryId: "DIC_kwDOHdLpkc4CPfmK",
     },
-    markdown: {
-      alert: true,
-      align: true,
-      attrs: true,
-      codeTabs: true,
-      component: true,
-      figure: true,
-      gfm: true,
-      imgLazyload: true,
-      imgMark: true,
-      imgSize: true,
-      math: true,
-      mark: true,
-      preview: true,
-      revealjs: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-        themes: [
-          "auto",
-          "beige",
-          "black",
-          "blood",
-          "league",
-          "moon",
-          "night",
-          "serif",
-          "simple",
-          "sky",
-          "solarized",
-          "white",
-        ],
-      },
-      spoiler: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({
-            tag,
-          }): {
-            tag: string;
-            attrs: Record<string, string>;
-            content: string;
-          } | void => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      tasklist: true,
-      vPre: true,
 
-      highlighter: {
-        type: "shiki",
-        lineNumbers: 15,
-        collapsedLines: 20,
-        notationDiff: true,
-        notationErrorLevel: true,
-        notationFocus: true,
-        notationHighlight: true,
-        // notationWordHighlight: true,
-        whitespace: true,
-        themes: {
-          light: "one-light",
-          dark: "one-dark-pro",
-        },
-        twoslash: {
-          twoslashOptions: {
-            compilerOptions: {
-              moduleResolution: /* bundler */ 100,
-            },
-          },
-        },
-      },
-
-      chartjs: true,
-      demo: true,
-      echarts: true,
-      flowchart: true,
-      kotlinPlayground: true,
-      markmap: true,
-      mermaid: true,
-      plantuml: true,
-      playground: {
-        presets: ["ts", "vue", "unocss"],
-      },
-      sandpack: true,
-      vuePlayground: true,
-    },
-
-
-    // Disable features you don’t want here
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      chart: true,
-      codetabs: true,
-      container: true,
-      demo: true,
-      echarts: true,
-      figure: true,
-      flowchart: true,
-      gfm: true,
-      imgLazyload: true,
-      imgSize: true,
-      include: true,
-      katex: true,
-      mark: true,
-      mermaid: true,
-      playground: {
-        presets: ['ts', 'vue'],
-      },
-      presentation: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
-      stylize: [
-        {
-          matcher: 'Recommended',
-          replacer: ({ tag }) => {
-            if (tag === 'em')
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: 'Recommended',
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      vPre: true,
-      vuePlayground: true,
-    },
   },
+
+  fullscreen: true, // ✅ 启用全宽模式
   //侧边栏热更新
   // hotReload: true
 });
