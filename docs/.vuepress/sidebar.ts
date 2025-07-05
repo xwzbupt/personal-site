@@ -181,6 +181,7 @@ export const sidebarConfig = sidebar({
       children: [
         "trading-mindset",
         "trading-management",
+        "compare",
         "xauusd",
         "options"
       ]
@@ -192,6 +193,7 @@ export const sidebarConfig = sidebar({
       collapsible: true,
       children: [
         "K",
+        "bull-bear-power"
       ]
     },
     {
