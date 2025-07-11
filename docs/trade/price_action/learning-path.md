@@ -7,6 +7,7 @@
 链接打不开是你的问题，不是我的问题，这里不解释，自己想办法。
 :::
 
+# 总览
 
 ```markmap
 # 价格行为
@@ -21,8 +22,12 @@
     - [什麼是支撐與阻力？是什麼讓價格的趨勢性運動發生反轉？](https://www.youtube.com/watch?v=pMuc829GJ8Q&list=PLYytWa6d58JiiUBANEetX8fNHlby6qWNA&index=4)
     - [價格運行的斜率變化代表什麼？什麼是急速、通道與區間？](https://www.youtube.com/watch?v=hM7N1CLJCTQ&list=PLYytWa6d58JiiUBANEetX8fNHlby6qWNA&index=5)
 - 方方土：价格行为专题课部分内容
+  - [Market Cycle - 市场周期](https://www.youtube.com/watch?v=4m56kTel1q0&t=9s)
+  - [市场周期的4个阶段，Q&A](https://www.youtube.com/watch?v=3fERLrHPMpA)
+  - [蜡烛图: 每天都在看，却忽视了K线传达的真正信息](https://www.youtube.com/watch?v=5A80AHIiVdA)
 - 罗晟：Steven价格行为教学视频
-
+  - [价格行为基础教学, 认识K线形态 01 Price Action](https://www.youtube.com/watch?v=-KdWt8VPjwI&list=PL7WPLNsdMyYeE84KVcxKJjtoxqKZnW2kb&index=3)
+  - [价格行为, 正确认识多空力量 02 Price Action 技术分析教学](https://www.youtube.com/watch?v=0HUaL9GeUBc&list=PL7WPLNsdMyYeE84KVcxKJjtoxqKZnW2kb&index=4)
 ## 顺势交易
 - 太妃：价格行为基础系列持续形态相关视频
 - 方方土：价格行为专题课部分内容
@@ -37,9 +42,23 @@
 ## 测量距离与缺口
 
 ## 构建交易系统
-
-
 ```
+## 基础认知
+
+
+## 认识K线、趋势动能和市场周期
+
+## 顺势交易
+
+## 突破与通道
+
+## 交易区间
+
+## 反转交易
+
+## 测量距离与缺口
+
+## 构建交易系统
 
 ::: echarts Stocks
 

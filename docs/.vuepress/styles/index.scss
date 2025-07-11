@@ -29,3 +29,12 @@ strong, b {
   color: #ffffff;
 }
 
+
+/* .vuepress/styles/index.scss */
+.markmap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  min-height: 400px; /* 基础高度 */
+  display: flex;
+  justify-content: center;
+}
