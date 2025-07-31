@@ -79,7 +79,7 @@ export const sidebarConfig = sidebar({
       ],
     },
     {
-      prefix: "basics/OOP",
+      prefix: "OOP",
       text: "面向对象",
       icon: "repair",
       collapsible: true,
@@ -96,7 +96,7 @@ export const sidebarConfig = sidebar({
     },
 
     {
-      prefix: "basics/design-principles",
+      prefix: "design-principles",
       text: "设计原则和思想",
       icon: "repair",
       collapsible: true,
@@ -114,7 +114,7 @@ export const sidebarConfig = sidebar({
       ],
     },
     {
-      prefix: "basics/design-patterns",
+      prefix: "design-patterns",
       text: "设计模式",
       icon: "repair",
       collapsible: true,
