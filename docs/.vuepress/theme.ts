@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { navbarConfig } from "./navbar";
 import { sidebarConfig } from "./sidebar";
-import { viteBundler } from '@vuepress/bundler-vite'
 
 export default hopeTheme({
   hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
@@ -182,6 +181,13 @@ export default hopeTheme({
       repoId: "R_kgDOHdLpkQ",
       category: "Announcements",
       categoryId: "DIC_kwDOHdLpkc4CPfmK",
+    },
+    watermark: {
+      watermarkOptions: {
+        content: "自定义内容",
+        movable: true,
+        // 其他选项
+      },
     },
 
   },
