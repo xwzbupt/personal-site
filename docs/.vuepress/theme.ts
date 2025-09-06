@@ -186,7 +186,7 @@ export default hopeTheme({
       enabled: (page) => !!page.filePathRelative && page.filePathRelative.startsWith("trade/"),
       watermarkOptions: {
         // 文档：https://zhensherlock.github.io/watermark-js-plus/zh/config/
-        content: "weiser.fun",
+        content: "weiser",
         width: 200,
         height: 200,
         movable: true,
