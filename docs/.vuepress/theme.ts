@@ -183,10 +183,18 @@ export default hopeTheme({
       categoryId: "DIC_kwDOHdLpkc4CPfmK",
     },
     watermark: {
+      enabled: (page) => !!page.filePathRelative && page.filePathRelative.startsWith("trade/"),
       watermarkOptions: {
-        content: "自定义内容",
+        // 文档：https://zhensherlock.github.io/watermark-js-plus/zh/config/
+        content: "weiser.fun",
+        width: 200,
+        height: 200,
         movable: true,
-        // 其他选项
+        rotate: -30,
+        globalAlpha: 0.4,
+        color: "rgba(0,0,0,0.15)",
+        fontSize: 16,
+        zIndex: 1000,
       },
     },
 

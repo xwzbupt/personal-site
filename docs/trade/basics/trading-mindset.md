@@ -1,10 +1,4 @@
----
-watermark:
-  width: 200
-  height: 200
-  content: Your content
-  opacity: 1
----
+
 
 # 正确的交易理念：稳健盈利的灵魂
 

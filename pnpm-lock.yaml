@@ -18,6 +18,9 @@ importers:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.23
         version: 2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5)
+      '@vuepress/plugin-watermark':
+        specifier: 2.0.0-rc.27
+        version: 2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
       chart.js:
         specifier: ^4.5.0
         version: 4.5.0
@@ -44,7 +47,7 @@ importers:
         version: 2.0.0-rc.30(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
       vuepress-theme-hope:
         specifier: 2.0.0-rc.93
-        version: 2.0.0-rc.93(@vue/repl@4.6.1)(chart.js@4.5.0)(echarts@5.6.0)(flowchart.ts@3.0.1)(katex@0.16.22)(markdown-it@14.1.0)(markmap-toolbar@0.18.12(markmap-common@0.18.9))(mermaid@11.8.0)(sass@1.89.2)(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
+        version: 2.0.0-rc.93(@vue/repl@4.6.1)(@vuepress/plugin-watermark@2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))))(chart.js@4.5.0)(echarts@5.6.0)(flowchart.ts@3.0.1)(katex@0.16.22)(markdown-it@14.1.0)(markmap-toolbar@0.18.12(markmap-common@0.18.9))(mermaid@11.8.0)(sass@1.89.2)(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
 
 packages:
 
@@ -1001,6 +1004,11 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
 
+  '@vuepress/helper@2.0.0-rc.27':
+    resolution: {integrity: sha512-7vBaSiPnA1bTcbUAA83NQ+g8D7zsF14Mm8FFWYwv1B+NlukMLv5PoDYsUzX+v2r8p49JTXmpESKBY6aqAXimfg==}
+    peerDependencies:
+      vuepress: 2.0.0-rc.9
+
   '@vuepress/highlighter-helper@2.0.0-rc.109':
     resolution: {integrity: sha512-cb2bwucJK/NWY7aqn0fHigaf4zjE/TFU/u6ykwnEOL7Y+3g8Wc35G+VHmrPlUnUWlMlhQZ7yToJk1KJh2sPj9w==}
     peerDependencies:
@@ -1231,6 +1239,11 @@ packages:
     resolution: {integrity: sha512-TtEwJdoWRueAe0+Ck3rHtcoio5P9LjD+7y1fEV6kzip4di7TY045MDYohsSzMfXAm8M4fdLWUkEzHCJxnSbJnw==}
     peerDependencies:
       vuepress: 2.0.0-rc.23
+
+  '@vuepress/plugin-watermark@2.0.0-rc.27':
+    resolution: {integrity: sha512-TE92IB7tR1a4DsTZdkA/wgxz6Q08LihUqHowft9yVKrL8G8WP8dkRniylnqOaGqYPl7SW3pvdAxqHsAYaxwCQQ==}
+    peerDependencies:
+      vuepress: 2.0.0-rc.9
 
   '@vuepress/shared@2.0.0-rc.23':
     resolution: {integrity: sha512-keUT4ZXVN0LvNWRxDOSjvyePZHoAmedVQvFqFWfH/3JjzLU1nrhn+WXucNtlJh6OqZZD5sdzCxnrotkb7MEnVw==}
@@ -2747,6 +2760,9 @@ packages:
       '@vuepress/bundler-webpack':
         optional: true
 
+  watermark-js-plus@1.6.3:
+    resolution: {integrity: sha512-iCLOGf70KacIwjGF9MDViYxQcRiVwOH7l42qDHLeE2HeUsQD1EQuUC9cKRG/4SErTUmdqV3yf5WnKk2dRARHPQ==}
+
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
 
@@ -3712,6 +3728,17 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@vuepress/helper@2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))':
+    dependencies:
+      '@vue/shared': 3.5.17
+      cheerio: 1.0.0-rc.12
+      fflate: 0.8.2
+      gray-matter: 4.0.3
+      vue: 3.5.17(typescript@4.9.5)
+      vuepress: 2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))
+    transitivePeerDependencies:
+      - typescript
+
   '@vuepress/highlighter-helper@2.0.0-rc.109(@vueuse/core@13.5.0(vue@3.5.17(typescript@4.9.5)))(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))':
     dependencies:
       vuepress: 2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))
@@ -4062,6 +4089,15 @@ snapshots:
       '@vue/devtools-api': 7.7.7
       vue: 3.5.17(typescript@4.9.5)
       vuepress: 2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))
+    transitivePeerDependencies:
+      - typescript
+
+  '@vuepress/plugin-watermark@2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))':
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
+      vue: 3.5.17(typescript@4.9.5)
+      vuepress: 2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))
+      watermark-js-plus: 1.6.3
     transitivePeerDependencies:
       - typescript
 
@@ -5601,7 +5637,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.93(@vue/repl@4.6.1)(chart.js@4.5.0)(echarts@5.6.0)(flowchart.ts@3.0.1)(katex@0.16.22)(markdown-it@14.1.0)(markmap-toolbar@0.18.12(markmap-common@0.18.9))(mermaid@11.8.0)(sass@1.89.2)(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))):
+  vuepress-theme-hope@2.0.0-rc.93(@vue/repl@4.6.1)(@vuepress/plugin-watermark@2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))))(chart.js@4.5.0)(echarts@5.6.0)(flowchart.ts@3.0.1)(katex@0.16.22)(markdown-it@14.1.0)(markmap-toolbar@0.18.12(markmap-common@0.18.9))(mermaid@11.8.0)(sass@1.89.2)(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5))):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.109(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.107(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
@@ -5644,6 +5680,7 @@ snapshots:
       vuepress-plugin-md-enhance: 2.0.0-rc.93(@vue/repl@4.6.1)(markdown-it@14.1.0)(sass@1.89.2)(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
       vuepress-shared: 2.0.0-rc.90(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
     optionalDependencies:
+      '@vuepress/plugin-watermark': 2.0.0-rc.27(typescript@4.9.5)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@24.0.10)(sass@1.89.2)(typescript@4.9.5))(typescript@4.9.5)(vue@3.5.17(typescript@4.9.5)))
       sass: 1.89.2
     transitivePeerDependencies:
       - '@vue/repl'
@@ -5683,6 +5720,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  watermark-js-plus@1.6.3: {}
 
   web-namespaces@2.0.1: {}
 

@@ -11,6 +11,7 @@
   "devDependencies": {
     "@vue/repl": "^4.6.1",
     "@vuepress/bundler-vite": "2.0.0-rc.23",
+    "@vuepress/plugin-watermark": "2.0.0-rc.27",
     "chart.js": "^4.5.0",
     "echarts": "^5.6.0",
     "flowchart.ts": "^3.0.1",
