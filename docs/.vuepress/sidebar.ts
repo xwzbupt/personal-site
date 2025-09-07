@@ -188,6 +188,18 @@ export const sidebarConfig = sidebar({
       ]
     },
     {
+      prefix: "tech/",
+      text: "技术指标",
+      icon: "repair",
+      collapsible: true,
+      children: [
+        "MACD",
+        "Fibonacci",
+        "EMA",
+        "Bolling",
+      ]
+    },
+    {
       prefix: "price_action/",
       text: "价格行为",
       icon: "repair",
