@@ -184,6 +184,7 @@ export const sidebarConfig = sidebar({
         "trading-management",
         "compare",
         "xauusd",
+        "news",
         "options"
       ]
     },
