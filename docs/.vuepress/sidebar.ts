@@ -220,5 +220,38 @@ export const sidebarConfig = sidebar({
         "ali-ac",
       ]
     },
+    {
+      prefix: "right/",
+      text: "随风交易系统",
+      icon: "tool",
+      collapsible: true,
+      children: [
+        {
+          text: "前言",
+          icon: "foreword",
+          prefix: "/",
+          collapsible: true,
+          children: [
+          ],
+        },
+        {
+          text: "结构",
+          icon: "note",
+          prefix: "instruction/",
+          collapsible: true,
+          children: [
+            "trend-segmentation-and-reversal-definition.md",
+          ],
+        },
+        {
+          text: "进阶",
+          icon: "note",
+          prefix: "advanced/",
+          collapsible: true,
+          children: [
+          ],
+        }
+      ]
+    },
   ]
 });
