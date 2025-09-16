@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { Layout } from "vuepress-theme-hope/client";
+import { onMounted } from "vue";
+
+// 移动端点击展开二维码
+onMounted(() => {
+  const btns = document.querySelectorAll(".reward-btn");
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btns.forEach((b) => b.classList.remove("active"));
+      btn.classList.toggle("active");
+    });
+  });
+});
 </script>
 
 <template>
@@ -10,13 +22,79 @@ import { Layout } from "vuepress-theme-hope/client";
     </template>
     <!-- 在右侧目录的下方添加赞赏码 -->
     <template #tocAfter>
-      <div style="text-align: center; margin-top: 1em">
-        <img
-          src="/reward-code.png"
-          alt="赞赏码"
-          style="max-width: 350px; width: 400%; border-radius: 8px"
-        />
+      <div style="margin-top: 1em">
+        <div style="display: flex; gap: 10px">
+          <!-- 按钮：支持我 -->
+          <div class="reward-btn">
+            <button class="support-btn">❤️ 支持我</button>
+            <div class="reward-popup">
+              <img src="/reward-code.png" alt="赞赏码" />
+            </div>
+          </div>
+
+          <!-- 按钮：交流圈 -->
+          <div class="reward-btn">
+            <button class="support-btn">💬 交流圈</button>
+            <div class="reward-popup">
+              <img src="/wechat-code.png" alt="交流圈二维码" />
+            </div>
+          </div>
+        </div>
       </div>
     </template>
   </Layout>
 </template>
+
+<style scoped>
+.support-btn {
+  padding: 6px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background: white; /* 白底 */
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.support-btn:hover {
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+
+.reward-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.reward-popup {
+  position: absolute;
+  bottom: 110%; /* 出现在按钮上方 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+.reward-popup img {
+  max-width: 320px; /* 扫码合适大小 */
+  border-radius: 6px;
+}
+
+/* PC: 鼠标悬停出现二维码 */
+.reward-btn:hover .reward-popup {
+  display: block;
+}
+
+/* Mobile: 点击按钮出现二维码 */
+@media (hover: none) {
+  .reward-btn .reward-popup {
+    display: none;
+  }
+  .reward-btn.active .reward-popup {
+    display: block;
+  }
+}
+</style>
