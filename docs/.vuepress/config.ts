@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { hopeTheme } from "vuepress-theme-hope";
 
 
 export default defineUserConfig({
@@ -39,4 +40,11 @@ export default defineUserConfig({
   ],
 
   theme,
+
+  extendsPage: (page) => {
+    // 假设你要让 posts 目录下的所有 md 页面都用 LayoutSlotDemo
+    if (page.filePathRelative?.startsWith("trade/")) {
+      page.frontmatter.layout = "LayoutSlotDemo";
+    }
+  },
 });
