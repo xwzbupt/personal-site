@@ -250,7 +250,16 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           children: [
           ],
-        }
+        },
+        {
+          text: "补充",
+          icon: "note",
+          prefix: "complement/",
+          collapsible: true,
+          children: [
+            "yangcongliu"
+          ],
+        },
       ]
     },
   ]
