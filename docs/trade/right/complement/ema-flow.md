@@ -9,7 +9,13 @@
 均线流是竹祥发明的，引入了ema20-60共5根均线。我写了均线流+布林带的tradingview脚本，如附录所示，供大家使用。
 ## 2.均线流
 
+如下图所示，黄金从3311一路涨到了3650附近，在30分钟K线图的均线流来看，每一次回踩均线流都是可以买入的位置，不断浮盈加仓，在这种行情下可以创造出巨大的利润。
+
+![大行情30分钟均线流回踩入场](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920180446178.png)
+
 ## 3.均线流-改
+
+
 
 
 ## 4.均线流反转
@@ -19,11 +25,18 @@
 ![均线流反转](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920134900181.png)
 
 ### 4.2.技术细节
-在大幅反弹或下跌的时候均线流需要2次反转，如下图所示。
+#### 4.2.1 两次反转
 
-![均线流的两次反转](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920140723010.png)
+**案例一**：在大幅反弹或下跌的时候均线流需要2次反转，如下图所示。
+
+![均线流的两次反转案例一](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920140723010.png)
+
+**案例二**：大幅度的回调，均线流可能二次反转，也就是一次起不来。
+
+![均线流的两次反转案例一](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920181556777.png)
 
 ## 附录
+
 以下是均线流+布林带的tradingview脚本
 ```
 //@version=6
