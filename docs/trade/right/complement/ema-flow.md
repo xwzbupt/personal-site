@@ -73,7 +73,8 @@
 
 ## 附录
 
-以下是均线流+布林带的tradingview脚本
+::: details 均线流+布林带的tradingview脚本
+
 ```
 //@version=6
 indicator("多条EMA + 可选布林带", overlay=true)
@@ -120,3 +121,5 @@ bbLowerPlot = plot(showBB ? lower : na, title="布林带下轨", color=color.tea
 fill(bbUpperPlot, bbLowerPlot, color=showBB ? color.new(color.teal, 90) : na, title="布林带填充")
 
 ```
+
+:::
