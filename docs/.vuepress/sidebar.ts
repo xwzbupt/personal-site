@@ -270,6 +270,7 @@ export const sidebarConfig = sidebar({
       collapsible: true,
       children: [
         "basics",
+        "entry"
       ]
     },
   ]
