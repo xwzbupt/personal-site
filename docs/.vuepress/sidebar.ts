@@ -263,5 +263,14 @@ export const sidebarConfig = sidebar({
         },
       ]
     },
+    {
+      prefix: "ema-flow/",
+      text: "均线流",
+      icon: "tool",
+      collapsible: true,
+      children: [
+        "basics",
+      ]
+    },
   ]
 });

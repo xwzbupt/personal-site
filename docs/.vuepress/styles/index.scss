@@ -30,11 +30,20 @@ strong, b {
 }
 
 
-/* .vuepress/styles/index.scss */
+/* 容器宽度撑满屏幕或指定宽度 */
 .markmap {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  min-height: 400px; /* 基础高度 */
-  display: flex;
-  justify-content: center;
+  width: 60vw !important;       /* 宽度可调 */
+  max-width: 100vw !important;
+  height: 80vh !important;      /* 高度可调 */
+  margin: 0 auto;
 }
+
+/* SVG 撑满容器 */
+.markmap > svg {
+  width: 200%;
+  height: 100%;
+}
+
+
+
+

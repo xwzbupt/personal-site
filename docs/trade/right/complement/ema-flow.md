@@ -69,7 +69,7 @@
 
 **案例二**：大幅度的回调，均线流可能二次反转，也就是一次起不来。
 
-![均线流的两次反转案例一](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920181556777.png)
+![均线流的两次反转案例二](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920181556777.png)
 
 ## 附录
 
