@@ -185,7 +185,8 @@ export const sidebarConfig = sidebar({
         "compare",
         "xauusd",
         "news",
-        "options"
+        "options",
+        "3pan",
       ]
     },
     {
