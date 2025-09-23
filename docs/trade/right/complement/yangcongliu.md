@@ -14,9 +14,12 @@
 
 只用布林带，价格收线得破位布林的中轨。然后回踩 0.5 开单 或者0.618 ，不需要等布林上轨。在下图中的红色圆圈入场，有8美金利润。
 
-![image-20250920012230458](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920012230458.png)
+![洋葱流技术介绍](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250920012230458.png)
 
 ## 案例一
+2025年9月24日，黄金强势上涨，任何回调都是做多的机会。傍晚打到5分钟布林下轨时，此时使用洋葱流入场，如下图所示。
+
+![洋葱流案例1](https://weiser-fun.oss-cn-beijing.aliyuncs.com/img/image-20250924004321672.png)
 
 ## 案例二
 

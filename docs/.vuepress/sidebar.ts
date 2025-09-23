@@ -229,10 +229,11 @@ export const sidebarConfig = sidebar({
       children: [
         {
           text: "前言",
-          icon: "foreword",
-          prefix: "/",
+          icon: "note",
+          prefix: "foreword/",
           collapsible: true,
           children: [
+            "first-lesson",
           ],
         },
         {
