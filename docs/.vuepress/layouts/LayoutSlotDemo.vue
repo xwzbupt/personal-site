@@ -6,12 +6,25 @@ import { onMounted } from "vue";
 onMounted(() => {
   const btns = document.querySelectorAll(".reward-btn");
   btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      // 如果按钮本身设置了跳转，就不要展开二维码
+      if ((e.target as HTMLElement).closest("button")?.dataset.link) {
+        return;
+      }
       btns.forEach((b) => b.classList.remove("active"));
       btn.classList.toggle("active");
     });
   });
 });
+
+// 点击跳转函数
+function goToArticle(path: string) {
+  // 当前页面跳转
+  window.open(path, "_blank");
+
+  // 如果要新标签页打开，请改成：
+  // window.open(path, "_blank");
+}
 </script>
 
 <template>
@@ -20,21 +33,28 @@ onMounted(() => {
     <template #tocBefore>
       <div>广告</div>
     </template>
+
     <!-- 在右侧目录的下方添加赞赏码 -->
     <template #tocAfter>
       <div style="margin-top: 1em">
         <div style="display: flex; gap: 10px">
-          <!-- 按钮：支持我 -->
+          <!-- 按钮：支持我（点击跳转 + 悬停二维码） -->
           <div class="reward-btn">
-            <button class="support-btn">❤️ 支持我</button>
+            <button
+              class="support-btn"
+              data-link="true"
+              @click="goToArticle('https://www.baidu.com')"
+            >
+              ❤️支持我
+            </button>
             <div class="reward-popup">
               <img src="/reward-code.png" alt="赞赏码" />
             </div>
           </div>
 
-          <!-- 按钮：交流圈 -->
+          <!-- 按钮：交流圈（仅二维码，不跳转） -->
           <div class="reward-btn">
-            <button class="support-btn">💬 交流圈</button>
+            <button class="support-btn">💬交流圈</button>
             <div class="reward-popup">
               <img src="/wechat-code.png" alt="交流圈二维码" />
             </div>
@@ -50,7 +70,7 @@ onMounted(() => {
   padding: 6px 12px;
   border: 1px solid #d9d9d9;
   border-radius: 6px;
-  background: white; /* 白底 */
+  background: white;
   color: #333;
   font-size: 14px;
   cursor: pointer;
@@ -68,7 +88,7 @@ onMounted(() => {
 
 .reward-popup {
   position: absolute;
-  bottom: 110%; /* 出现在按钮上方 */
+  bottom: 110%;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -79,7 +99,7 @@ onMounted(() => {
   z-index: 10;
 }
 .reward-popup img {
-  max-width: 320px; /* 扫码合适大小 */
+  max-width: 320px;
   border-radius: 6px;
 }
 

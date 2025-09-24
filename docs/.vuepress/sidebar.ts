@@ -234,6 +234,10 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           children: [
             "first-lesson",
+            "k",
+            "patterns",
+            "continuation-patterns",
+            "reversal-patterns"
           ],
         },
         {
