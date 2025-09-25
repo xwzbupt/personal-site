@@ -247,6 +247,10 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           children: [
             "trend-segmentation-and-reversal-definition",
+            "points-and-lines",
+            "level-and-cycle",
+            "reversal-and-keypoint",
+            "level-and-cycle-relationship"
           ],
         },
         {
