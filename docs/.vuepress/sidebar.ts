@@ -246,7 +246,7 @@ export const sidebarConfig = sidebar({
           prefix: "instruction/",
           collapsible: true,
           children: [
-            "trend-segmentation-and-reversal-definition.md",
+            "trend-segmentation-and-reversal-definition",
           ],
         },
         {
