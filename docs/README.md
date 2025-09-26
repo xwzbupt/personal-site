@@ -7,7 +7,7 @@ title: 博客主页
 heroText: Weiser的个站
 bgImage: /mountain.jpg
 heroFullScreen: true
-tagline: 一个有纸、笔、橡皮擦并且坚持严格的行为准则的人，实质上就是一台通用图灵机。
+tagline: 至臻之境，他得以在巅峰成就中品味凯旋；至暗时刻，他亦以孤勇之姿虽败犹荣。他的身影，永不湮没于怯懦者的苍白行列。
 projects:
   - icon: project
     name: pdai
