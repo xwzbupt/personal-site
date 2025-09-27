@@ -250,7 +250,9 @@ export const sidebarConfig = sidebar({
             "points-and-lines",
             "level-and-cycle",
             "reversal-and-keypoint",
-            "level-and-cycle-relationship"
+            "level-and-cycle-relationship",
+            "use-ema",
+            "fund-risk-management"
           ],
         },
         {
@@ -259,6 +261,17 @@ export const sidebarConfig = sidebar({
           prefix: "advanced/",
           collapsible: true,
           children: [
+            "points-and-lines-advanced1",
+            "points-and-lines-advanced2",
+            "points-and-lines-advanced3",
+            "points-and-lines-advanced4",
+            "signal",
+            "MACD-beili",
+            "bolang1",
+            "bolang2",
+            "stop-loss",
+            "take-profit",
+            "ema-stop-loss"
           ],
         },
         {
