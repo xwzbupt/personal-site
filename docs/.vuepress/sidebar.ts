@@ -271,7 +271,10 @@ export const sidebarConfig = sidebar({
             "bolang2",
             "stop-loss",
             "take-profit",
-            "ema-stop-loss"
+            "ema-stop-loss",
+            "ema-reserve",
+            "atr",
+            "last-lesson"
           ],
         },
         {
