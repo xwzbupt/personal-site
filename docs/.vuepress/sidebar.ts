@@ -284,7 +284,8 @@ export const sidebarConfig = sidebar({
           collapsible: true,
           children: [
             "ema-flow",
-            "yangcongliu"
+            "yangcongliu",
+            "cat-scalp-flow"
           ],
         },
       ]
