@@ -222,6 +222,30 @@ export const sidebarConfig = sidebar({
       ]
     },
     {
+      prefix: "trade-basics/",
+      text: "交易基础课程",
+      icon: "tool",
+      collapsible: true,
+      children: [
+        {
+          text: "初级",
+          icon: "note",
+          prefix: "elementary/",
+          collapsible: true,
+          children: [
+            "single-K",
+            "multi-K",
+            "maintain-instruction",
+            "maintain-instruction-enhance",
+            "reserve",
+            "relationship",
+            "qushi",
+            "dao"
+          ],
+        },
+      ]
+    },
+    {
       prefix: "right/",
       text: "随风交易系统",
       icon: "tool",
