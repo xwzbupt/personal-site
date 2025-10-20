@@ -56,7 +56,12 @@
 头肩顶底是最经典的反转形态，其核心结构由 “左肩、头、右肩” 与 “颈线位” 构成：
 
 - **头肩顶**：在上升趋势末端，价格先形成左肩（冲高回落），再突破左肩高点形成头（更高点后回落），随后再次冲高但未突破头部高点形成右肩（低于头部的高点后回落）；连接左肩与右肩的低点，形成颈线位，价格跌破颈线位并反抽不破，标志着头肩顶形态确立，后续大概率延续下跌趋势；
+
+  ![img](https://cdn.imixmatrix.com/market-opinions/2025/10/18/f96b7ef35d33dc0a84ab349519c9b69b.png)
+
 - **头肩底**：与头肩顶结构相反，在下降趋势末端，价格依次形成左肩（探底回升）、头（更低点后回升）、右肩（高于头部的低点后回升），连接左肩与右肩的高点形成颈线位，价格突破颈线位并回踩不破，标志着头肩底形态确立，后续大概率延续上涨趋势。
+
+![预览图片](https://cdn.imixmatrix.com/market-opinions/2025/10/18/3fb08f2af336bf8e19d771cb8b2dbb6c.png)
 
 头肩顶底形态存在多种变种，需注意两点：一是肩与头的数量可能并非单一，左肩或右肩可能由多个高点 / 低点构成，只要整体结构符合 “左肩 - 头 - 右肩” 的逻辑，即可认定为头肩形态；二是颈线位可能为直线或斜线，斜线颈线位不改变形态性质，仅需根据实际走势调整颈线绘制方式。
 
@@ -69,8 +74,23 @@
 双顶、双底与三重顶、三重底形态，可视为头肩顶底形态的简化变种，核心结构为 “多个高点 / 低点” 与 “颈线位”：
 
 - **双顶（M 头）**：上升趋势末端，价格两次冲高至相近高点后回落，形成两个顶部，连接两个顶部之间的低点形成颈线位，价格跌破颈线位即确立双顶形态，后续看跌；
+
+<div style="text-align: center;">
+  <img src="https://cdn.imixmatrix.com/market-opinions/2025/10/20/4b3a624be5a0beb77514eda8ef43211d.png" alt="img" style="zoom: 50%;" />
+</div>
+
 - **双底（W 底）**：下降趋势末端，价格两次探底至相近低点后回升，形成两个底部，连接两个底部之间的高点形成颈线位，价格突破颈线位即确立双底形态，后续看涨；
+
+<div style="text-align: center;">
+  <img src="https://cdn.imixmatrix.com/market-opinions/2025/10/20/1b500ddc8d2eaf42c0893cea2bdcc298.png" alt="img" style="zoom: 50%;" />
+</div>
+
 - **三重顶、三重底**：结构与双顶、双底类似，区别在于形成三个相近的高点或低点，形态的稳定性高于双顶、双底，因多空博弈更充分，趋势反转信号更可靠。
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="https://cdn.imixmatrix.com/market-opinions/2025/10/20/05c43ee55af5893d6df4b2af73d1ad9d.png" alt="img" style="width:40%;">
+  <img src="https://cdn.imixmatrix.com/market-opinions/2025/10/20/6a18d3f5235fad5fb4020075cc546a38.png" alt="img" style="width:40%;">
+</div>
 
 这类形态的目标位测算与头肩顶底一致，突破后的最小目标位等于 “顶部 / 底部到颈线位的垂直距离”。实战中，需注意顶部形态的形成速度通常快于底部形态，双顶、三重顶可能在短时间内完成，需快速响应；双底、三重底形成时间较长，需耐心等待颈线位突破与回踩确认。
 
@@ -87,6 +107,11 @@ V 型反转的形成，通常源于突发消息（如政策利好、利空）或
 ### （四）圆弧顶底形态
 
 圆弧顶底形态的核心特征是 “价格沿圆弧轨迹运行，无明显拐点”，圆弧顶表现为上升趋势中价格逐步冲高后缓慢回落，形成圆弧状顶部；圆弧底表现为下降趋势中价格逐步探底后缓慢回升，形成圆弧状底部。
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="https://cdn.imixmatrix.com/market-opinions/2025/10/18/37ec0dede30cfaecb713462f2baa7f80.png" alt="img" style="width:45%;">
+  <img src="https://cdn.imixmatrix.com/market-opinions/2025/10/18/2ee3d070fd9687c2ceaac22af3b3bab1.png" alt="img" style="width:45%;">
+</div>
 
 圆弧顶底形态的形成过程缓慢，多空力量的转换温和，无剧烈博弈，因此形态的稳定性较高，但形成概率较低。其目标位测算与其他反转形态一致，突破颈线位后的最小目标位等于 “圆弧底部 / 顶部到颈线位的垂直距离”，实际走势中可结合斐波那契扩展进一步修正目标。
 
