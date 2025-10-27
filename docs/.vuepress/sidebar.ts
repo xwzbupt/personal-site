@@ -243,6 +243,22 @@ export const sidebarConfig = sidebar({
             "dao"
           ],
         },
+        {
+          text: "中级",
+          icon: "note",
+          prefix: "intermediate/",
+          collapsible: true,
+          children: [
+            "big-yang-big-yin",
+            "mid-yang-mid-yin",
+            "multi-k",
+            "maintain",
+            "reserve",
+            "qushi-reserve",
+            "dao",
+            "identify-trends"
+          ],
+        },
       ]
     },
     {
