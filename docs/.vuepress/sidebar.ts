@@ -259,6 +259,19 @@ export const sidebarConfig = sidebar({
             "identify-trends"
           ],
         },
+        {
+          text: "高级",
+          icon: "note",
+          prefix: "advanced/",
+          collapsible: true,
+          children: [
+            "points-and-lines",
+            "trends-part",
+            "trends-stage",
+            "shunshi",
+            "money-management",
+          ],
+        },
       ]
     },
     {
