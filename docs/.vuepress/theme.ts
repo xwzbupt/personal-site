@@ -168,8 +168,8 @@ export default hopeTheme({
       "/about/cv": ["weiser-cv"],
       "/language/Java": ["weiser-java"],
       "/trade/basics/xauusd.html": ["xauusd"],
-      "/trade/right": ["weiser-heyuan"],
-      "/trade/trade-basics": ["weiser-heyuan"],
+      "/trade/right": ["weiser666"],
+      "/trade/trade-basics": ["weiser666"],
     },
   },
 
