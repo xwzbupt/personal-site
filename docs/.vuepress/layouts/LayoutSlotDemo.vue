@@ -30,9 +30,9 @@ function goToArticle(path: string) {
 <template>
   <Layout>
     <!-- 在右侧目录的上方添加广告 -->
-    <template #tocBefore>
+    <!-- <template #tocBefore>
       <div>广告</div>
-    </template>
+    </template> -->
 
     <!-- 在右侧目录的下方添加赞赏码 -->
     <template #tocAfter>
