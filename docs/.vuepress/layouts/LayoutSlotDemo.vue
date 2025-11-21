@@ -43,7 +43,7 @@ function goToArticle(path: string) {
             <button
               class="support-btn"
               data-link="true"
-              @click="goToArticle('https://www.baidu.com')"
+              @click="goToArticle('https://weiser.fun/others/refund.html')"
             >
               ❤️支持我
             </button>
