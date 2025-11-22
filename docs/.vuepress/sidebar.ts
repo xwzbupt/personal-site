@@ -209,6 +209,7 @@ export const sidebarConfig = sidebar({
       children: [
         "learning-path",
         "K",
+        "key-position",
         "bull-bear-power"
       ]
     },
