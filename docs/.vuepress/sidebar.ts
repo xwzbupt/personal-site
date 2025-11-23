@@ -210,7 +210,19 @@ export const sidebarConfig = sidebar({
         "learning-path",
         "K",
         "key-position",
-        "bull-bear-power"
+        "bull-bear-power",
+        {
+          text: "突破交易",
+          icon: "note",
+          prefix: "breakout/",
+          collapsible: true,
+          children: [
+            "fake-breakout",
+            "real-breakout",
+            "2nd-leg-trap",
+            "breakout-test",
+          ],
+        },
       ]
     },
     {
