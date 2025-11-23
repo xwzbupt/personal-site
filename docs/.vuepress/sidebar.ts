@@ -179,7 +179,8 @@ export const sidebarConfig = sidebar({
       icon: "repair",
       collapsible: true,
       children: [
-        "shinianyimeng",
+        // "shinianyimeng",
+        "cheat",
         "trading-mindset",
         "trading-management",
         "compare",
