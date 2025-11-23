@@ -223,6 +223,15 @@ export const sidebarConfig = sidebar({
             "breakout-test",
           ],
         },
+        {
+          text: "缺口",
+          icon: "note",
+          prefix: "gap/",
+          collapsible: true,
+          children: [
+            "gap-basic",
+          ],
+        },
       ]
     },
     {
