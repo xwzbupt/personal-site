@@ -30,7 +30,7 @@ projects:
     link: /funny/qinglong
 
   - icon: friend
-    name: 陈俊达
+    name: 我的朋友：陈俊达
     desc: 北大硕士，就职于微软
     link: https://ddadaal.me/
 
