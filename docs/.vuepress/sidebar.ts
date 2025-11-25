@@ -188,6 +188,7 @@ export const sidebarConfig = sidebar({
         "news",
         "options",
         "3pan",
+        "trick"
       ]
     },
     {
