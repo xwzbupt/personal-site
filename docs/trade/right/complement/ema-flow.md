@@ -77,9 +77,10 @@
 
 ```
 //@version=6
-indicator("多条EMA + 可选布林带", overlay=true)
+indicator("均线流 + 布林带 + ATR Range", overlay=true)
 
-// === EMA 设置 ===
+// === 【均线流设置】 ===
+only20and50 = input.bool(false, "只显示EMA20和EMA50")
 showAllEMAs = input.bool(true, "显示所有EMA")
 
 len1 = input.int(20, "EMA1 长度", minval=1)
@@ -94,32 +95,114 @@ ema3 = ta.ema(close, len3)
 ema4 = ta.ema(close, len4)
 ema5 = ta.ema(close, len5)
 
-plot(showAllEMAs ? ema1 : na, title="EMA1", color=color.red, linewidth=1)
-plot(showAllEMAs ? ema2 : na, title="EMA2", color=color.orange, linewidth=1)
-plot(showAllEMAs ? ema3 : na, title="EMA3", color=color.blue, linewidth=1)
-plot(showAllEMAs ? ema4 : na, title="EMA4", color=color.green, linewidth=1)
-plot(showAllEMAs ? ema5 : na, title="EMA5", color=color.purple, linewidth=1)
+show_ema1 = only20and50 or showAllEMAs
+show_ema2 = showAllEMAs and not only20and50
+show_ema3 = showAllEMAs and not only20and50
+show_ema4 = only20and50 or showAllEMAs
+show_ema5 = showAllEMAs and not only20and50
 
-// === 布林带设置 ===
-showBB = input.bool(true, "显示布林带")
-bbLength = input.int(20, "布林带长度", minval=1)
-bbMult   = input.float(2.0, "布林带倍数", minval=0.1, step=0.1)
-bbSource = input.string("SMA", "布林带基准", options=["SMA", "EMA"])
+plot(show_ema1 ? ema1 : na, title="EMA20", color=color.red, linewidth=1)
+plot(show_ema2 ? ema2 : na, title="EMA30", color=color.orange, linewidth=1)
+plot(show_ema3 ? ema3 : na, title="EMA40", color=color.blue, linewidth=1)
+plot(show_ema4 ? ema4 : na, title="EMA50", color=color.green, linewidth=1)
+plot(show_ema5 ? ema5 : na, title="EMA60", color=color.purple, linewidth=1)
 
-// 布林带基准线
+// === 【布林带设置】 ===
+showBB     = input.bool(true, "显示布林带")
+bbLength   = input.int(20, "布林带长度", minval=1)
+bbMult     = input.float(2.0, "布林带倍数", minval=0.1, step=0.1)
+bbSource   = input.string("SMA", "布林带基准", options=["SMA", "EMA"])
+
 basis = bbSource == "EMA" ? ta.ema(close, bbLength) : ta.sma(close, bbLength)
 dev   = bbMult * ta.stdev(close, bbLength)
 upper = basis + dev
 lower = basis - dev
 
-// 绘制布林带
-bbBasisPlot = plot(showBB ? basis : na, title="布林带中轨", color=color.yellow, linewidth=1)
-bbUpperPlot = plot(showBB ? upper : na, title="布林带上轨", color=color.teal, linewidth=1)
-bbLowerPlot = plot(showBB ? lower : na, title="布林带下轨", color=color.teal, linewidth=1)
+// === 布林带三轨（统一黑色） ===
+bbBasisPlot = plot(showBB and not only20and50 ? basis : na, title="布林带中轨", color=color.black, linewidth=2)
+bbUpperPlot = plot(showBB and not only20and50 ? upper : na, title="布林带上轨", color=color.black, linewidth=2)
+bbLowerPlot = plot(showBB and not only20and50 ? lower : na, title="布林带下轨", color=color.black, linewidth=2)
 
-// 填充布林带背景
-fill(bbUpperPlot, bbLowerPlot, color=showBB ? color.new(color.teal, 90) : na, title="布林带填充")
+fill(bbUpperPlot, bbLowerPlot, color=(showBB and not only20and50) ? color.new(color.teal, 90) : na, title="布林带填充")
 
+// === 【ATR Range 设置】 ===
+atrLength = input.int(14, "ATR Length", group="ATR Settings")
+atrSmoothing = input.string("EMA", "Smoothing", options=["RMA", "SMA", "EMA", "WMA"], group="ATR Settings")
+
+ma_function(source, length) =>
+    switch atrSmoothing
+        "RMA" => ta.rma(source, length)
+        "SMA" => ta.sma(source, length)
+        "EMA" => ta.ema(source, length)
+        => ta.wma(source, length)
+
+atrValue = ma_function(ta.tr(true), atrLength)
+
+// 颜色和表格设置
+dash_loc    = input.string("Top Right", "Dashboard Location", options=["Top Right", "Bottom Right", "Top Left", "Bottom Left", "Middle Right", "Bottom Center"], group="Table Settings")
+text_size   = input.string("Normal", "Dashboard Size", options=["Tiny", "Small", "Normal", "Large"], group="Table Settings")
+cell_transp = input.int(10, "Cell Transparency", minval=0, maxval=100, group="Table Settings")
+col_H       = input.color(color.black, "Header", group="Table Settings")
+Col_txt     = input.color(color.white, "Text", group="Table Settings")
+
+col_P100 = color.new(color.red, 0)
+col_M100 = color.new(color.green, 0)
+
+// 显示开关
+showHTF = input.bool(true, "显示日线关键位")
+showTFD = input.bool(true, "显示表格数据")
+
+// === 【ATR 计算 - 日线】 ===
+atrD = request.security(syminfo.tickerid, "D", atrValue)[0]
+OD   = request.security(syminfo.tickerid, "D", open, lookahead=barmerge.lookahead_on)
+HD   = request.security(syminfo.tickerid, "D", high)
+LD   = request.security(syminfo.tickerid, "D", low)
+
+DP100 = atrD + LD
+DM100 = HD - atrD
+
+dailyEndTime = time_close("D")
+
+// === 【绘制日线关键线】 ===
+if showHTF
+    var line ODLine = line.new(na, na, na, na, xloc = xloc.bar_time, style = line.style_dashed, width = 2, color = color.blue)
+    if ta.change(time("D")) != 0
+        line.set_xy1(ODLine, time, OD)
+        line.set_xy2(ODLine, dailyEndTime, OD)
+
+if barstate.islast and showHTF
+    var line DP100Line = line.new(na, na, na, na, xloc=xloc.bar_time, style=line.style_solid, width=2, color=col_P100)
+    var line DM100Line = line.new(na, na, na, na, xloc=xloc.bar_time, style=line.style_solid, width=2, color=col_M100)
+    line.set_xy1(DP100Line, time, DP100)
+    line.set_xy2(DP100Line, dailyEndTime, DP100)
+    line.set_xy1(DM100Line, time, DM100)
+    line.set_xy2(DM100Line, dailyEndTime, DM100)
+
+// === 【表格显示】 ===
+var table_position = dash_loc == "Top Left" ? position.top_left :
+     dash_loc == "Bottom Left" ? position.bottom_left :
+     dash_loc == "Middle Right" ? position.middle_right :
+     dash_loc == "Bottom Center" ? position.bottom_center :
+     dash_loc == "Top Right" ? position.top_right : position.middle_right
+
+var table_text_size = text_size == "Tiny" ? size.tiny :
+     text_size == "Small" ? size.small :
+     text_size == "Normal" ? size.normal : size.large
+
+var t = table.new(table_position, 2, 8, frame_color = color.new(#000000, 0), frame_width = 1, border_color = color.new(#000000, 0), border_width = 1)
+
+if barstate.islast and showTFD
+    table.cell(t, 0, 0, "Open",  text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_H, cell_transp))
+    table.cell(t, 0, 1, "ATR-F", text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_H, cell_transp))
+    table.cell(t, 0, 2, "ATR-T", text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_H, cell_transp))
+    table.cell(t, 0, 5, "L+ATR", text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_H, cell_transp))
+    table.cell(t, 0, 6, "H-ATR", text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_H, cell_transp))
+
+    table.cell(t, 1, 0, str.tostring(OD, "#.##"), text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(color.blue, cell_transp))
+    table.cell(t, 1, 1, str.tostring(atrD, "#.#"), text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_H, cell_transp))
+    table.cell(t, 1, 2, str.tostring(HD - LD, "#.##"), text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(color.purple, cell_transp))
+    table.cell(t, 1, 5, str.tostring(DP100, "#"), text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_P100, cell_transp))
+    table.cell(t, 1, 6, str.tostring(DM100, "#"), text_color=Col_txt, text_size=table_text_size, bgcolor=color.new(col_M100, cell_transp))
 ```
 
 :::
