@@ -3,7 +3,7 @@ import { navbarConfig } from "./navbar";
 import { sidebarConfig } from "./sidebar";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
+  hostname: "https://weiser.fun",
 
   author: {
     name: "Weiser",
@@ -23,11 +23,14 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebarConfig,
 
-  footer: "默认页脚",
+  footer: "Weiser 的个人网站 · 记录学习、技术与思考",
+
+  copyright: "Copyright © 2022-present Weiser",
 
   displayFooter: true,
 
-  darkmode: "switch",
+  // 仅在明暗两态间切换，避免 auto 与 light 视觉相同时首次点击无变化。
+  darkmode: "toggle",
 
   markdown: {
     alert: true,
@@ -45,20 +48,8 @@ export default hopeTheme({
     preview: true,
     revealjs: {
       plugins: ["highlight", "math", "search", "notes", "zoom"],
-      themes: [
-        "auto",
-        "beige",
-        "black",
-        "blood",
-        "league",
-        "moon",
-        "night",
-        "serif",
-        "simple",
-        "sky",
-        "solarized",
-        "white",
-      ],
+      // slide.md 使用默认 auto 主题，不打包未使用的额外主题与字体。
+      themes: ["auto"],
     },
     spoiler: true,
     stylize: [
@@ -109,24 +100,15 @@ export default hopeTheme({
       },
     },
 
-    chartjs: true,
-    demo: true,
     echarts: true,
     // 仅允许受控文章中的 ECharts JavaScript 配置执行。
     DANGEROUS_ALLOW_SCRIPT_EXECUTION: true,
     DANGEROUS_SCRIPT_EXECUTION_ALLOWLIST: [
       "trade/price_action/learning-path.md",
     ],
-    flowchart: true,
-    kotlinPlayground: true,
     markmap: true,
     mermaid: true,
     plantuml: true,
-    playground: {
-      presets: ["ts", "vue", "unocss"],
-    },
-    sandpack: true,
-    vuePlayground: true,
   },
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word"],

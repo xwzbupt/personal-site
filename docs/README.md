@@ -1,11 +1,12 @@
 ---
 home: true
-layout: Blog
+layout: BlogWithUptime
 icon: home
 title: 博客主页
+siteStartTime: "2022-05-02T09:18:36+08:00"
 # heroImage: /640.png
 heroText: Weiser的个人网站
-bgImage: /mountain.jpg
+bgImage: /mountain.webp
 heroFullScreen: true
 tagline: 至臻之境，他得以在巅峰成就中品味凯旋；至暗时刻，他亦以孤勇之姿虽败犹荣。他的身影，永不湮没于怯懦者的苍白行列。
 projects:
@@ -19,11 +20,6 @@ projects:
     desc: 计算机基础知识扫盲
     link: https://javaguide.cn
 
-  - icon: book
-    name: 书籍名称
-    desc: 书籍详细描述
-    link: https://你的书籍链接
-
   - icon: article
     name: qinglong
     desc: 定时任务面板
@@ -34,27 +30,16 @@ projects:
     desc: 北大硕士，就职于微软
     link: https://ddadaal.me/
 
-  - icon: /logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
-    link: https://你的自定义链接
-
-footer: <div align="left">
-          <a href="https://beian.miit.gov.cn">
-          京ICP备2022016439号
-          </a>
-        </div>
-
-copyright: <div align="left"> 
-              <a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral">由
-                <img src='/又拍云logo.png' alt="又拍云" style="zoom:8%;" padding-top:10px />
-                提供CDN服务
-              </a>
-              </br>
-              </br>
-              友情链接：</br>
-                &nbsp;&nbsp;&nbsp; <a href="https://128bit.top"> Dixeran </a> </br>
-                &nbsp;&nbsp;&nbsp; <a href="https://ddadaal.me"> ddadaal </a> </br>
-            </div>              
+footer: >-
+  <div class="home-footer">
+    <div class="home-footer__friends">
+      <span class="home-footer__label">友情链接</span>
+      <a href="https://128bit.top" target="_blank" rel="noopener noreferrer">Dixeran</a>
+      <span class="home-footer__divider" aria-hidden="true">·</span>
+      <a href="https://ddadaal.me" target="_blank" rel="noopener noreferrer">ddadaal</a>
+    </div>
+    <a class="home-footer__record" href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">京ICP备2022016439号</a>
+  </div>
+copyright: false
 ---
 

@@ -82,23 +82,6 @@ export const navbarConfig = navbar([
     ],
   },
   {
-    text: "面向招聘",
-    icon: "strong",
-    prefix: "/recruitment/",
-    children: [
-      {
-        text: "校招",
-        icon: "group",
-        link: "campus/tipsFromBYRForum"
-      },
-      {
-        text: "社招",
-        icon: "mysql",
-        link: "/",
-      }
-    ],
-  },
-  {
     text: "交易",
     icon: "money",
     prefix: "/trade/",

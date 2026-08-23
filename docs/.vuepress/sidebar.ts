@@ -377,5 +377,28 @@ export const sidebarConfig = sidebar({
         "entry"
       ]
     },
-  ]
+  ],
+  // 为未手工编排的内容目录生成当前分区导航，避免整站目录过大。
+  "/about/": "structure",
+  "/bigdata/": "structure",
+  "/funny/": "structure",
+  "/general/": "structure",
+  "/others/": "structure",
+  "/tools/": "structure",
+  "/project/": "structure",
+  "/language/Java/basics/code/": "structure",
+  "/language/Java/basics/exception/": "structure",
+  "/language/Java/basics/container/": "structure",
+  "/language/Java/basics/generic/": "structure",
+  "/language/Java/basics/io/": "structure",
+  "/language/Java/basics/grammar/": "structure",
+  "/language/Java/JVM/compile/": "structure",
+  "/language/Java/multithreading/basic/": "structure",
+  "/language/Java/multithreading/current-container/": "structure",
+  "/language/Java/multithreading/lockless/": "structure",
+  "/language/Java/multithreading/lock/": "structure",
+  "/language/Java/multithreading/sync-tool/": "structure",
+  "/language/Java/multithreading/thread-manage/": "structure",
+  // 首页、分类、标签等聚合页不需要侧边栏；根规则同时作为显式兜底。
+  "/": false,
 });
