@@ -4,27 +4,40 @@ on:
   # 每当 push 到 main 分支时触发部署
   push:
     branches: [main]
+  # 在合并前验证升级后的依赖和构建结果，但不部署
+  pull_request:
+    branches: [main]
   # 手动触发部署
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   docs:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: 设置 pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: 设置 Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           # 选择要使用的 node 版本
-          node-version: 20
+          node-version: 22.18.0
           # 缓存 pnpm 依赖
           cache: pnpm
 
@@ -33,12 +46,22 @@ jobs:
 
       # 运行构建脚本
       - name: 构建 VuePress 站点
-        run: pnpm docs:build
+        shell: bash
+        run: |
+          set -o pipefail
+          pnpm docs:build 2>&1 | tee vuepress-build.log
+          if grep -E "Cannot resolve layout|Error: \[vuepress\]" vuepress-build.log; then
+            echo "VuePress 构建日志中发现页面渲染错误"
+            exit 1
+          fi
+          test -s docs/.vuepress/dist/index.html
+          test -s docs/.vuepress/dist/slide.html
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: 部署到 GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
+        if: github.event_name != 'pull_request'
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages

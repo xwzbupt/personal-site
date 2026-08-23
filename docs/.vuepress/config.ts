@@ -1,8 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
 import { viteBundler } from "@vuepress/bundler-vite";
-import { hopeTheme } from "vuepress-theme-hope";
-
 
 export default defineUserConfig({
   lang: "zh-CN",

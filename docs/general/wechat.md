@@ -1,5 +1,5 @@
 ---
-index: 3
+index: true
 title: 通过微信联系我
 icon: wechat
 

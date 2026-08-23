@@ -112,6 +112,11 @@ export default hopeTheme({
     chartjs: true,
     demo: true,
     echarts: true,
+    // 仅允许受控文章中的 ECharts JavaScript 配置执行。
+    DANGEROUS_ALLOW_SCRIPT_EXECUTION: true,
+    DANGEROUS_SCRIPT_EXECUTION_ALLOWLIST: [
+      "trade/price_action/learning-path.md",
+    ],
     flowchart: true,
     kotlinPlayground: true,
     markmap: true,
