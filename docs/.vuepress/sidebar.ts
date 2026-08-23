@@ -1,9 +1,9 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const sidebarConfig = sidebar({
-  "/basics/": [
+  "/basics/algorithm/": [
     {
-      prefix: "algorithm/",
+      prefix: "",
       text: "算法",
       icon: "creative",
       collapsible: true,
@@ -27,8 +27,10 @@ export const sidebarConfig = sidebar({
         "17.笔试题"
       ],
     },
+  ],
+  "/basics/MySQL/": [
     {
-      prefix: "MySQL/",
+      prefix: "",
       text: "MySQL",
       icon: "mysql",
       collapsible: true,
@@ -78,8 +80,10 @@ export const sidebarConfig = sidebar({
         },
       ],
     },
+  ],
+  "/basics/OOP/": [
     {
-      prefix: "OOP",
+      prefix: "",
       text: "面向对象",
       icon: "repair",
       collapsible: true,
@@ -94,9 +98,10 @@ export const sidebarConfig = sidebar({
         "实战二：接口鉴权",
       ],
     },
-
+  ],
+  "/basics/design-principles/": [
     {
-      prefix: "design-principles",
+      prefix: "",
       text: "设计原则和思想",
       icon: "repair",
       collapsible: true,
@@ -113,8 +118,10 @@ export const sidebarConfig = sidebar({
         "实战二",
       ],
     },
+  ],
+  "/basics/design-patterns/": [
     {
-      prefix: "design-patterns",
+      prefix: "",
       text: "设计模式",
       icon: "repair",
       collapsible: true,
@@ -172,6 +179,7 @@ export const sidebarConfig = sidebar({
       ],
     },
   ],
+  "/basics/distribute/": "structure",
   "/trade/": [
     {
       prefix: "basics/",
@@ -234,15 +242,6 @@ export const sidebarConfig = sidebar({
             "gap-basic",
           ],
         },
-      ]
-    },
-    {
-      prefix: "tools/",
-      text: "交易工具",
-      icon: "tool",
-      collapsible: true,
-      children: [
-        "ali-ac",
       ]
     },
     {
@@ -385,20 +384,141 @@ export const sidebarConfig = sidebar({
   "/general/": "structure",
   "/others/": "structure",
   "/tools/": "structure",
-  "/project/": "structure",
-  "/language/Java/basics/code/": "structure",
-  "/language/Java/basics/exception/": "structure",
-  "/language/Java/basics/container/": "structure",
-  "/language/Java/basics/generic/": "structure",
-  "/language/Java/basics/io/": "structure",
-  "/language/Java/basics/grammar/": "structure",
-  "/language/Java/JVM/compile/": "structure",
-  "/language/Java/multithreading/basic/": "structure",
-  "/language/Java/multithreading/current-container/": "structure",
-  "/language/Java/multithreading/lockless/": "structure",
-  "/language/Java/multithreading/lock/": "structure",
-  "/language/Java/multithreading/sync-tool/": "structure",
-  "/language/Java/multithreading/thread-manage/": "structure",
+  "/project/": false,
+  "/language/Java/": [
+    "",
+    {
+      text: "Java 基础",
+      prefix: "basics/",
+      collapsible: true,
+      children: [
+        {
+          text: "基本语法",
+          prefix: "grammar/",
+          collapsible: true,
+          children: [
+            "1.program",
+            "2.基础语法",
+            "3.引用",
+            "4.基本类型",
+            "5.bit",
+            "6.float",
+            "7.character",
+            "8.String",
+            "9.class",
+            "10.keyWords",
+          ],
+        },
+        {
+          text: "容器",
+          prefix: "container/",
+          collapsible: true,
+          children: [
+            "11.container",
+            "12.tool",
+            "13.HashMap1",
+            "15.LinkedHashMap",
+            "16.Iterator",
+          ],
+        },
+        {
+          text: "异常",
+          prefix: "exception/",
+          collapsible: true,
+          children: ["17.exception", "18.exception"],
+        },
+        {
+          text: "文件与 I/O",
+          prefix: "io/",
+          collapsible: true,
+          children: ["19.io", "20.nio", "21.高速io", "22.高速io"],
+        },
+        {
+          text: "泛型",
+          prefix: "generic/",
+          collapsible: true,
+          children: ["23.generic"],
+        },
+        {
+          text: "动态编程与函数式编程",
+          prefix: "code/",
+          collapsible: true,
+          children: [
+            "24.reflection",
+            "25.annotation",
+            "26.dynamic-proxy",
+            "27.lamda",
+          ],
+        },
+      ],
+    },
+    {
+      text: "JVM",
+      prefix: "JVM/",
+      collapsible: true,
+      children: [
+        {
+          text: "编译执行",
+          prefix: "compile/",
+          collapsible: true,
+          children: ["summary", "JIT"],
+        },
+      ],
+    },
+    {
+      text: "多线程",
+      prefix: "multithreading/",
+      collapsible: true,
+      children: [
+        {
+          text: "基础理论",
+          prefix: "basic/",
+          collapsible: true,
+          children: ["thread", "JMM", "thread-safe"],
+        },
+        {
+          text: "互斥锁",
+          prefix: "lock/",
+          collapsible: true,
+          children: ["Synchronized", "lock", "deadlock"],
+        },
+        {
+          text: "无锁与原子类",
+          prefix: "lockless/",
+          collapsible: true,
+          children: ["CAS", "Atomic", "LongAdder", "ThreadLocal"],
+        },
+        {
+          text: "同步工具",
+          prefix: "sync-tool/",
+          collapsible: true,
+          children: ["conditionalVariable", "Semaphore", "Latch-Barrier"],
+        },
+        {
+          text: "并发容器",
+          prefix: "current-container/",
+          collapsible: true,
+          children: [
+            "currentContainer",
+            "block-wait",
+            "ConcurrentHashMap",
+            "CopyOnWrite",
+          ],
+        },
+        {
+          text: "线程管理",
+          prefix: "thread-manage/",
+          collapsible: true,
+          children: [
+            "thread-state",
+            "threadpool",
+            "thread-interrupt",
+            "executor",
+          ],
+        },
+      ],
+    },
+  ],
   // 首页、分类、标签等聚合页不需要侧边栏；根规则同时作为显式兜底。
   "/": false,
 });

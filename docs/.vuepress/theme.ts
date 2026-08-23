@@ -48,7 +48,7 @@ export default hopeTheme({
     preview: true,
     revealjs: {
       plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // slide.md 使用默认 auto 主题，不打包未使用的额外主题与字体。
+      // 使用 VuePress Theme Hope 内置方式注册 Reveal.js，支持文章内交互演示。
       themes: ["auto"],
     },
     spoiler: true,
@@ -153,7 +153,6 @@ export default hopeTheme({
     config: {
       "/guide/encrypt.html": ["1234"],
       "/about/cv": ["weiser-cv"],
-      "/language/Java": ["weiser-java"],
       "/trade/basics/xauusd.html": ["xauusd"],
       "/trade/right": ["weiser666"],
       "/trade/trade-basics": ["weiser666"],

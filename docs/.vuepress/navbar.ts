@@ -14,6 +14,11 @@ export const navbarConfig = navbar([
         link: "algorithm/"
       },
       {
+        text: "Java",
+        icon: "java",
+        link: "/language/Java/",
+      },
+      {
         text: "MySQL数据库",
         icon: "mysql",
         link: "MySQL/",
@@ -41,18 +46,6 @@ export const navbarConfig = navbar([
     ],
   },
   {
-    text: "语言",
-    icon: "language",
-    prefix: "/language/",
-    children: [
-      {
-        text: "Java",
-        icon: "java",
-        link: "Java/"
-      },
-    ],
-  },
-  {
     text: "工具",
     icon: "tool",
     prefix: "/tools/",
@@ -70,18 +63,6 @@ export const navbarConfig = navbar([
     ],
   },
   {
-    text: "项目",
-    icon: "strong",
-    prefix: "/project/",
-    children: [
-      {
-        text: "lottery抽奖系统",
-        icon: "group",
-        link: "lottery/lottery-design-patterns"
-      },
-    ],
-  },
-  {
     text: "交易",
     icon: "money",
     prefix: "/trade/",
@@ -89,7 +70,32 @@ export const navbarConfig = navbar([
       {
         text: "交易基础",
         icon: "group",
-        link: ""
+        link: "basics/cheat",
+      },
+      {
+        text: "技术指标",
+        icon: "chart",
+        link: "tech/MACD",
+      },
+      {
+        text: "价格行为",
+        icon: "trend",
+        link: "price_action/learning-path",
+      },
+      {
+        text: "交易基础课程",
+        icon: "book",
+        link: "trade-basics/elementary/single-K",
+      },
+      {
+        text: "随风交易系统",
+        icon: "wind",
+        link: "right/foreword/first-lesson",
+      },
+      {
+        text: "均线流",
+        icon: "chart",
+        link: "ema-flow/basics",
       },
     ],
   },
