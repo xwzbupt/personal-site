@@ -44,43 +44,73 @@ strong, b {
 
 /* 首页页脚 */
 .home-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem 1.4rem;
-}
-
-.home-footer__friends {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.home-footer__label {
+  width: min(1160px, calc(100vw - 4rem));
   color: var(--vp-c-text-mute);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  text-align: left;
 }
 
-.home-footer__divider {
-  color: var(--vp-c-text-subtle);
+.home-footer__grid {
+  display: grid;
+  grid-template-columns: minmax(15rem, 1.6fr) repeat(3, minmax(8rem, 1fr));
+  gap: 2rem 3rem;
+  padding: 1.2rem 0 1.5rem;
+}
+
+.home-footer__section h2 {
+  margin: 0 0 0.8rem;
+  color: var(--vp-c-text);
+  font-size: 0.96rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.home-footer__section p {
+  margin: 0.32rem 0;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.home-footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.38rem;
+}
+
+.home-footer__contact {
+  flex-direction: row;
+  gap: 0.9rem;
+  margin-top: 0.8rem;
 }
 
 .home-footer a {
   color: var(--vp-c-accent);
   text-decoration: none;
-  transition: color 0.25s ease, text-shadow 0.25s ease;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s var(--weiser-motion-ease);
 }
 
 .home-footer a:hover {
   color: var(--vp-c-accent-hover);
   text-shadow: 0 0 12px color-mix(in srgb, var(--vp-c-accent) 45%, transparent);
+  transform: translateX(3px);
 }
 
-.home-footer__record {
-  padding-left: 1.4rem;
-  border-left: 1px solid var(--vp-c-border);
+.home-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vp-c-border);
+  font-size: 0.8rem;
+}
+
+/* 博客主页只保留导航、首屏封面和页脚，不显示文章概览与侧栏。 */
+.vp-blog-home > .blog-page-wrapper {
+  display: none;
 }
 
 /* 全站动效：保持克制的同时强化层次、反馈和首屏氛围。 */
@@ -95,11 +125,54 @@ body {
 
 .vp-navbar {
   backdrop-filter: saturate(140%) blur(14px);
-  transition: box-shadow 0.35s ease, background-color 0.45s ease;
+  transition:
+    box-shadow 0.35s ease,
+    background-color 0.45s ease,
+    backdrop-filter 0.45s ease;
 }
 
 .vp-navbar:hover {
   box-shadow: 0 8px 30px rgb(15 48 38 / 10%);
+}
+
+/* 首页首屏由封面延伸至导航栏，滚动后再恢复主题导航背景。 */
+html.weiser-blog-home .vp-page.vp-blog-home {
+  padding-top: 0;
+}
+
+html.weiser-blog-home .vp-blog-hero.hero-fullscreen {
+  height: 100vh;
+  min-height: 34rem;
+}
+
+html.weiser-blog-home:not(.weiser-home-scrolled) .vp-navbar {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+html.weiser-blog-home:not(.weiser-home-scrolled)
+  .vp-navbar:not(:has(.vp-toggle-navbar-button.is-active))
+  :is(
+    .vp-site-name,
+    .vp-nav-links > .vp-nav-item > .auto-link,
+    .vp-nav-links > .vp-nav-item > .vp-dropdown-wrapper > .vp-dropdown-title,
+    .vp-navbar-end > .vp-nav-item > button
+  ) {
+  color: #fff;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 58%);
+}
+
+html.weiser-blog-home:not(.weiser-home-scrolled)
+  .vp-navbar:not(:has(.vp-toggle-navbar-button.is-active))
+  .vp-nav-links > .vp-nav-item > .route-link-active {
+  color: #fff;
+}
+
+html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
+  background: color-mix(in srgb, var(--navbar-c-bg) 94%, transparent);
+  box-shadow: 0 8px 30px rgb(15 48 38 / 12%);
+  backdrop-filter: saturate(145%) blur(14px);
 }
 
 .vp-blog-hero {
@@ -374,21 +447,37 @@ a.hero-background-credit:hover {
 }
 
 @media (max-width: 719px) {
-  .home-footer,
-  .home-footer__friends {
-    flex-direction: column;
+  .home-footer {
+    width: min(100%, calc(100vw - 2.5rem));
   }
 
-  .home-footer__record {
-    padding-top: 0.6rem;
-    padding-left: 0;
-    border-top: 1px solid var(--vp-c-border);
-    border-left: 0;
+  .home-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.7rem 1.4rem;
+  }
+
+  .home-footer__about {
+    grid-column: 1 / -1;
+  }
+
+  .home-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .vp-project-card:hover,
   .vp-article-item:hover {
     transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 419px) {
+  .home-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-footer__about {
+    grid-column: auto;
   }
 }
 

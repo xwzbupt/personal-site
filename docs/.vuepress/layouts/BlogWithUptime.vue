@@ -23,6 +23,13 @@ const isChangingBackground = ref(false);
 let rotationTimer: ReturnType<typeof setInterval> | undefined;
 let requestController: AbortController | undefined;
 
+const updateHomeNavbar = (): void => {
+  document.documentElement.classList.toggle(
+    "weiser-home-scrolled",
+    window.scrollY > 48,
+  );
+};
+
 const preloadImage = (src: string): Promise<void> =>
   new Promise((resolve, reject) => {
     const image = new Image();
@@ -77,6 +84,10 @@ const changeBackground = async (): Promise<void> => {
 };
 
 onMounted(() => {
+  document.documentElement.classList.add("weiser-blog-home");
+  updateHomeNavbar();
+  window.addEventListener("scroll", updateHomeNavbar, { passive: true });
+
   void changeBackground();
   rotationTimer = setInterval(() => {
     if (document.visibilityState === "visible") void changeBackground();
@@ -84,6 +95,11 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateHomeNavbar);
+  document.documentElement.classList.remove(
+    "weiser-blog-home",
+    "weiser-home-scrolled",
+  );
   requestController?.abort();
   if (rotationTimer) clearInterval(rotationTimer);
 });
