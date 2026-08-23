@@ -70,6 +70,57 @@ strong, b {
   line-height: 1.7;
 }
 
+.home-footer__uptime {
+  min-height: 2rem;
+  margin: 0.7rem 0 0;
+}
+
+.home-footer .home-footer__uptime .site-uptime {
+  justify-content: flex-start;
+  gap: 0.45rem;
+  margin: 0;
+  font-family: inherit;
+  text-shadow: none;
+}
+
+.home-footer .home-footer__uptime .site-uptime__prefix {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.home-footer .home-footer__uptime .site-uptime__units {
+  justify-content: flex-start;
+  gap: 0.28rem;
+}
+
+.home-footer .home-footer__uptime .site-uptime__digits {
+  gap: 0.06rem;
+}
+
+.home-footer .home-footer__uptime .site-uptime__digit-slot {
+  width: 0.82rem;
+  height: 1.28rem;
+}
+
+.home-footer .home-footer__uptime .site-uptime__digit {
+  border-color: color-mix(in srgb, var(--vp-c-accent) 28%, var(--vp-c-border));
+  background:
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--vp-c-accent) 14%, transparent) 49%,
+      transparent 50%
+    ),
+    color-mix(in srgb, var(--vp-c-bg-elv) 88%, var(--vp-c-accent));
+  box-shadow: 0 3px 9px rgb(0 0 0 / 10%);
+  color: var(--vp-c-text);
+  font-size: 0.78rem;
+}
+
+.home-footer .home-footer__uptime .site-uptime__label {
+  margin-left: 0.1rem;
+  font-size: 0.72rem;
+}
+
 .home-footer__links {
   display: flex;
   flex-direction: column;
@@ -193,7 +244,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   animation: hero-rise 0.85s 0.16s var(--weiser-motion-ease) both;
 }
 
-.site-uptime {
+.vp-blog-hero .site-uptime {
   animation: hero-rise 0.85s 0.32s var(--weiser-motion-ease) both;
 }
 

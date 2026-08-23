@@ -6,7 +6,7 @@ title: 博客主页
 siteStartTime: "2022-05-02T09:18:36+08:00"
 # heroImage: /640.png
 heroText: Weiser的个人网站
-bgImage: /mountain.webp
+bgImage: https://picsum.photos/seed/weiser-home/1920/1080.webp
 heroFullScreen: true
 tagline: 至臻之境，他得以在巅峰成就中品味凯旋；至暗时刻，他亦以孤勇之姿虽败犹荣。他的身影，永不湮没于怯懦者的苍白行列。
 footer: >-
@@ -15,7 +15,7 @@ footer: >-
       <section class="home-footer__section home-footer__about">
         <h2>👨‍💻 Weiser 的个人网站</h2>
         <p>记录学习、技术、项目实践与交易思考。</p>
-        <p>自 2022 年 5 月 2 日起持续运行与更新。</p>
+        <div id="home-site-uptime" class="home-footer__uptime"></div>
         <div class="home-footer__links home-footer__contact">
           <a href="https://github.com/xwzbupt" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="/general/wechat/">微信</a>
@@ -47,7 +47,6 @@ footer: >-
     </div>
     <div class="home-footer__bottom">
       <span>© 2022–至今 Weiser · 用热爱记录成长</span>
-      <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">京ICP备2022016439号</a>
     </div>
   </div>
 copyright: false

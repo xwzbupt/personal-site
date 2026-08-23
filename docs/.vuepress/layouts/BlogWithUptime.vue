@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { nextTick, onBeforeUnmount, onMounted, ref } from "vue";
 import { usePageFrontmatter } from "vuepress/client";
 import { Blog } from "vuepress-theme-hope/blog";
 import SiteUptime from "../components/SiteUptime.vue";
@@ -14,13 +14,14 @@ interface PicsumPhoto {
   url: string;
 }
 
-const ROTATION_INTERVAL = 5 * 60 * 1000;
-const currentBackground = ref("");
+const INITIAL_BACKGROUND =
+  "https://picsum.photos/seed/weiser-home/1920/1080.webp";
+const currentBackground = ref(INITIAL_BACKGROUND);
 const currentPhoto = ref<PicsumPhoto>();
 const photoPool = ref<PicsumPhoto[]>([]);
 const isChangingBackground = ref(false);
+const footerReady = ref(false);
 
-let rotationTimer: ReturnType<typeof setInterval> | undefined;
 let requestController: AbortController | undefined;
 
 const updateHomeNavbar = (): void => {
@@ -87,11 +88,9 @@ onMounted(() => {
   document.documentElement.classList.add("weiser-blog-home");
   updateHomeNavbar();
   window.addEventListener("scroll", updateHomeNavbar, { passive: true });
-
-  void changeBackground();
-  rotationTimer = setInterval(() => {
-    if (document.visibilityState === "visible") void changeBackground();
-  }, ROTATION_INTERVAL);
+  void nextTick(() => {
+    footerReady.value = document.querySelector("#home-site-uptime") !== null;
+  });
 });
 
 onBeforeUnmount(() => {
@@ -101,7 +100,6 @@ onBeforeUnmount(() => {
     "weiser-home-scrolled",
   );
   requestController?.abort();
-  if (rotationTimer) clearInterval(rotationTimer);
 });
 </script>
 
@@ -126,11 +124,6 @@ onBeforeUnmount(() => {
       <div class="vp-blog-hero-info">
         <h1 v-if="text" class="vp-blog-hero-title">{{ text }}</h1>
         <p v-if="tagline" class="vp-blog-hero-description">{{ tagline }}</p>
-        <SiteUptime
-          :start-at="
-            frontmatter.siteStartTime ?? '2022-05-02T09:18:36+08:00'
-          "
-        />
         <div class="hero-background-controls">
           <button
             class="hero-background-button"
@@ -151,9 +144,15 @@ onBeforeUnmount(() => {
           >
             摄影：{{ currentPhoto.author }} · Unsplash
           </a>
-          <span v-else class="hero-background-credit">当前使用本地背景</span>
+          <span v-else class="hero-background-credit">图片来源：Lorem Picsum</span>
         </div>
       </div>
     </template>
   </Blog>
+
+  <Teleport v-if="footerReady" to="#home-site-uptime">
+    <SiteUptime
+      :start-at="frontmatter.siteStartTime ?? '2022-05-02T09:18:36+08:00'"
+    />
+  </Teleport>
 </template>
