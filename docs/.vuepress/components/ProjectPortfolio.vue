@@ -35,37 +35,67 @@
       <div class="project-card-grid">
         <a class="portfolio-card portfolio-card--work" data-index="01" href="/project/simulation-control-system/">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
-          <div class="portfolio-card__body">
-            <span class="portfolio-card__type">分布式控制 · 状态管理</span>
-            <h3>仿真控制系统</h3>
-            <p>将分散的节点操作收敛为可配置、可编排、可追踪的标准流程，形成命令、状态与数据闭环。</p>
+          <div class="portfolio-card__content">
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">分布式控制 · 状态管理</span>
+              <h3>仿真控制系统</h3>
+              <p>将分散的节点操作收敛为可配置、可编排、可追踪的标准流程，形成命令、状态与数据闭环。</p>
+            </div>
+            <div class="portfolio-card__tags" aria-label="相关技术">
+              <span>Java</span><span>Netty</span><span>状态机</span><span>任务编排</span>
+            </div>
           </div>
-          <div class="portfolio-card__tags" aria-label="相关技术">
-            <span>Java</span><span>Netty</span><span>状态机</span><span>任务编排</span>
+          <div class="portfolio-card__media portfolio-card__media--image">
+            <img
+              src="/images/projects/simulation-control.png"
+              alt="仿真控制系统架构预览图"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </a>
 
         <a class="portfolio-card portfolio-card--work" data-index="02" href="/project/federated-query-platform/">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
-          <div class="portfolio-card__body">
-            <span class="portfolio-card__type">数据平台 · 联邦查询</span>
-            <h3>多源异构数据联邦查询平台</h3>
-            <p>以统一 SQL 连接多类数据源，通过查询下推、权限治理与分层缓存优化跨源分析链路。</p>
+          <div class="portfolio-card__content">
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">数据平台 · 联邦查询</span>
+              <h3>多源异构数据联邦查询平台</h3>
+              <p>以统一 SQL 连接多类数据源，通过查询下推、权限治理与分层缓存优化跨源分析链路。</p>
+            </div>
+            <div class="portfolio-card__tags" aria-label="相关技术">
+              <span>Presto</span><span>Connector</span><span>Alluxio</span><span>数据治理</span>
+            </div>
           </div>
-          <div class="portfolio-card__tags" aria-label="相关技术">
-            <span>Presto</span><span>Connector</span><span>Alluxio</span><span>数据治理</span>
+          <div class="portfolio-card__media portfolio-card__media--image">
+            <img
+              src="/images/projects/federated-query.png"
+              alt="多源异构数据联邦查询平台架构预览图"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </a>
 
         <a class="portfolio-card portfolio-card--work" data-index="03" href="/project/ai-virtualization-ops/">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
-          <div class="portfolio-card__body">
-            <span class="portfolio-card__type">AI 运维 · 虚拟化管理</span>
-            <h3>AI 虚拟化平台智能运维</h3>
-            <p>以受控 Agent 连接虚拟化资源，覆盖智能放置、任务编排、故障诊断与容量治理。</p>
+          <div class="portfolio-card__content">
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">AI 运维 · 虚拟化管理</span>
+              <h3>AI 虚拟化平台智能运维</h3>
+              <p>以受控 Agent 连接虚拟化资源，覆盖智能放置、任务编排、故障诊断与容量治理。</p>
+            </div>
+            <div class="portfolio-card__tags" aria-label="相关技术">
+              <span>LLM Agent</span><span>oVirt</span><span>工作流</span><span>AIOps</span>
+            </div>
           </div>
-          <div class="portfolio-card__tags" aria-label="相关技术">
-            <span>LLM Agent</span><span>oVirt</span><span>工作流</span><span>AIOps</span>
+          <div class="portfolio-card__media portfolio-card__media--image">
+            <img
+              src="/images/projects/ai-operations.png"
+              alt="AI 虚拟化平台智能运维架构预览图"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </a>
       </div>
@@ -83,13 +113,23 @@
       <div class="project-card-grid">
         <a class="portfolio-card portfolio-card--personal" data-index="04" href="/about/guide.html">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
-          <div class="portfolio-card__body">
-            <span class="portfolio-card__type">内容系统 · 自动化发布</span>
-            <h3>个人网站与知识库</h3>
-            <p>基于 VuePress 构建持续维护的个人知识库，并通过 GitHub Actions 完成自动构建与部署。</p>
+          <div class="portfolio-card__content">
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">内容系统 · 自动化发布</span>
+              <h3>个人网站与知识库</h3>
+              <p>基于 VuePress 构建持续维护的个人知识库，并通过 GitHub Actions 完成自动构建与部署。</p>
+            </div>
+            <div class="portfolio-card__tags" aria-label="相关技术">
+              <span>VuePress</span><span>TypeScript</span><span>GitHub Actions</span>
+            </div>
           </div>
-          <div class="portfolio-card__tags" aria-label="相关技术">
-            <span>VuePress</span><span>TypeScript</span><span>GitHub Actions</span>
+          <div class="portfolio-card__media portfolio-card__media--image">
+            <img
+              src="/images/projects/personal-site.png"
+              alt="Weiser 个人网站首页预览图"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </a>
       </div>
