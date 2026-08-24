@@ -47,9 +47,14 @@
           </div>
           <div class="portfolio-card__media portfolio-card__media--image">
             <img
-              src="/images/projects/simulation-control.png"
+              src="/images/projects/simulation-control-960.webp"
+              srcset="/images/projects/simulation-control-640.webp 640w, /images/projects/simulation-control-960.webp 960w"
+              sizes="(max-width: 719px) calc(100vw - 5rem), 22rem"
               alt="仿真控制系统架构预览图"
-              loading="lazy"
+              width="960"
+              height="540"
+              loading="eager"
+              fetchpriority="high"
               decoding="async"
             />
           </div>
@@ -69,8 +74,12 @@
           </div>
           <div class="portfolio-card__media portfolio-card__media--image">
             <img
-              src="/images/projects/federated-query.png"
+              src="/images/projects/federated-query-960.webp"
+              srcset="/images/projects/federated-query-640.webp 640w, /images/projects/federated-query-960.webp 960w"
+              sizes="(max-width: 719px) calc(100vw - 5rem), 22rem"
               alt="多源异构数据联邦查询平台架构预览图"
+              width="960"
+              height="540"
               loading="lazy"
               decoding="async"
             />
@@ -91,8 +100,12 @@
           </div>
           <div class="portfolio-card__media portfolio-card__media--image">
             <img
-              src="/images/projects/ai-operations.png"
+              src="/images/projects/ai-operations-960.webp"
+              srcset="/images/projects/ai-operations-640.webp 640w, /images/projects/ai-operations-960.webp 960w"
+              sizes="(max-width: 719px) calc(100vw - 5rem), 22rem"
               alt="AI 虚拟化平台智能运维架构预览图"
+              width="960"
+              height="679"
               loading="lazy"
               decoding="async"
             />
@@ -125,8 +138,12 @@
           </div>
           <div class="portfolio-card__media portfolio-card__media--image">
             <img
-              src="/images/projects/personal-site.png"
+              src="/images/projects/personal-site-960.webp"
+              srcset="/images/projects/personal-site-640.webp 640w, /images/projects/personal-site-960.webp 960w"
+              sizes="(max-width: 719px) calc(100vw - 5rem), 22rem"
               alt="Weiser 个人网站首页预览图"
+              width="960"
+              height="476"
               loading="lazy"
               decoding="async"
             />
