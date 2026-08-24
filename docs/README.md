@@ -6,7 +6,6 @@ title: 博客主页
 siteStartTime: "2022-05-02T09:18:36+08:00"
 # heroImage: /640.png
 heroText: Weiser的个人网站
-bgImage: https://picsum.photos/seed/weiser-home/1920/1080.webp
 heroFullScreen: true
 tagline: 至臻之境，他得以在巅峰成就中品味凯旋；至暗时刻，他亦以孤勇之姿虽败犹荣。他的身影，永不湮没于怯懦者的苍白行列。
 footer: >-

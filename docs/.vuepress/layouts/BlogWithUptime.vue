@@ -14,9 +14,7 @@ interface PicsumPhoto {
   url: string;
 }
 
-const INITIAL_BACKGROUND =
-  "https://picsum.photos/seed/weiser-home/1920/1080.webp";
-const currentBackground = ref(INITIAL_BACKGROUND);
+const currentBackground = ref("");
 const currentPhoto = ref<PicsumPhoto>();
 const photoPool = ref<PicsumPhoto[]>([]);
 const isChangingBackground = ref(false);
@@ -38,6 +36,25 @@ const preloadImage = (src: string): Promise<void> =>
     image.onerror = () => reject(new Error(`Unable to load ${src}`));
     image.src = src;
   });
+
+const createRequestToken = (): string =>
+  `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+const loadInitialBackground = async (): Promise<void> => {
+  if (isChangingBackground.value) return;
+  isChangingBackground.value = true;
+
+  try {
+    const initialBackground =
+      `https://picsum.photos/1920/1080.webp?random=${createRequestToken()}`;
+    await preloadImage(initialBackground);
+    currentBackground.value = initialBackground;
+  } catch (error) {
+    console.warn("Initial background failed; keeping the gradient fallback.", error);
+  } finally {
+    isChangingBackground.value = false;
+  }
+};
 
 const loadPhotoPool = async (): Promise<void> => {
   requestController?.abort();
@@ -71,14 +88,16 @@ const changeBackground = async (): Promise<void> => {
 
     if (!nextPhoto) throw new Error("No landscape photo is available");
 
-    const nextBackground = `https://picsum.photos/id/${nextPhoto.id}/1920/1080.webp`;
+    const requestToken = createRequestToken();
+    const nextBackground =
+      `https://picsum.photos/id/${nextPhoto.id}/1920/1080.webp?random=${requestToken}`;
     await preloadImage(nextBackground);
 
     currentPhoto.value = nextPhoto;
     currentBackground.value = nextBackground;
   } catch (error) {
     if (!(error instanceof DOMException && error.name === "AbortError"))
-      console.warn("Background rotation failed; keeping the local fallback.", error);
+      console.warn("Background rotation failed; keeping the online fallback.", error);
   } finally {
     isChangingBackground.value = false;
   }
@@ -88,6 +107,8 @@ onMounted(() => {
   document.documentElement.classList.add("weiser-blog-home");
   updateHomeNavbar();
   window.addEventListener("scroll", updateHomeNavbar, { passive: true });
+  // 每次进入首页随机一次；之后仅由按钮触发更换，不设置定时器。
+  void loadInitialBackground();
   void nextTick(() => {
     footerReady.value = document.querySelector("#home-site-uptime") !== null;
   });
@@ -105,14 +126,16 @@ onBeforeUnmount(() => {
 
 <template>
   <Blog>
-    <template #heroBg="{ image, style }">
+    <template #heroBg="{ style }">
       <Transition name="hero-background" type="transition">
         <div
-          :key="currentBackground || image"
+          :key="currentBackground || 'gradient-fallback'"
           class="vp-blog-mask weiser-hero-background"
           :style="[
             {
-              background: `linear-gradient(rgb(5 18 27 / 28%), rgb(5 18 27 / 48%)), url('${currentBackground || image}') center / cover no-repeat`,
+              background: currentBackground
+                ? `linear-gradient(rgb(5 18 27 / 28%), rgb(5 18 27 / 48%)), url('${currentBackground}') center / cover no-repeat`
+                : 'linear-gradient(135deg, rgb(18 62 55), rgb(20 38 58))',
             },
             style,
           ]"
