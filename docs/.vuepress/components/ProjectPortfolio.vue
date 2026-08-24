@@ -33,7 +33,7 @@
       </header>
 
       <div class="project-card-grid">
-        <a class="portfolio-card portfolio-card--work" href="/project/simulation-control-system/">
+        <a class="portfolio-card portfolio-card--work" data-index="01" href="/project/simulation-control-system/">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
           <div class="portfolio-card__body">
             <span class="portfolio-card__type">分布式控制 · 状态管理</span>
@@ -45,7 +45,7 @@
           </div>
         </a>
 
-        <a class="portfolio-card portfolio-card--work" href="/project/federated-query-platform/">
+        <a class="portfolio-card portfolio-card--work" data-index="02" href="/project/federated-query-platform/">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
           <div class="portfolio-card__body">
             <span class="portfolio-card__type">数据平台 · 联邦查询</span>
@@ -57,7 +57,7 @@
           </div>
         </a>
 
-        <a class="portfolio-card portfolio-card--work" href="/project/ai-virtualization-ops/">
+        <a class="portfolio-card portfolio-card--work" data-index="03" href="/project/ai-virtualization-ops/">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
           <div class="portfolio-card__body">
             <span class="portfolio-card__type">AI 运维 · 虚拟化管理</span>
@@ -81,7 +81,7 @@
       </header>
 
       <div class="project-card-grid">
-        <a class="portfolio-card portfolio-card--personal" href="/about/guide.html">
+        <a class="portfolio-card portfolio-card--personal" data-index="04" href="/about/guide.html">
           <span class="portfolio-card__arrow" aria-hidden="true">↗</span>
           <div class="portfolio-card__body">
             <span class="portfolio-card__type">内容系统 · 自动化发布</span>
