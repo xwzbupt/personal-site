@@ -4,7 +4,7 @@
       <div class="project-portfolio__copy">
         <span class="project-portfolio__eyebrow">PROJECTS &amp; PRACTICE</span>
         <h1>项目与实践</h1>
-        <p>工程系统、数据平台与 AI 运维的实践记录。</p>
+        <p>记录持续探索、亲手构建与长期迭代的项目实践。</p>
       </div>
       <div class="project-portfolio__summary" aria-label="项目统计">
         <div class="project-portfolio__metric">
@@ -57,6 +57,10 @@
               fetchpriority="high"
               decoding="async"
             />
+            <div class="portfolio-card__abstract" aria-hidden="true">
+              <span>ABSTRACT</span>
+              <p>围绕异构节点的远程控制与状态收敛，建立命令分发、心跳检测、执行回执和数据采集链路，使分散操作具备统一编排与追踪能力。</p>
+            </div>
           </div>
         </a>
 
@@ -83,6 +87,10 @@
               loading="lazy"
               decoding="async"
             />
+            <div class="portfolio-card__abstract" aria-hidden="true">
+              <span>ABSTRACT</span>
+              <p>面向多源异构数据的统一分析场景，通过 Presto Connector、权限治理、查询下推与分层缓存，降低跨源 JOIN 的访问与计算成本。</p>
+            </div>
           </div>
         </a>
 
@@ -109,6 +117,10 @@
               loading="lazy"
               decoding="async"
             />
+            <div class="portfolio-card__abstract" aria-hidden="true">
+              <span>ABSTRACT</span>
+              <p>将自然语言运维、受控工具调用、工作流编排和虚拟资源调度串联起来，使运维过程可审计、可恢复并支持容量治理。</p>
+            </div>
           </div>
         </a>
       </div>
@@ -147,6 +159,10 @@
               loading="lazy"
               decoding="async"
             />
+            <div class="portfolio-card__abstract" aria-hidden="true">
+              <span>ABSTRACT</span>
+              <p>以 VuePress 管理长期知识内容，结合自动构建、GitHub Pages 与自定义域名形成持续发布链路，并持续优化阅读与跨端体验。</p>
+            </div>
           </div>
         </a>
       </div>

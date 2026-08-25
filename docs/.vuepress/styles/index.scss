@@ -88,37 +88,11 @@ strong, b {
   letter-spacing: 0.04em;
 }
 
-.home-footer .home-footer__uptime .site-uptime__units {
-  justify-content: flex-start;
-  gap: 0.28rem;
-}
-
-.home-footer .home-footer__uptime .site-uptime__digits {
-  gap: 0.06rem;
-}
-
-.home-footer .home-footer__uptime .site-uptime__digit-slot {
-  width: 0.82rem;
-  height: 1.28rem;
-}
-
-.home-footer .home-footer__uptime .site-uptime__digit {
-  border-color: color-mix(in srgb, var(--vp-c-accent) 28%, var(--vp-c-border));
-  background:
-    linear-gradient(
-      to bottom,
-      color-mix(in srgb, var(--vp-c-accent) 14%, transparent) 49%,
-      transparent 50%
-    ),
-    color-mix(in srgb, var(--vp-c-bg-elv) 88%, var(--vp-c-accent));
-  box-shadow: 0 3px 9px rgb(0 0 0 / 10%);
-  color: var(--vp-c-text);
+.home-footer .home-footer__uptime .site-uptime__value {
+  color: var(--vp-c-text-subtle);
   font-size: 0.78rem;
-}
-
-.home-footer .home-footer__uptime .site-uptime__label {
-  margin-left: 0.1rem;
-  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.025em;
 }
 
 .home-footer__links {
@@ -1168,15 +1142,18 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 
 .portfolio-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(8.5rem, 0.85fr);
+  grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.9fr);
   align-items: stretch;
-  gap: 1rem;
+  gap: clamp(1.15rem, 2.8vw, 2rem);
+  overflow: hidden;
   min-height: 12.5rem;
-  padding: 1.25rem 1.3rem;
-  border: 1px solid color-mix(in srgb, var(--vp-c-border) 92%, var(--portfolio-accent));
+  padding: 1.35rem 1.45rem;
+  border: 1px solid color-mix(in srgb, var(--vp-c-border) 88%, var(--portfolio-accent));
   border-radius: 1rem;
-  background: color-mix(in srgb, var(--vp-c-bg-elv) 97%, var(--portfolio-accent));
-  box-shadow: 0 12px 30px rgb(0 0 0 / 4%);
+  background:
+    linear-gradient(112deg, color-mix(in srgb, var(--portfolio-accent) 3.5%, transparent), transparent 43%),
+    color-mix(in srgb, var(--vp-c-bg-elv) 98%, var(--portfolio-accent));
+  box-shadow: 0 10px 28px rgb(0 0 0 / 4%);
   transform: none;
   animation: project-clarity-enter 480ms var(--weiser-motion-ease) backwards;
   transition: transform 260ms var(--weiser-motion-ease), border-color 220ms ease, box-shadow 260ms ease, background 220ms ease;
@@ -1207,6 +1184,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
     radial-gradient(circle at 72% 25%, color-mix(in srgb, var(--portfolio-accent) 16%, transparent) 0 12%, transparent 13%),
     linear-gradient(145deg, color-mix(in srgb, var(--portfolio-accent) 9%, var(--vp-c-bg-alt)), var(--vp-c-bg-alt));
   isolation: isolate;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 8%);
 }
 
 .portfolio-card__media::before {
@@ -1250,6 +1228,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   object-fit: contain;
   object-position: center;
   background: #fff;
+  transition: transform 420ms var(--weiser-motion-ease), filter 320ms ease;
 }
 
 .portfolio-card__media--image {
@@ -1259,6 +1238,59 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 
 .portfolio-card__media--image::before {
   content: none;
+}
+
+.portfolio-card__media--image::after {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  z-index: 4;
+  padding: 0.24rem 0.48rem;
+  border: 1px solid rgb(255 255 255 / 32%);
+  border-radius: 999px;
+  color: #fff;
+  background: rgb(10 18 30 / 58%);
+  box-shadow: 0 3px 12px rgb(0 0 0 / 14%);
+  content: "悬浮查看摘要";
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  opacity: 0.86;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 220ms ease;
+}
+
+.portfolio-card__abstract {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(0.85rem, 2vw, 1.15rem);
+  color: var(--vp-c-text);
+  background:
+    linear-gradient(to top, color-mix(in srgb, var(--vp-c-bg-elv) 99%, var(--portfolio-accent)) 0 68%, color-mix(in srgb, var(--vp-c-bg-elv) 92%, transparent)),
+    color-mix(in srgb, var(--vp-c-bg-elv) 93%, transparent);
+  backdrop-filter: blur(9px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.65rem);
+  transition: opacity 240ms ease, transform 300ms var(--weiser-motion-ease);
+}
+
+.portfolio-card__abstract > span {
+  color: var(--portfolio-accent);
+  font-size: 0.64rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+}
+
+.portfolio-card__abstract > p {
+  margin: 0.42rem 0 0;
+  color: color-mix(in srgb, var(--vp-c-text) 82%, var(--vp-c-bg));
+  font-size: clamp(0.75rem, 1.3vw, 0.84rem);
+  line-height: 1.72;
 }
 
 .portfolio-card::before {
@@ -1286,6 +1318,26 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   background: color-mix(in srgb, var(--vp-c-bg-elv) 95%, var(--portfolio-accent));
   box-shadow: 0 18px 38px color-mix(in srgb, var(--portfolio-accent) 11%, transparent);
   transform: translateY(-4px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-card:hover .portfolio-card__media > img,
+  .portfolio-card:focus-visible .portfolio-card__media > img {
+    filter: saturate(0.72) brightness(0.82);
+    transform: scale(1.035);
+  }
+
+  .portfolio-card:hover .portfolio-card__abstract,
+  .portfolio-card:focus-visible .portfolio-card__abstract {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .portfolio-card:hover .portfolio-card__media--image::after,
+  .portfolio-card:focus-visible .portfolio-card__media--image::after {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
 }
 
 .portfolio-card:hover::before {
@@ -1413,7 +1465,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 
   .portfolio-card {
-    grid-template-columns: minmax(0, 1.65fr) minmax(12rem, 0.85fr);
+    grid-template-columns: minmax(0, 1.45fr) minmax(15rem, 0.95fr);
   }
 }
 
@@ -1436,6 +1488,11 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   .portfolio-card__media {
     order: -1;
     min-height: 8.5rem;
+  }
+
+  .portfolio-card__media--image::after,
+  .portfolio-card__abstract {
+    display: none;
   }
 
   .portfolio-card__body h3 {
@@ -1466,6 +1523,11 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   .project-group,
   .portfolio-card {
     animation: none !important;
+  }
+
+  .portfolio-card__abstract,
+  .portfolio-card__media > img {
+    transition: none !important;
   }
 }
 
