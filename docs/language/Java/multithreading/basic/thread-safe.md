@@ -45,7 +45,7 @@ category: Java
 
 复合操作由多个操作组成，比如先检查再执行、先读取再修改后写入。这些复合操作一般都是非原子操作。实际上，之前讲到的非双重检测的单例就属于先检查再执行这类复合操作，自增操作就属于先读取再修改后写入这类复合操作。除此之外，往LinkedList、HashMap中添加元素，底层都是复合操作。
 
-```
+```java
 // 先检查再执行
 public class Singleton {
   private static Singleton instance;  
@@ -84,7 +84,7 @@ public class Demo {
 
 我们举个例子进一步解释一下，如何分析是否线程安全。示例代码如下所示。
 
-```
+```java
 public class Counter {
   private int count = 0;
 
@@ -124,7 +124,7 @@ public class Counter {
 
 除此之外，如果临界区访问的共享资源有多个，那么，我们还需要查看指令重排序是否会影响执行结果，导致线程不安全，比如第30节中例子，如下所示。
 
-```
+```java
 public class Demo {
   private static boolean ready = false;
   private static int value = 1;
@@ -161,7 +161,7 @@ public class Demo {
 
 在分析代码是否线程安全时，我们还需要关注，代码中所使用的其他类或函数是否线程安全，是否会引起自己编写的类或函数的线程安全性问题。除此之外，特别需要注意的是，使用线程安全的类或函数编写的代码，也不一定是线程安全的，示例代码如下所示。
 
-```
+```java
 public class IdGenerator {
   private int seq = 1;
 

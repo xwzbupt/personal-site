@@ -58,7 +58,7 @@ Java提供的并发容器有以下几种。
 
 我们拿SynchronizedList举例讲解，我们通过synchronizedList()方法来创建SynchronizedList对象，具体的创建方法如下所示。
 
-```
+```java
 List list = Collections.synchronizedList(new LinkedList<>());
 ```
 
@@ -68,7 +68,7 @@ List list = Collections.synchronizedList(new LinkedList<>());
 
 Java并发容器的底层实现原理非常简单，跟Vector、Stack、HashTable类似，都是通过对方法加锁来避免线程安全问题。我们拿SynchronizedList举例讲解，其源码如下所示。所有的函数都使用synchronized加了锁。实际上，我们还可以使用ReentrantReadWriteLock替代synchronized来提高代码的并发性能。
 
-```
+```java
 public static <T> List<T> synchronizedList(List<T> list) {
     return (list instanceof RandomAccess ?
             new SynchronizedRandomAccessList<>(list) :

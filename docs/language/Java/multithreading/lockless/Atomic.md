@@ -35,7 +35,7 @@ JUC提供了3个基本类型原子类，它们分别是：AtomicBoolean、Atomic
 
 AtomicBoolean、AtomicInteger、AtomicLong这3个基本类型原子类的使用方法和实现原理非常相似，我们拿AtomicInteger举例讲解。AtomicInteger类的部分源码如下所示。AtomicInteger类中包含的核心的原子操作暂时未给出，待会一一讲解。
 
-```
+```java
 public class AtomicInteger {
     private volatile int value;
     
@@ -73,7 +73,7 @@ public class AtomicInteger {
 
 AtomicInteger中的compareAndSet()是标准的CAS函数。如下代码所示，如果value值等于入参expect值，那么就将value值更新为入参update值，并返回true。compareAndSet()函数底层调用Unsafe类的CAS方法compareAndSwapInt()来实现，此方法在上一节中已经详细讲解，这里就不再赘述了。
 
-```
+```java
 public final boolean compareAndSet(int expect, int update) {
     return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
 }
@@ -87,7 +87,7 @@ public final boolean compareAndSet(int expect, int update) {
 
 增加函数有两个。从命名上，我们也可以大概猜出两者的不同之处。其中，getAndAdd()函数先获取value值，再更新value，函数返回更新前的旧值，addAndGet()函数先更新value，再获取value值，函数返回更新之后的新值。
 
-```
+```java
 public final int getAndAdd(int delta) {
     return unsafe.getAndAddInt(this, valueOffset, delta);
 }
@@ -102,7 +102,7 @@ public final int addAndGet(int delta) {
 
 两个函数的代码实现非常相似，addAndGet()函数只不过是在getAndAdd()返回值的基础之上，加了一个delta再返回而已。因此，我们重点看下getAndAdd()函数。getAndAdd()函数调用Unsafe类的getAndAddInt()方法来实现。getAndAddInt()方法的代码实现如下所示。
 
-```
+```java
 public final int getAndAddInt(Object o, long offset, int delta) {
     int oldValue;
     do { // 自旋+CAS
@@ -124,7 +124,7 @@ getAndAddInt()并非native方法，而是直接由Java代码实现，其底层�
 
 自增函数也有两个。用法跟增加函数类似，getAndIncrement()函数返回自增之前的旧值，incrementAndGet()函数返回自增之后的新值。底层实现原理也跟增加函数类似，只需要将增加函数中的delta设置为1即可。
 
-```
+```java
 public final int getAndIncrement() { 
     return unsafe.getAndAddInt(this, valueOffset, 1);
 }
@@ -141,7 +141,7 @@ public final int incrementAndGet() {
 
 自减函数也有两个。用法跟自增函数类似，getAndDecrement()函数返回自减之前的旧值，decrementAndGet()函数返回自减之后的新值。底层实现原理跟增加函数类似，只需要将增加函数中的delta设置为-1即可。
 
-```
+```java
 public final int getAndDecrement() {
     return unsafe.getAndAddInt(this, valueOffset, -1);
 }
@@ -168,7 +168,7 @@ public final int decrementAndGet() {
 
 AtomicReference类的部分源码如下所示。基本类型原子类主要依赖Unsafe类中的compareAndSwapInt()和compareAndSwapLong()这两个CAS方法来实现。引用类型原子类主要依赖Unsafe类中的compareAndSwapObject()这个CAS方法来实现。AtomicReference的实现方式跟AtomicInteger类似，这里就不再赘述了。
 
-```
+```java
 public class AtomicReference<V> {
     private volatile V value;
     
@@ -199,7 +199,7 @@ public class AtomicReference<V> {
 
 AtomicReference类的使用方式，如下示例代码所示。
 
-```
+```java
 public class DemoLock {
   private AtomicReference<Thread> owner = null;
 
@@ -217,7 +217,7 @@ public class DemoLock {
 
 相对于AtomicReference，AtomicStampedReference增加了版本戳，主要是用来解决CAS的ABA问题。什么是CAS的ABA问题呢？我们举例解释一下。如下代码所示，addAtHead()函数往链表头部添加节点，removeAtHead()函数从链表头部移除节点。你觉得下面的代码是否是线程安全的呢？
 
-```
+```java
 public class Node {
   private char val;
   private Node next;
@@ -278,7 +278,7 @@ public class LinkedList {
 
 实际上，不管是addAtHead()，还是removeAtHead()，线程不安全的本质原因是：在更新head时，head有可能已经被其他线程更改。为了解决LinkedList的线程安全问题，我们既可以基于synchronized或Lock锁来解决，也可以基于自旋+CAS来解决。基于锁的解决方案比较简单，这里就留给你自己思考。我们重点来看下基于自旋+CAS的解决方案。代码实现如下所示。在更新head时，我们通过CAS确保head没有被其他线程更新过。
 
-```
+```java
 public class LinkedListThreadSafe {
   private AtomicReference<Node> head = new AtomicReference<>(null);
 
@@ -319,7 +319,7 @@ public class LinkedListThreadSafe {
 
 为了解决以上ABA问题，我们使用AtomicStampedReference对LinkedList进行改造，如下代码所示。
 
-```
+```java
 public class LinkedList {
   private AtomicStampedReference<Node> head
                = new AtomicStampedReference<>(null, 0); // stamp初始值为0
@@ -353,7 +353,7 @@ public class LinkedList {
 
 AtomicStampedReference的部分源码如下所示。相对于AtomicReference，AtomicStampedReference增加了一个int类型stamp版本戳，它将stamp和引用对象reference（例如head）封装成一个新的Pair对象，在Pair对象上执行CAS。即便引用对象存在ABA问题，但是stamp总是在增加，stamp不会存在ABA问题，因此，两者组合而成的Pair对象，也不就不存在ABA问题了。
 
-```
+```java
 public class AtomicStampedReference<V> {
     private static class Pair<T> {
         final T reference;
@@ -405,7 +405,7 @@ JUC提供了3个数组类型原子类，它们分别是：AtomicIntegerArray、A
 
 实际上，AtomicIntegerArray中的原子操作，跟AtomicInteger中的原子操作一一对应，只是在操作中多了一个下标而已。我们拿CAS操作来举例。两个类中的CAS函数对比如下所示。AtomicIntegerArray中的CAS函数，也是用来Unsafe中的compareAndSwapInt()来实现的，只不过计算元素的偏移位置比较复杂而已。
 
-```
+```java
 // AtomicInteger
 public final boolean compareAndSet(int expect, int update) {
     return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
@@ -429,7 +429,7 @@ JUC提供了3个对象属性原子类，它们分别是：AtomicIntegerFiledUpda
 
 因为对象属性原子类很少用到，所以，我们仅仅举例简单介绍一下，不做深入分析。
 
-```
+```java
 public class Updater {
   private static AtomicIntegerFieldUpdater<Node> updater =
       AtomicIntegerFieldUpdater.newUpdater(Node.class, "val");
@@ -448,7 +448,7 @@ public class Updater {
 
 对于AtomicInteger类中的getAndAdd()函数，如果我们不使用CAS来实现，那么，如下代码实现方式，是否是线程安全的？为什么呢？
 
-```
+```java
 public final int getAndAdd(int delta) {
     int oldValue = value;
     value += delta;

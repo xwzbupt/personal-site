@@ -31,7 +31,7 @@ synchronized关键字既可以作用于方法，也可以作用方法内的局�
 
 在上一节中，我们展示了一个非线程安全的Counter类。为了让Counter类变为线程安全的，我们可以在add()函数和substract()函数声明中，添加synchronized关键字，代码如下所示。因为add()函数和substract()函数使用同一个锁，所以，在多线程环境下，不仅add()函数本身以及substract()函数本身不可并发执行，add()函数与substract()函数之间也不可并发执行。
 
-```
+```java
 public class Counter {
   private int count = 0;
 
@@ -53,7 +53,7 @@ public class Counter {
 
 如果上述Counter类的add()函数和substract()函数内部包含大量其他逻辑，只有count+=value以及count-=value这两个代码块才是真正的临界区，那么，为了尽可能的提高代码执行的并发度，减小加锁范围，我们可以使用synchronized关键字，只对add()函数和substract()函数中的局部代码块加锁。如下代码所示。
 
-```
+```java
 public class Counter {
   private int count = 0;
 
@@ -81,7 +81,7 @@ public class Counter {
 
 现在，我们再修改一下Counter类，如下所示。在修改之后的代码中，尽管add()函数和substract()函数仍然都是线程不安全的，但是，add()函数和substract()函数是可以并发执行的，因为它们访问的共享资源并不相同。针对修改后的Counter类，我们应该如何使用synchronized加锁，既保证类为线程安全的，又保证两个函数可以并发执行呢？
 
-```
+```java
 public class Counter {
   private int increasedSum = 0;
   private int decreasedSum = 0;
@@ -110,7 +110,7 @@ synchronized关键字底层使用的锁叫做Monitor锁。但是，我们无法�
 
 为了让add()函数和substract()函数之间能并发执行，我们可以采用如下方式，对add()函数和substract()函数加锁。add()函数使用obj1对象上的Monitor锁，substract()函数使用obj2对象上的锁，两者互不影响。
 
-```
+```java
 public class Counter {
   private int increasedSum = 0;
   private int decreasedSum = 0;
@@ -144,7 +144,7 @@ public class Counter {
 
 我们先来看一段代码，如下所示，Wallet类表示用户钱包，里面有一个transferTo()函数，可以实现将当前钱包的钱，转账给另一个钱包。下面的transferTo()函数是否是线程安全的呢？
 
-```
+```java
 public class Wallet {
   private int balance;
 
@@ -195,7 +195,7 @@ transferTo()函数访问了共享资源（balance），并且包含复合操作�
 
 也就说是，不仅一个对象上的transferTo()函数，不能并发执行，同一个类上的所有对象上的transferTo()函数，都不能并发执行。为了实现这样的限制，我们就需要使用类锁来替代对象锁，对transferTo()函数进行加锁。类锁的语法非常简单，如下代码所示，synchronized关键词后跟随某个类的Class类对象即可。
 
-```
+```java
 public class Wallet {
   private int balance;
 
@@ -220,7 +220,7 @@ public class Wallet {
 
 除了显示指定使用哪个类的类锁（类的Class类对象的Monitor锁）之外，如果我们对静态方法添加synchronized关键词，那么，对应的静态方法会隐式地使用当前类的类锁。如下代码所示，add()函数使用Counter类的类锁。
 
-```
+```java
 public class Counter {
   private static int count = 0;
 
@@ -242,7 +242,7 @@ public class Counter {
 
 我们先来看synchronized作用于方法。示例代码如下所示。
 
-```
+```java
 public class Counter {
   private int count = 0;
 
@@ -258,7 +258,7 @@ public class Counter {
 
 add()函数对应的字节码如下所示。实际上，编译器只不过是在函数的flags中添加了ACC_SYNCHRONIZED标记而已，其他部分跟没有添加synchronized的add()函数的字节码相同。
 
-```
+```java
   public synchronized void add(int);
     descriptor: (I)V
     flags: (0x0021) ACC_PUBLIC, ACC_SYNCHRONIZED
@@ -282,7 +282,7 @@ add()函数对应的字节码如下所示。实际上，编译器只不过是在
 
 我们再来看synchronized作用于局部代码块，示例代码如下所示。
 
-```
+```java
 public class Counter {
   private int count = 0;
   private Object obj = new Object();
@@ -301,7 +301,7 @@ public class Counter {
 
 add()函数对应的字节码如下所示。字节码通过monitorenter和monitorexit来标记synchronized的作用范围。除此之外，对于以下字节码，我们有点需要解释。其一，以下字节码中有两个monitorexit，添加第二个monitorexit的目的是为了在代码抛出异常时仍然能解锁。其二，前面讲到，synchronized可以选择指定使用哪个对象的Monitor锁。具体使用哪个对象的Monitor锁，在字节码中，通过monitorenter前面的几行字节码来指定。
 
-```
+```java
   public void add(int);
     descriptor: (I)V
     flags: (0x0001) ACC_PUBLIC
@@ -570,7 +570,7 @@ void unpark() {
 
 线程成功获取到偏向锁之后，就去执行业务代码了（也就是synchronized关键字所包围的代码）。执行完业务代码之后，线程并不会解锁偏向锁，也就是，不会更改Mark Word字段将threadID设置为0。这是偏向锁有别于轻量级锁和重量级锁，非常独特的一点。这样做的目的是提高加锁的效率。当同一个线程再次请求这个偏向锁时，如下代码所示，线程查看Mark Word，发现Mark Word处于偏向锁状态，并且threadID值就是自己的线程ID。这时，线程不需要做任何加锁操作，就直接可以去执行业务代码了。
 
-```
+```java
 public class Demo {
   private static Object obj = new Object();
   private static int count = 0;
@@ -596,7 +596,7 @@ public class Demo {
 
 以上讲的是理想情况，即在对象有限的生命周期里，这个对象对应的锁只被一个线程使用。接下来，我们再来看看非理想情况。非理想情况有两种，前面已经提到了一种：对象诞生之后处于偏向锁状态，但还没被任何线程获取过，两个线程通过CAS操作竞争偏向锁，一个线程获取到偏向锁，另一个线程没有获取到偏向锁。这个时候，另一个线程该咋办？这是第一种非理想情况。我们再来看第二种非理想情况：一个线程获取了某个偏向锁，但之后又有另一个线程请求这个偏向锁，如下代码所示。这个时候，另一个线程该怎么办？实际上，第一种情况是第二种情况的特殊情况。
 
-```
+```java
 public class Demo {
   private static Object obj = new Object();
   private static int count = 0;
@@ -689,7 +689,7 @@ public class Demo {
 
 按理来说，这已经不符合轻量级锁的使用场景了，应该升级为重量级锁。但是，线程抱有侥幸心理，觉得持有轻量级锁的线程会很快释放锁。毕竟升级为重量级锁是件很麻烦的事情，又要创建ObjectMonitor，又要排队，而且，调用操作系统的系统调用阻塞和唤醒内核线程，还会导致用户态和内核态的切换，比较耗时。因此，线程就采用自旋的方式，如下示例代码所示，循环执行CAS操作，如果执行了很多次（比如10次，这个值可以通过JVM参数设置），仍然没有等到另一个线程释放轻量级锁，那么它就只能将轻量级锁升级为重量级锁了。
 
-```
+```java
 int count = 0;
 while (count < 10) {
   ..do CAS to get lightweight lock..
@@ -716,7 +716,7 @@ while (count < 10) {
 
 搞定了偏向锁和轻量级锁，synchronized的另外两个优化（锁消除和锁粗化）相比而言就简单多了。虚拟机在执行JIT编译时，会根据对代码的分析（逃逸分析，这个在JVM模块中再讲），去掉某些没有必要的锁。如下示例代码所示。为了保证多线程操作的安全性，StringBuffer中的append()函数在设计实现时加了锁。但是，在下面的代码中，strBuffer是局部变量，不会被多线程共享，更不会在多线程环境下调用它的append()函数。因此，append()函数的锁可以被优化消除。
 
-```
+```java
 public class Demo {
   public String concat(String s1, String s2) {
     StringBuffer strBuffer = new StringBuffer();
@@ -735,7 +735,7 @@ public class Demo {
 
 上一节中，当讲到synchronized作用于代码块时，我们提到，缩小加锁范围能够提高程序的并发程度，提高多线程环境下的程序的执行效率。但是，在有些情况下，虚拟机在执行JIT编译时，会扩大加锁范围，将对多个小范围代码的加锁，合并一个对大范围代码的加锁，这样的做法叫做锁粗化。如下所示代码所示，执行10000次append()函数，会加锁解锁10000次。通过锁粗化，编译器将append()函数的锁去掉，移到for循环外面，这样就只需要加锁解锁1次即可。
 
-```
+```java
 public class Demo35_4 {
   private StringBuffer strBuffer;
 

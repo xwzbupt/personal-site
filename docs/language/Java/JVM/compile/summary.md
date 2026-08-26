@@ -55,7 +55,7 @@ Java为了提高开发效率，提供了很多语法糖。所谓语法糖，指�
 
 自动装箱和拆箱是为了方便基本类型和包装类互相转换。如下所示，字面量12是int基本类型的，当赋值给包装类Integer对象时，便会触发自动装箱操作，创建一个Integer类型的对象，然后赋值给变量iobj。实际上，自动装箱其底层相当于执行了Integer类的valueof()方法。反过来，当把包装类对象iobj赋值给基本类型变量i时，便会触发自动拆箱操作，将iobj中的数据取出，然后赋值给变量i。自动拆箱底层相当于执行了Integer类的intValue()方法。
 
-```
+```java
 Integer iobj = 12; 底层实现为：Integer iobj = Integer.valueof(12);
 int i = iobj; 底层实现为：int i = iobj.intValue();
 ```
@@ -64,7 +64,7 @@ int i = iobj; 底层实现为：int i = iobj.intValue();
 
 for-each遍历也叫做增强for循环，底层依赖迭代器来实现。如下代码所示。
 
-```
+```java
 List<String> arr = Arrays.asList("xiao", "zheng", "ge");
 
 // for-each循环遍历等价于下面的迭代器遍历
@@ -85,7 +85,7 @@ while (itr.hasNext()) {
 
 内部类也是一种语法糖。当编译成字节码之后，外部类编译为A.class，内部类编译为A$B.class，匿名内部类编译为A$1.class，均为独立的类。
 
-```
+```java
 public class A { // A.class
   public class B {} //内部类->A$B.class
 
@@ -114,7 +114,7 @@ public class A { // A.class
 
 我们拿以下代码举例来看下，类的字节码格式。
 
-```
+```java
 public class Demo {
   private String greeting= "hello";
 
@@ -146,7 +146,7 @@ public class Demo {
 
 我们举个例子解释一下。如下代码所示。虚拟机从main()函数开始执行，当执行到Demo类对象的创建语句时，虚拟机发现内存中没有Demo类的字节码信息，于是，就通过类加载器在classpath对应的路径下查找Demo.class文件，并将其加载到内存中。之后，虚拟机根据类的字节码在堆中创建demo对象。当虚拟机执行demo.greet(“wangzheng”)方法时，虚拟机根据对象demo中的类指针（请参看第9节对象的内存结构），找到内存中的Demo类，然后在类的方法表中查找greet()函数对应的字节码，最后逐句解释执行。
 
-```
+```java
 public class App {
   public static void main(String[] args) {
     Demo demo = new Demo();

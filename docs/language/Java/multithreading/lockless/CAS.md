@@ -17,7 +17,7 @@ category: Java
 
 CAS指的是先检查后更新这类复合操作，英文翻译有多种：Compare And Set、Compare And Swap或Check And Set。示例代码如下所示。这段代码是我们从Lock锁的底层实现原理中，抽象出来的一段功能代码，state为共享变量，值为0表示没有加锁，值为1表示已加锁。多个线程同时调用tryAcquire()函数，谁将state变为1，谁就获取到了锁。
 
-```
+```java
 public class LockDemo {
   private int state = 0;
   public boolean tryAcquire() {
@@ -84,7 +84,7 @@ LOCK cmpxchg [目标操作数], [源操作数]
 
 Unsafe类中提供了3个CAS方法，如下所示。o表示针对哪个对象的成员变量进行CAS操作。offset表示成员变量在对象中的偏移位置。oldValue为期望值，newValue为更新值。如果对象o中偏移位置为offset的成员变量的值等于oldValue，那么，对象o中偏移位置为offset的成员变量的值更新为newValue，并且CAS方法返回true。
 
-```
+```java
 public final native boolean compareAndSwapInt(
         Object o, long offset, int oldValue, int newValue);
                                        
@@ -137,7 +137,7 @@ inline jint     Atomic::cmpxchg(
 
 了解了Unsafe类中CAS方法的实现原理之后，我们使用这些CAS方法来实现tryAcquire()函数，对应的代码实现如下所示。代码比较简单，我们就不详细解释了。
 
-```
+```java
 public class Demo {
   private int state = 0;
 
@@ -168,7 +168,7 @@ public class Demo {
 
 我们举例解释一下自旋执行CAS这种处理策略，示例如下代码所示。如果我们希望increment()函数线程安全，那么，我们现在有两种处理方法，一种是使用synchronized或Lock对increment()函数加锁，对应代码为increment_lock()函数，另一种是使用CAS，对应代码为increment_CAS()函数。
 
-```
+```java
 public class Demo {
   private int id = 0;
   
@@ -208,7 +208,7 @@ public class Demo {
 
 对比以上两种处理方法，Increment_lock()函数总是能让id值增一，但increment_cas()却不能，在CAS失败时，函数直接返回，id值并没有增一。也就是说，increment_cas()的处理方式，并不符合我们对increment()函数的逻辑要求（总是会增一）。对于这个问题，我们就可以使用自旋+CAS来解决。如下代码所示。
 
-```
+```java
 public void increment_CAS() {
   boolean succeded = false;
   while (!succeded) {
@@ -241,7 +241,7 @@ public void increment_CAS() {
 
 我们对链表支持的操作做稍许简化，假设只支持在链表尾部添加元素这一操作。非线程安全的原始链表的定义如下所示。其中，使用虚拟头节点和tail尾指针是为了方便在链表尾部插入元素，并且，链表的虚拟头节点在初始化时已经创建好。了解更多链表操作，请参看我的《数据结构与算法之美》这本书。
 
-```
+```java
 public class AQSDemo {
   public static final class Node {
     private int threadId;
@@ -282,7 +282,7 @@ public class AQSDemo {
 
 我们可以使用CAS来保证addWaiter()函数线程安全，如下代码所示。多个线程竞争往链表尾部添加元素时，只有一个线程会成功执行CAS，将tail指针更新为指向自己的节点，其他线程执行CAS失败，继续自旋执行CAS，直到将元素成功添加到链表尾部为止。
 
-```
+```java
 public void addWaiter(int val) {
   Node waiter = new Node(val, null, null);
   for(;;) {

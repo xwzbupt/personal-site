@@ -19,7 +19,7 @@ category: Java
 
 假设我们现在有这样一个需求：在一个标准的Controller-Service-Repository三层结构的后端系统中，我们希望实现一个简单的调用链追踪功能。每个接口请求所对应的所有日志都附带同一个traceId，这样，我们通过traceId便可以轻松得到一个接口请求的所有日志，方便通过日志查找代码问题。以下是调用链追踪功能的一种实现方式。traceId定义为函数内的局部变量，需要通过参数传递给被调用函数使用。
 
-```
+```java
 public class UserController {
   private static final Logger logger = 
       LoggerFactory.getLogger(UserController.class);
@@ -46,7 +46,7 @@ public class UserController {
 
 ThreadLocal的提供的函数如下所示。其中，set()函数用来将变量值存储在当前线程中，get()函数用来从当前线程中取出变量值。remove()函数用来从当前线程删除变量。initialValue()函数是一个protected方法，可以在子类中重新实现，用于提供变量的初始值。
 
-```
+```java
 public class ThreadLocal<T> {
     protected T initialValue() { return null; }
     public T get();
@@ -61,7 +61,7 @@ public class ThreadLocal<T> {
 
 我们使用ThreadLocal重新实现调用链追踪功能，对应的代码如下所示。我们实现了一个匿名类，继承自ThreadLocal，重写了initialValue()来提供threadLocalTraceId的初始值。如果在调用get()函数之前没有调用set()函数设置threadLocalTraceId的值，ThreadLocal会调用我们提供的initialValue()函数，使用其返回值初始化threadLocalTraceId。对于详细的处理逻辑，我们待会结合源码来讲解。
 
-```
+```java
 public class Context {
   private static final ThreadLocal<String> threadLocalTraceId = 
       new ThreadLocal<String>() {
@@ -110,7 +110,7 @@ public class UserController {
 
 ThreadLocal的代码结构如下所示。从如下代码中，我们可以发现，ThreadLocal类只定义了读写数据的方法，并没有定义任何成员变量来存储数据。那么，set()函数写入的数据存储在哪里呢？get()函数又是从哪里读取数据的呢？
 
-```
+```java
 public class ThreadLocal<T> {
     public ThreadLocal() {}
     protected T initialValue() { return null; }
@@ -152,7 +152,7 @@ public class Thread implements Runnable {
 
 set()函数的源码如下所示。对ThreadLocal的存储结构有了了解之后，我们便很容易看懂set()函数的代码逻辑。对于set()函数的代码逻辑，我在代码中添加了详细的注释，这里就不再赘述了。
 
-```
+```java
 public void set(T value) {
     Thread t = Thread.currentThread(); //获取当前线程对应的Thread对象
     ThreadLocalMap map = getMap(t); //获取Thread对象的threadLocals成员变量
@@ -177,7 +177,7 @@ void createMap(Thread t, T firstValue) {
 
 get()函数的源码如下所示。get()函数的逻辑也比较简单。我们先获取当前线程的threadLocals成员变量。如果threadLocals不为null，那么，我们在threadLocals中查找当前操作的ThreadLocal变量对应的数据值。如果查找到对应的数据值，则直接返回。如果threadLocals为null，或者没有查找threadLocal变量对应的数据值，则调用initialValue()方法获取到threadLocal变量的初始值，创建threadLocals并添加键值对（threadLocal变量和初始值）。
 
-```
+```java
 public T get() {
     Thread t = Thread.currentThread(); //获取当前线程对应的Thread对象
     ThreadLocalMap map = getMap(t); //获取Thread对象的threadLocals成员变量
@@ -211,7 +211,7 @@ private T setInitialValue() {
 
 remove()函数的源码如下所示，相对来说，更加简单。对其代码逻辑，我们就不再赘述了。
 
-```
+```java
  public void remove() {
      ThreadLocalMap m = getMap(Thread.currentThread());
      if (m != null) m.remove(this);
@@ -226,7 +226,7 @@ remove()函数的源码如下所示，相对来说，更加简单。对其代码
 
 前面我们讲到的ReentrantReadWriteLock，其底层实现也用到了ThreadLocal。我们一块回忆一下。对于ReentrantReadWriteLock，AQS中的state同时存储写锁和读锁的加锁情况。state的低16位存储写锁的加锁情况，值为0表示没有加写锁，值为1表示已加写锁，值大于1表示写锁的重入次数。state的高16位存储读锁的加锁情况，值为0表示没有加读锁，值为1表示已加读锁，不过，值大于1并不表示读锁的重入次数，而是表示读锁总共被获取了多少次（每个线程对读锁重入的次数相加），此值用来最终解锁读锁。而每个线程对读锁的重入次数是有用信息，只有重入次数大于0时，线程才可以继续重入。那么，重入次数在哪里记录呢？因为重入次数是跟每个线程相关的数据，所以，我们就可以使用ThreadLocal变量来存储它。对应的源码如下所示。
 
-```
+```java
 //以下代码位于ReentrantReadWriteLock.java中
 static final class HoldCounter {
     int count = 0;
@@ -250,7 +250,7 @@ private transient ThreadLocalHoldCounter readHolds;
 
 在本节的示例中，我们使用时间戳来生成traceId，如果我们更改traceId的生成方式，使用自增的方式生成traceId，如下代码所示，那么，请问下面的代码是否是线程安全的？如果不是，应该如何修改才能保证其线程安全性？
 
-```
+```java
 public class Context {
   private static int id = 0;
   private static final ThreadLocal<String> threadLocalTraceId = 

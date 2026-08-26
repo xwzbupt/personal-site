@@ -12,7 +12,7 @@ category: Java
 
 前面几节中，我们讲到锁、自旋+CAS、原子类。对于如下代码，如果我们希望将其改造成线程安全的，那么该如何来做呢？
 
-```
+```java
 public class Counter {
   private long sum;
 
@@ -32,7 +32,7 @@ public class Counter {
 
 为了让以上代码线程安全，我们只需要对add()函数进行处理。对于add()函数，第一种线程安全的实现方式是：对add()函数加锁，但是加锁会影响程序本身的性能。第二种线程安全的实现方式是：使用自旋+CAS的方式，这样可以避免加锁，在低并发的情况下，这种实现方式的性能远优于加锁，但是，从零实现自旋+CAS，需要用到Unsafe类，风险比较大且编程复杂。第三种线程安全的实现方式是：直接使用封装了自旋+CAS的原子类，相对于第二种实现方式，编程实现简单了许多。这三种实现方式对应的代码如下所示。
 
-```
+```java
 // 线程安全实现方式一：加锁
 public void add_lock(long value) {
   synchronized (this) {
@@ -82,7 +82,7 @@ LongAdder在JDK8中引入，功能非常专精尖，用来实现线程安全的�
 
 我们使用LongAdder对Counter类进行改造，以保证其线程安全，改造之后的代码如下所示。这里需要注意的是，在高并发的情况下，sum()函数并不能返回精确的累加值，这也是其为了实现高性能所付出的代价。也正因如此，LongAdder一般仅限用于对累加值的精确性要求不高的场合，比如应用于数据统计中。至于sum()函数为什么不能返回精确值，我们稍后讲解。
 
-```
+```java
 public class CounterLongAdder {
   private LongAdder ladder = new LongAdder();
   
@@ -118,7 +118,7 @@ LongAdder的使用方法非常简单，但其底层实现原理却比较复杂�
 
 当然，以上只是基本的实现原理，在具体的代码实现中，LongAdder还包含很多细节优化。我们结合LongAdder的源码，来看下累加操作的主要处理流程。LongAdder中的部分源码如下所示。以下源码包含LongAdder类中的核心的成员变量和函数。
 
-```
+```java
 public class LongAdder extends Striped64 {
     public LongAdder() {}
     public void add(long x) { ... }
@@ -193,7 +193,7 @@ cellBusy用来实现锁，类似ReetrantLock中的state字段，cellBusy初始�
 
 对核心成员变量有了简单了解之后，我们再来看下LongAdder的累加过程，对应的源码如下所示。为了展示基本实现原理，避免过多的实现细节的干扰，我对代码进行了稍许调整。
 
-```
+```java
 // 位于LongAdder.java
 public void add(long x) {
     Cell[] as; long b, v; int m; Cell a;
@@ -239,7 +239,7 @@ public void add(long x) {
 
 除此之外，哈希函数计算得到的哈希值，会保存在线程对应的Thread对象的成员变量中，之后便可以一直重复使用，除非发生冲突，两个线程同时执行cas更新同一个Cell对象，执行cas失败的线程会重新生成新的哈希值，并同步更新到对应的Thread对象中。
 
-```
+```java
 //直接获取当前线程对应的Thread对象的PROBE成员变量值
 static final int getProbe() {
     return UNSAFE.getInt(Thread.currentThread(), PROBE);
@@ -287,7 +287,7 @@ static final int advanceProbe(int probe) {
 
 前面我们提到，LongAdder中的sum()函数会累加base和cells中的Cell对象的value值，从而得到最终的累加值。但是，这个值是不准确的，或者说不一致的。这是为什么呢？我们先来看下sum()函数的源码，如下所示。
 
-```
+```java
 public long sum() {
     Cell[] as = cells; Cell a;
     long sum = base;
@@ -317,7 +317,7 @@ public long sum() {
 
 从前面的讲解，我们可以发现，LongAdder只能实现累加操作，而LongAccumulator却可以实现更加丰富的统计操作，比如求最大值。LongAccumulator类的部分源码如下所示。
 
-```
+```java
 @FunctionalInterface
 public interface LongBinaryOperator {
     long applyAsLong(long left, long right);
@@ -367,7 +367,7 @@ public class LongAccumulator extends Striped64 {
 
 从代码实现，我们可以发现，LongAccumulator的代码实现，跟LongAdder的代码实现非常相似，主要区别在于，LongAccumulator支持不同的统计操作。如下示例代码所示，我们通过定义实现了LongBinaryOperator接口的类LongMax，然后通过构造函数传入LongAccumulator对象，便可以支持取最大值的操作。
 
-```
+```java
 public class Demo {
   public static class LongMax implements LongBinaryOperator {
     @Override

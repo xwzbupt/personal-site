@@ -29,7 +29,7 @@ JUC提供了几种不同的锁，继承和实现层次关系如下图所示。�
 
 我们先来看Lock接口，其接口定义如下所示。因为在平时的开发中，我们用到的锁都是可重入锁，所以，Lock接口只有 一个可重入的实现类ReentrantLock。
 
-```
+```java
 public interface Lock {
     void lock();
     void lockInterruptibly() throws InterruptedException;
@@ -52,7 +52,7 @@ public interface Lock {
 
 如下代码所示，为了保证线程安全，getEvenSeq()函数和increment()函数中的代码都加了锁。getEvenSeq()函数调用increment()函数，导致getEvenSeq()函数在锁释放前再次加锁。如果JUC提供的锁不支持可重入特性，那么，getEvenSeq()中的第二次加锁需要等待锁释放，而锁释放又需要加锁之后才能执行，于是，getEvenSeq()就会出现死锁。
 
-```
+```java
 public class Demo {
   Lock lock = new ReentrantLock();
   private int seq = 0;
@@ -98,7 +98,7 @@ JUC提供的锁都是可重入锁。实际上，Java synchronized内置锁也是
 
 Java将synchronized设计为只支持非公平锁，而JUC提供的ReentrantLock既支持公平锁，也支持非公平锁。默认情况下，ReentrantLock为非公平锁。如果需要创建公平锁，那么我们只需要在创建ReentrantLock对象时，将构造函数的参数设置为true即可。如下代码所示。
 
-```
+```java
 Lock lock = new ReentrantLock(true); // 公平锁
 ```
 
@@ -140,7 +140,7 @@ Lock lock = new ReentrantLock(true); // 公平锁
 
 对于synchronized锁来说，线程在阻塞等待synchronized锁时是无法响应中断的。而JUC Lock接口提供了lockInterruptibly()函数，支持可响应中断的方式来请求锁。示例代码如下所示。主线程先获取到了锁并一直持有，之后线程t1调用lockInterruptibly()请求锁，因为锁被主线程持有，所以，线程t1阻塞等待。主线程调用interrupt()函数向线程t1发起中断请求，线程t1响应中断请求，退出阻塞等待锁，并打印“I am interrupted”。
 
-```
+```java
 public class Demo {
   private static Lock lock = new ReentrantLock();
   
@@ -181,7 +181,7 @@ public class Demo {
 
 对于synchronized锁来说，一个线程去请求一个synchronized锁时，如果锁已经被另一个线程获取，那么，这个线程就需要阻塞等待。JUC Lock接口提供了tryLock()函数，支持非阻塞的方式获取锁。如果锁已经被其他线程获取，那么，调用tryLock()函数会直接返回错误码而非阻塞等待。示例代码如下所示。非阻塞锁的实现原理非常简单。竞争锁失败的线程不放入队列排队即可实现非阻塞锁。
 
-```
+```java
 public class Demo {
   private Lock lock = new ReentrantLock();
   
@@ -207,7 +207,7 @@ public class Demo {
 
 除了提供不带参数的tryLock()函数之外，JUC Lock接口还提供给了带时间参数的tryLock()函数，支持非阻塞获取锁的同时设置超时时间。也就是说，一个线程在请求锁时，如果这个锁被其他线程持有，那么这个线程会阻塞等待一段时间。如果超过了设定的超时时间，线程仍然没有获取到锁，那么tryLock()函数将会返回错误码而不再阻塞等待。示例代码如下所示。从示例代码中，我们还可以发现，tryLock()跟lockInterruptibly()一样，也可以被中断。这样是为了避免tryLock()阻塞过长时间。
 
-```
+```java
 public class Demo {
   private Lock lock = new ReentrantLock();
   
@@ -287,7 +287,7 @@ class ObjectMonitor {
 
 AQS类中所包含的成员变量并不多，如下代码所示。这几个成员变量构成了AQS实现锁和同步工具所依赖的核心数据结构。
 
-```
+```java
 public abstract class AbstractQueuedSynchronizer
                       extends AbstractOwnableSynchronizer {
     private transient volatile Node head;
@@ -312,7 +312,7 @@ public abstract class AbstractOwnableSynchronizer {
 
 前面在讲到synchronized的底层实现原理时，我们讲到，当多个线程竞争锁时，它们会通过CAS操作来设置ObjectMonitor中的_owner字段。谁设置成功，谁就获取了这个锁。实际上，AQS中的state的作用就类似于ObjectMonitor中的_owner字段。只不过_owner字段是一个指针，存储的是获取锁的线程，而state是一个int类型的变量，存储0、1等整型值。其中，0表示锁没有被占用，1表示锁已经被占用，大于1的数表示重入的次数。当多个线程竞争锁时，它们会通过如下所示的CAS操作来更新state的值。这里CAS指的是先检查state的值是否为0，如果是的话，将state值设置为1。谁设置成功，谁就获取了这个锁。
 
-```
+```java
 protected final boolean compareAndSetState(int expect, int update) {
   return unsafe.compareAndSwapInt(this, stateOffset, expect, update);
 }
@@ -336,7 +336,7 @@ AQS中的exclusiveOwnerThread成员变量存储持有锁的线程，它配合sta
 
 在ObjectMonitor中，_cxq、_EntryList用来存储等待锁的线程，_WaitSet用来存储调用了wait()函数（等待条件变量的函数）的线程。相比而言，AQS只有一个等待队列，既可以用来存储等待锁的线程，又可以用来存储等待条件变量的线程。在ObjectMonitor中，_cxq使用单链表来实现，_EntryList和_WaitSet使用双向链表来实现。在AQS中，等待队列使用双向链表来实现。双向链表的节点定义如下所示。AQS中的head和tail两个成员变量分别为双向链表的头指针和尾指针。
 
-```
+```java
 static final class Node {
     static final Node SHARED = new Node();
     static final Node EXCLUSIVE = null;
@@ -366,7 +366,7 @@ AQS使用模板方法模式来实现。在《设计模式之美》一书中，�
 
 **AQS定义了8个模板方法，如下所示****。**以下8个函数可以分为2组，分别用于AQS的两种工作模式：独占模式和共享模式。其中，前4个函数用于独占模式，后4个函数用于共享模式。Lock为排它锁，因此，Lock的底层实现只会用到AQS的独占模式。ReadWriteLock中的读锁为共享锁，写锁为排它锁，因此，ReadWriteLock的底层实现既会用到AQS的独占模式，又会用到AQS的共享模式。Semaphore、CountdownLatch这些同步工具只会用到AQS的共享模式。
 
-```
+```java
 public final void acquire(int arg) { ... }
 public final void acquireInterruptibly(int arg)
                   throws InterruptedException { ... }
@@ -388,7 +388,7 @@ public final boolean releaseShared(int arg) { ... }
 
 **AQS提供了4个抽象方法，如下所示。**前两个抽象方法用于独占模式的4个模板方法，后两个抽象方法用于共享模式的4个模板方法。在标准的模板方法模式的代码实现中，抽象方法需要使用abstract关键字来定义，以强制子类去实现它。但以下抽象方法并没有使用abstract关键字来定义，而是给出了默认的实现，即抛出UnsupportOperationException异常。这样做是为了减少开发量，即我们不需要在子类中实现所有的抽象方法，用到哪个就实现哪个即可。
 
-```
+```java
 protected boolean tryAcquire(int arg) {
     throw new UnsupportedOperationException();
 }
@@ -412,7 +412,7 @@ protected boolean tryReleaseShared(int arg) {
 
 **接下来，我们结合ReentrantLock来看下AQS如何使用。**ReentrantLock既支持非公平锁，又支持公平锁，其部分代码如下所示。ReentrantLock定义了两个继承自AQS的子类：NonfairSync和FairSync，分别用来实现非公平锁和公平锁。因为NonfairSync和FairSync的释放锁的逻辑是一样的，所以，NonfairSync和FairSync又抽象出了一个公共的父类Sync。注意，为了更清晰的展示原理，在不改变代码逻辑的情况下，我对本节中的代码均做了少许调整。
 
-```
+```java
 public class ReentrantLock implements Lock {
     private final Sync sync;
     
@@ -451,7 +451,7 @@ ReentrantLock中的lock()函数调用AQS的acquire()模板方法来实现，unlo
 
 acquire()的代码实现如下所示。acquire()的代码实现看似非常简单，实际上，其包含的逻辑可不少。acquire()先调用tryAcquire()方法去竞争获取锁。如果tryAcquire()获取锁成功，acquire()就直接返回。如果tryAcquire()获取锁失败，那么就会执行addWaiter()，将线程包裹为Node节点放入等待队列的尾部，最后调用acquireQueued()阻塞当前线程。selfInterrupt()用来处理中断，如果在等待锁的过程中，线程被其他线程中断，那么，在获取锁之后，将线程的中断标记设置为true。这里的中断不是重点，简单了解即可。
 
-```
+```java
 public final void acquire(int arg) {
     // tryAcquire() -> addWaiter() -> acquireQueued()
     if (!tryAcquire(arg) && acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
@@ -465,7 +465,7 @@ public final void acquire(int arg) {
 
 tryAcquire()是抽象方法，在NonfairSync和FairSync中实现。代码如下所示。我对代码做了详细的注释，这里就不再重述其中的代码逻辑了。两个tryAcquire()方法的代码实现区别也不大，唯一的区别是在获取锁之前，FairSync会调用hasQueuedPredecessors()函数，查看等待队列中是否有线程在排队，如果有，那么tryAcquire(）返回false，表示竞争锁失败，从而禁止“插队”获取锁的行为。
 
-```
+```java
 static final class NonfairSync extends Sync {
     // 尝试获取锁，成功返回true，失败返回false。AQS用于实现锁时，acquires=1
     protected final boolean tryAcquire(int acquires) {
@@ -515,7 +515,7 @@ static final class FairSync extends Sync {
 
 addWaiter()函数的代码实现如下所示。在多线程环境下，往链表尾部添加节点会存在线程安全问题，因此，下面的代码采用自旋+CAS操作的方式来解决这个问题，这种方式在AtomicInteger等原子类中被大量使用，我们在讲解原子类时再详细讲解。除此之外，addWaiter()函数还需要特殊处理链表为空的情况，同样也存在线程安全问题，也同样是采用自旋+CAS操作解决的。注意，为了方便操作，AQS中的双向链表带有虚拟头节点。关于虚拟头节点，你可以阅读我的《数据结构与算法之美》这本书来了解。
 
-```
+```java
 private Node addWaiter(Node mode) {
     Node node = new Node(Thread.currentThread(), mode);
     // 自旋执行CAS操作，直到成功为止
@@ -543,7 +543,7 @@ private Node addWaiter(Node mode) {
 
 acquireQueued()的代码实现如下所示，主要包含两部分逻辑：使用tryAcquire()函数来竞争锁和使用park()函数来阻塞线程，并且采用for循环来交替执行这两个逻辑。之所以这样做，是因为线程在被唤醒（取消阻塞）之后，并不是直接获取锁，而是需要重新竞争锁，如果竞争失败，那么就需要再次被阻塞。关于代码中涉及的中断的处理逻辑，我们在本节中的中断机制小结中讲解。
 
-```
+```java
 final boolean acquireQueued(final Node node, int arg) {
     boolean failed = true;
     try {
@@ -583,7 +583,7 @@ private final boolean parkAndCheckInterrupt() {
 
 release()模板方法的代码实现比较简单，如下所示，主要包含两部分逻辑：使用tryRelease()函数释放锁和调用unpark()函数唤醒链首节点（除虚拟头节点之外）对应的线程。
 
-```
+```java
 public final boolean release(int arg) {
     if (tryRelease(arg)) {
         Node h = head;
@@ -601,7 +601,7 @@ public final boolean release(int arg) {
 
 tryRelease()是抽象方法。不管是公平锁还是非公平锁，tryRelease()释放锁的逻辑相同，如下所示。代码中有详细的注释，这里就不再赘述代码逻辑了。
 
-```
+```java
 static final class Sync extends AbstractQueuedSynchronizer {
     // 释放锁，成功返回true，失败返回false。AQS用于实现锁时，releases=1
     protected final boolean tryRelease(int releases) {
@@ -631,7 +631,7 @@ static final class Sync extends AbstractQueuedSynchronizer {
 
 在独占模式下，AQS中对应的模板方法有4个。前面讲到了两个：acquire()和release()，分别用来实现ReentrantLock中的lock()和unlock()函数。接下来，我们再来看下另外两个：aquireInterruptibly()和tryAquireNanos()，它们分别用来实现ReentrantLock中的lockInterruptibly()函数和带超时时间的tryLock()函数。具体如下代码所示。
 
-```
+```java
 public void lockInterruptibly() throws InterruptedException {
     sync.acquireInterruptibly(1);
 }
@@ -648,7 +648,7 @@ public boolean tryLock(long timeout, TimeUnit unit)
 
 acquireInterruptibly()模板方法对应的代码实现如下所示。代码实现也非常简单，如果线程被中断，则抛出InterruptedException异常，否则，调用tryAcquire()竞争获取锁，如果获取锁成功，则直接返回，否则，调用doAcquireInterruptible()函数。
 
-```
+```java
 public final void acquireInterruptibly(int arg) throws InterruptedException {
     if (Thread.interrupted()) throw new InterruptedException();
     if (!tryAcquire(arg)) doAcquireInterruptibly(arg);
@@ -661,7 +661,7 @@ public final void acquireInterruptibly(int arg) throws InterruptedException {
 
 doAcquireInterruptibly()函数的代码实现如下所示，跟之前讲的acquireQueued()函数的代码实现非常相似。唯一的区别是对中断的响应处理不同。parkAndCheckInterrupt()函数返回有两种情况，一种是其他线程调用了unpark()函数取消阻塞，另一种是被其他线程中断。对于第二种情况，acquireQueued()函数不对中断做任何处理，继续等待锁。doAcquireInterruptibly()函数则是将中断包裹为InterruptedException异常抛出，终止等待锁。因此，调用acquire()实现的lock()函数，在阻塞等待锁时，不会被中断。调用acquireInterruptibly()实现的lockInterruptibly()函数，在阻塞等待锁时，可以被中断。
 
-```
+```java
 private void doAcquireInterruptibly(int arg) throws InterruptedException {
     final Node node = addWaiter(Node.EXCLUSIVE);
     boolean failed = true;
@@ -691,7 +691,7 @@ private void doAcquireInterruptibly(int arg) throws InterruptedException {
 
 tryAquireNanos()模板方法的代码实现如下所示。代码实现也非常简单，如果线程被中断，则直接抛出InterruptedException异常，否则，调用tryAcquire()竞争获取锁，如果获取锁成功，则直接返回，否则，调用doAcquireNanos()函数。
 
-```
+```java
 public final boolean tryAcquireNanos(int arg, long nanosTimeout)
     throws InterruptedException {
     if (Thread.interrupted()) throw new InterruptedException();
@@ -705,7 +705,7 @@ public final boolean tryAcquireNanos(int arg, long nanosTimeout)
 
 doAcquireNanos()函数的代码实现如下所示。在doAcquireInterruptibly()函数的代码实现的基础之上，doAcquireNanos()函数又添加了对超时的处理机制。因此，使用tryAcquireNanos()实现的ReentrantLock的tryLock()函数，既支持中断，又支持设置超时时间。
 
-```
+```java
 private boolean doAcquireNanos(int arg, long nanosTimeout)
                                     throws InterruptedException {
     if (nanosTimeout <= 0L) return false;
@@ -775,7 +775,7 @@ void park() {
 
 ReadWriteLock接口的定义，如下所示。跟Lock和ReentrantLock的关系类似，ReadWriteLock也只有一个可重入的实现类ReentrantReadWriteLock。
 
-```
+```java
 public interface ReadWriteLock {
     Lock readLock();
     Lock writeLock();
@@ -788,7 +788,7 @@ public interface ReadWriteLock {
 
 ReadWriteLock接口中只包含两个函数，其中，readLock()函数返回读锁。读锁用来给读操作加锁。writeLock()函数返回写锁。写锁用来给写操作加锁。读锁是一种共享锁，读锁可以被多个线程同时获取。写锁是排它锁。写锁同时只能被一个线程获取。除此之外，读锁和写锁之间也是排它的。因此，读写锁一般用于读多写少的场景。读写锁的使用示例代码如下所示。两个线程允许并发执行get()函数。
 
-```
+```java
 public class Demo {
   private List<String> list = new LinkedList<>();
   private ReadWriteLock rwLock = new ReentrantReadWriteLock();
@@ -821,7 +821,7 @@ public class Demo {
 
 ReentrantReadWriteLock既支持公平锁又支持非公平锁。跟ReentrantLock的公平锁和非公平锁的构建方法一样，ReentrantReadWriteLock默认为非公平锁。如果要成创建公平锁，我们只需要在创建ReentrantReadWriteLock对象时，将构造函数的参数设置为true即可，示例代码如下所示。
 
-```
+```java
 ReadWriteLock rwLock = new ReentrantReadWriteLock(true); //公平锁
 ReadWriteLock rwLock = new ReentrantReadWriteLock(false); //非公平锁
 ReadWriteLock rwLock = new ReentrantReadWriteLock(); //默认为非公平锁
@@ -869,7 +869,7 @@ ReadWriteLock rwLock = new ReentrantReadWriteLock(); //默认为非公平锁
 
 前面讲到读写锁跟上一节讲到的普通锁（JUC Lock）一样，既支持公平锁，也支持非公平锁。ReentrantReadWriteLock的代码结构如下所示。
 
-```
+```java
 public class ReentrantReadWriteLock implements ReadWriteLock {
     private final ReadLock readerLock;
     private final WriteLock writerLock;
@@ -917,7 +917,7 @@ public class ReentrantReadWriteLock implements ReadWriteLock {
 
 上述代码结构跟ReentrantLock的代码结构类似，NonfairSync和FairSync具体化抽象的模板类AQS，并且实现了其中的抽象方法。NonfairSync是非公平锁，FairSync是公平锁。ReentrantReadWriteLock使用NonfairSync或FairSync来编程实现读锁（ReadLock）和写锁（WriteLock）。ReadLock和WriteLock均实现了Lock接口，使用相同的AQS，实现了Lock接口中的所有加锁和解锁函数。ReadLock和WriteLock的代码实现如下所示。
 
-```
+```java
 //写锁中的加锁和解锁方法使用AQS的独占模式下的几个模板方法来实现
 public static class WriteLock implements Lock, java.io.Serializable {
     private final Sync sync;
@@ -976,7 +976,7 @@ WriteLock写锁是排它，因此，它的实现原理跟上一节讲到的Reent
 
 **我们先来看WriteLock中的lock()函数。**实现比较简单，直接调用了AQS中的acquire()模板方法。
 
-```
+```java
 public void lock() {
     sync.acquire(1);
 }
@@ -988,7 +988,7 @@ public void lock() {
 
 AQS中的acquire()模板方法如下所示，在上一节中已经讲解，使用tryAcquire()竞争锁，如果竞争锁成功，则直接返回，如果竞争锁失败，则调用addWaiter()将线程放入等待队列的尾部，然后调用acquireQueued()阻塞线程等待被唤醒。
 
-```
+```java
 public final void acquire(int arg) {
     // tryAcquire() -> addWaiter() -> acquireQeuued()
     if (!tryAcquire(arg) && acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
@@ -1002,7 +1002,7 @@ public final void acquire(int arg) {
 
 上一节，我们已经详细讲解了addWaiter()函数和acquiredQueued()函数，这里就不再赘述。我们重点看下tryAcquire()竞争锁的逻辑，它是AQS中的抽象方法，在NonfairSync和FairSync的公共父类Sync类中实现。代码如下所示。
 
-```
+```java
 protected final boolean tryAcquire(int acquires) {
     Thread current = Thread.currentThread();
     int c = getState(); //c为state的值
@@ -1033,7 +1033,7 @@ protected final boolean tryAcquire(int acquires) {
 
 我们重点看下writerShouldBlock()这个函数，这个函数控制着锁是否为公平锁。在state=0，也就是没有加读锁和写锁的情况下，如果writerShouldBlock()函数返回值为true，那么，线程不尝试竞争锁，而是直接去排队。如果writerShouldBlock()函数返回值为false，那么，线程先尝试竞争锁，不行再去排队。对于非公平锁，writerShouldBlock()总是返回false。对于公平锁，如果等待队列中有线程，那么writerShouldBlock()返回true。如果等待队列中没有线程，那么writerShouldBlock()返回false。
 
-```
+```java
 static final class NonfairSync extends Sync {
     final boolean writerShouldBlock() { return false; }
     final boolean readerShouldBlock() {
@@ -1063,7 +1063,7 @@ static final class FairSync extends Sync {
 
 **我们再来看WriteLock的unlock()函数。**代码实现也比较简单，直接调用了AQS的release()模板方法。
 
-```
+```java
 public void unlock() { 
     sync.release(1);
 }
@@ -1075,7 +1075,7 @@ public void unlock() {
 
 AQS中的release()模板方法如下所示，在上一节中已经讲解，使用tryRelease()释放锁，然后唤醒等待队列中位于队首的线程。
 
-```
+```java
 public final boolean release(int arg) {
     if (tryRelease(arg)) {
         Node h = head;
@@ -1093,7 +1093,7 @@ public final boolean release(int arg) {
 
 我们重点看下在写锁中tryRelease()抽象方法的代码实现，代码如下所示。tryRelease()的代码实现比较简单，在代码中，我详细作了注释，你可以参看注释了解其代码逻辑。这里就不再赘述了。
 
-```
+```java
 protected final boolean tryRelease(int releases) {
     // tryRelease()是AQS工作在独占模式下的函数，只能用于排它锁，也就是写锁
     if (!isHeldExclusively()) throw new IllegalMonitorStateException();
@@ -1119,7 +1119,7 @@ protected final boolean tryRelease(int releases) {
 
 **我们先来看ReadLock中的lock()函数。**前面讲到，WriteLock中的lock()函数调用了AQS中的acquire()模板方法，这里ReadLock的lock()函数调用的是AQS中的acquireShared()模板方法。acquire()模板方法用于独占模式，acquireShared()模板方法用于共享模式。
 
-```
+```java
 public void lock() {
     sync.acquireShared(1);
 }
@@ -1131,7 +1131,7 @@ public void lock() {
 
 我们再来看下AQS中acquireShared()的代码实现，如下所示。对比acquire()的代码实现，acquireShared()的代码实现同样也比较简单，调用tryAquireShared()去竞争锁，如果竞争成功，则直接返回，如果竞争失败，则调用doAcquireShared()去排队等待唤醒。
 
-```
+```java
 public final void acquireShared(int arg) {
     if (tryAcquireShared(arg) < 0) // 竞争读锁
         doAcquireShared(arg); // 竞争失败去排队
@@ -1144,7 +1144,7 @@ public final void acquireShared(int arg) {
 
 tryAcquiredShared()为AQS的抽象方法，其在AQS的子类Sync中实现，具体代码如下所示。tryAcquireShared()为了提高性能做了很多代码层面的优化，导致代码量很大。为了聚焦在基本实现原理上，在不改变基本实现原理的情况下，我对tryAcquireShared()中的代码做了简化。如果你想了解完成的代码，请自行查看源码。
 
-```
+```java
 // 返回-1表示竞争锁失败，返回1表示竞争锁成功
 protected final int tryAcquireShared(int unused) {
     Thread current = Thread.currentThread();
@@ -1201,7 +1201,7 @@ protected final int tryAcquireShared(int unused) {
 
 接下来，我们再来看下doAcquireShared()函数，此函数负责排队和等待唤醒，代码如下所示。doAcquireShared()函数跟上一节讲到的acquireQueued()函数非常类似。区别主要有两点，如下注释所示。区别一是等待读锁的线程标记为SHARED，区别二是线程获取到读锁之后，如果下一个节点对应的线程也在等待读锁，那么也会被唤醒。下一个节点对应的线程获取到读锁之后，又会去唤醒下下个节点对应的线程（如果下下个节点对应的线程也在等待读锁的话）。唤醒操作一直传播下去，直到遇到等待写锁的线程为止。
 
-```
+```java
 private void doAcquireShared(int arg) {
     final Node node = addWaiter(Node.SHARED);//区别一：标记此线程等待的是共享锁（读锁）
     boolean failed = true;
@@ -1234,7 +1234,7 @@ private void doAcquireShared(int arg) {
 
 **我们先来看ReadLock中的unlock()函数。**代码实现也比较简单，直接调用了AQS的releaseShared()模板方法。
 
-```
+```java
 public void unlock() {
     sync.releaseShared(1);
 }
@@ -1246,7 +1246,7 @@ public void unlock() {
 
 AQS中的releaseShared()模板方法如下所示，调用tryReleaseShared()释放读锁，只有当所有的读锁都释放之后，state变为0，才会调用doReleaseShared()唤醒等待队列中位于队首的线程。
 
-```
+```java
 public final boolean releaseShared(int arg) {
     if (tryReleaseShared(arg)) {
         doReleaseShared();
@@ -1262,7 +1262,7 @@ public final boolean releaseShared(int arg) {
 
 doReleaseShared()的代码实现比较简单，我们重点看下tryReleaseShared()。tryReleaseShared()是AQS中的抽象方法，在Sync中实现，代码如下所示。
 
-```
+```java
 //当所有的读锁都释放之后（state变成0）才会返回true
 protected final boolean tryReleaseShared(int unused) {
     Thread current = Thread.currentThread();
@@ -1285,7 +1285,7 @@ protected final boolean tryReleaseShared(int unused) {
 
 StampedLock是对ReadWriteLock的进一步优化，在读锁和写锁的基础之上，又提供了乐观读锁。实际上，乐观读锁并没有加任何锁。在读多写少的应用场景中，大部分读操作都不会被写操作干扰，因此，我们甚至可以将读锁也省略掉。只有验证读操作真正有被写操作干扰的情况下，线程再加读锁重复执行读操作。我们举一个例子解释一下。代码如下所示。
 
-```
+```java
 public class Demo {
   private StampedLock slock = new StampedLock();
   private List<String> list = new LinkedList<>();

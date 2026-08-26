@@ -69,7 +69,7 @@ volatile的作用是什么?等等。
 
 经常有人会拿下面的例子来解释可见性问题。因为线程t1和线程t2运行在不同的CPU上，running作为共享数据，被加载到不同CPU的缓存中，线程t2在缓存中对running值进行修改，对于线程t1来说不可见，因此并不会使线程t1中的while循环结束。
 
-```
+```java
 public class Demo30_1 {
   private static boolean running = true;
   private static int count = 0;
@@ -117,7 +117,7 @@ public class Demo30_1 {
 
 我们先来通过一个经典的例子，看下什么是指令重排序。示例代码如下所示。你觉得下列代码的执行结果是什么呢？
 
-```
+```java
 public class Demo30_3 {
   private static boolean ready = false;
   private static int value = 1;
@@ -192,7 +192,7 @@ public class Demo30_3 {
 
 我们举例解释一下。示例代码如下所示。线程t1和线程t2共享变量count，线程t1执行10000次count++，线程t2执行10000次count++，最终count的值是多少呢？
 
-```
+```java
 public class Demo30_2 {
   private  static volatile int count = 0;
 
@@ -408,7 +408,7 @@ t = x; // x为volatile变量，此句为x变量的读操作
 
 了解了volatile如何解决指令重排问题之后，我们再来看下上一节给出的指令重排问题代码。实际上，问题代码在X86 CPU上运行并不会出现问题，永远都是打印正确的value值2。这是因为在X86 CPU上只有写读重排序，而问题代码中，value=2和ready=true是写写结构，并不会重排序。但是，代码给出正确执行结果，仅限于运行在X86 CPU。如果代码运行在其他类型的CPU上，就无法保证仍然给出正确的执行结果。因此，我们需要在ready变量前面加上volatile修饰，依次来禁止volatile变量写入操作（ready=true）前面的前面的读写操作（value=2）跟它重排序。
 
-```
+```java
 public class Demo30_3 {
   private static volatile boolean ready = false;
   private static int value = 1;
@@ -479,7 +479,7 @@ synchronized也可以解决可见性、有序性、原子性问题。只不过�
 
 在《设计模式之美》中，我们讲到单例模式，单例模式有多种实现方式，其中一种如下代码所示。你觉得以下代码是否存在问题呢？
 
-```
+```java
 public class Singleton {
   private static Singleton instance;
   private int seq;
@@ -529,7 +529,7 @@ STEP2和STEP3一个是读，一个是写，尽管x86 CPU只允许写读重排序
 
 如果说Singleton类中的seq的值设置以后就不再修改，那么，我们还可以使用final关键字来禁止重排序。如下所示。当然，这种做法的前提是seq本身就是不可变的，如果seq可变，那就只能用volatile关键字了。
 
-```
+```java
 public class Singleton {
   private static Singleton instance;
   private final int seq;
@@ -782,7 +782,7 @@ Store Buffer和Invalidate Queue与CPU的相对物理位置不同。Store Buffer�
 
 我们再来看下，上上节中讲到可见性问题时，给出的示例代码，如下所示。尽管线程t2对running的修改，不能被线程t1立即可见，但是，这个不可见的时间窗口不会很长，并不会导致线程t1一直while循环不退出。那么到底是什么导致while循环一直不退出的呢？
 
-```
+```java
 public class Demo30_1 {
   private static boolean running = true;
   private static int count = 0;
@@ -816,7 +816,7 @@ public class Demo30_1 {
 
 实际上，导致线程t1一直while循环不退出的原因是JIT编译的编译优化。对于热点代码，JIT会将其编译为二进制机器指令，以提高执行效率。在进行JIT编译时，会同步进行一定的编译优化。JIT编译器在编译线程t1中的while循环时，因为探测到running一直为true，所以，对其进行优化，省掉了每次判定running是否为true的逻辑，优化之后的代码大致如下所示。因此，即便线程t2改变了running的值，线程t1也不可能再感知到了。
 
-```
+```java
 @Override
 public void run() {
   while (true) {
