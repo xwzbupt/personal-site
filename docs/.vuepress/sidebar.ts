@@ -379,7 +379,48 @@ export const sidebarConfig = sidebar({
   ],
   // 为未手工编排的内容目录生成当前分区导航，避免整站目录过大。
   "/about/": "structure",
-  "/bigdata/": "structure",
+  "/bigdata/": [
+    "",
+    {
+      text: "分析型数据库",
+      icon: "mysql",
+      collapsible: true,
+      children: ["doris/"],
+    },
+    {
+      text: "分布式查询引擎",
+      icon: "rank",
+      collapsible: true,
+      children: ["trino/", "query-engines/openlookeng"],
+    },
+    {
+      text: "数据仓库",
+      icon: "group",
+      collapsible: true,
+      children: ["hive/", "hive/installation"],
+    },
+    {
+      text: "权限与治理",
+      icon: "people",
+      collapsible: true,
+      children: ["security/apache-ranger"],
+    },
+  ],
+  "/ai/": [
+    "",
+    {
+      text: "大模型基础",
+      icon: "creative",
+      collapsible: true,
+      children: ["llm/"],
+    },
+    {
+      text: "模型应用",
+      icon: "tool",
+      collapsible: true,
+      children: ["prompt-engineering/", "rag/", "agents/"],
+    },
+  ],
   "/funny/": "structure",
   "/general/": "structure",
   "/others/": "structure",

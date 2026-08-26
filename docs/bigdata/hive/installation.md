@@ -1,3 +1,13 @@
+---
+title: Hive 单节点离线安装
+category:
+  - 大数据技术
+tag:
+  - Hive
+redirectFrom:
+  - /bigdata/Hive安装.html
+---
+
 ::: info 单节点离线安装
 
 这篇文章记录了对Hive做单节点、离线的安装。

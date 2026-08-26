@@ -12,6 +12,7 @@
     "docs:dev": "vuepress dev docs"
   },
   "devDependencies": {
+    "@lucide/vue": "^1.34.0",
     "@vuepress/bundler-vite": "2.0.0-rc.30",
     "@vuepress/plugin-revealjs": "2.0.0-rc.130",
     "@vuepress/plugin-watermark": "2.0.0-rc.130",

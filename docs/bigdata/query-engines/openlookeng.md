@@ -1,5 +1,11 @@
 ---
-category: openLookeng
+title: openLooKeng 部署实践
+category:
+  - 大数据技术
+tag:
+  - openLooKeng
+redirectFrom:
+  - /bigdata/openLookeng.html
 ---
 
 # openLookeng
