@@ -7,20 +7,36 @@ const progress = ref(0);
 const isReadingPage = ref(false);
 
 let frame: number | undefined;
+let lastScrollY = 0;
+
+const setNavbarHidden = (hidden: boolean): void => {
+  document.documentElement.classList.toggle(
+    "weiser-reading-navbar-hidden",
+    hidden && isReadingPage.value,
+  );
+};
 
 const updateReadingState = (): void => {
   frame = undefined;
 
   if (!isReadingPage.value) {
     progress.value = 0;
+    setNavbarHidden(false);
     return;
   }
 
   const root = document.documentElement;
+  const scrollY = window.scrollY;
   const scrollable = Math.max(0, root.scrollHeight - window.innerHeight);
-  const nextProgress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  const nextProgress = scrollable > 0 ? (scrollY / scrollable) * 100 : 0;
+
+  if (scrollY <= 80) setNavbarHidden(false);
+  else if (scrollY < lastScrollY - 2) setNavbarHidden(false);
+  else if (scrollY > 160 && scrollY > lastScrollY + 2)
+    setNavbarHidden(true);
 
   progress.value = Math.min(100, Math.max(0, nextProgress));
+  lastScrollY = scrollY;
 };
 
 const scheduleReadingState = (): void => {
@@ -40,6 +56,8 @@ const syncPageType = async (): Promise<void> => {
     "weiser-reading-page",
     isReadingPage.value,
   );
+  lastScrollY = window.scrollY;
+  setNavbarHidden(false);
   scheduleReadingState();
 };
 
@@ -56,6 +74,7 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", scheduleReadingState);
   if (frame !== undefined) window.cancelAnimationFrame(frame);
   document.documentElement.classList.remove("weiser-reading-page");
+  document.documentElement.classList.remove("weiser-reading-navbar-hidden");
 });
 </script>
 

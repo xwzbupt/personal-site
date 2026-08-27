@@ -464,10 +464,18 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
     box-shadow: 0 14px 34px rgb(20 34 28 / 10%);
 
     pre {
-      margin: 0;
+      margin-block: 0;
       padding-top: 1.15rem;
       padding-bottom: 1.15rem;
       line-height: 1.72;
+    }
+
+    &.line-numbers-mode pre {
+      margin-inline-start: var(--code-line-number-width);
+    }
+
+    &::before {
+      inset-inline-end: 4rem;
     }
 
     > button.vp-copy-code-button {
@@ -595,10 +603,10 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 .weiser-reading-page .vp-back-to-top-button {
   right: clamp(1rem, 2.5vw, 2rem);
   bottom: max(1.25rem, env(safe-area-inset-bottom));
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 1px solid color-mix(in srgb, var(--vp-c-accent) 32%, var(--vp-c-border));
-  border-radius: 0.85rem;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
   color: var(--vp-c-accent);
   background: color-mix(in srgb, var(--vp-c-bg-elv) 88%, transparent);
   box-shadow: 0 12px 32px rgb(31 62 49 / 16%);
@@ -617,7 +625,25 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 }
 
+.weiser-reading-page .vp-navbar {
+  transition:
+    transform 240ms var(--weiser-motion-ease),
+    background-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.weiser-reading-page.weiser-reading-navbar-hidden .vp-navbar {
+  transform: translateY(-105%);
+}
+
 @media (min-width: 1440px) {
+  .weiser-reading-page.weiser-reading-navbar-hidden
+    .vp-page:not(.vp-blog-home):not(:has(.project-portfolio))
+    > .vp-toc-placeholder
+    #toc {
+    top: 2rem;
+  }
+
   .weiser-reading-page #app {
     --content-width: clamp(
       880px,
@@ -2656,9 +2682,7 @@ a.hero-background-credit:hover {
   .weiser-reading-page .vp-back-to-top-button {
     right: 0.85rem;
     bottom: max(0.85rem, env(safe-area-inset-bottom));
-    width: 2.55rem;
-    height: 2.55rem;
-    border-radius: 0.75rem;
+    border-radius: 50%;
   }
 
   .home-footer {
