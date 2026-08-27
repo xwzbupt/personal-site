@@ -1,13 +1,29 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { execFileSync } from "node:child_process";
+
+const getLastCommitTime = (): string => {
+  try {
+    return execFileSync("git", ["log", "-1", "--format=%cI"], {
+      cwd: process.cwd(),
+      encoding: "utf8",
+    }).trim();
+  } catch {
+    return "";
+  }
+};
 
 export default defineUserConfig({
   lang: "zh-CN",
   title: "Weiser",
   description: "weiser的个人网站",
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      define: {
+        __LAST_COMMIT_TIME__: JSON.stringify(getLastCommitTime()),
+      },
+    },
     vuePluginOptions: {},
   }),
 

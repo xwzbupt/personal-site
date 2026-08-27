@@ -4,7 +4,10 @@ import { usePageFrontmatter } from "vuepress/client";
 import { Blog } from "vuepress-theme-hope/blog";
 import SiteUptime from "../components/SiteUptime.vue";
 
+declare const __LAST_COMMIT_TIME__: string;
+
 const frontmatter = usePageFrontmatter<{ siteStartTime?: string }>();
+const lastCommitTime = __LAST_COMMIT_TIME__;
 
 interface PicsumPhoto {
   id: string;
@@ -176,6 +179,7 @@ onBeforeUnmount(() => {
   <Teleport v-if="footerReady" to="#home-site-uptime">
     <SiteUptime
       :start-at="frontmatter.siteStartTime ?? '2022-05-02T09:18:36+08:00'"
+      :last-commit-at="lastCommitTime"
     />
   </Teleport>
 </template>

@@ -76,6 +76,7 @@ strong, b {
 }
 
 .home-footer .home-footer__uptime .site-uptime {
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 0.45rem;
   margin: 0;
@@ -93,6 +94,11 @@ strong, b {
   font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.025em;
+}
+
+.home-footer .home-footer__uptime .site-uptime__commit {
+  color: var(--vp-c-text-subtle);
+  font-size: 0.76rem;
 }
 
 .home-footer__links {
@@ -1009,6 +1015,10 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-shadow: none;
+}
+
+.home-footer .home-footer__uptime .site-uptime__duration {
+  gap: 0.45rem;
 }
 
 .project-portfolio__intro h1 {

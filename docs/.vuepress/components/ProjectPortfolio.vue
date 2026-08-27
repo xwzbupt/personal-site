@@ -45,7 +45,7 @@ const projects: ProjectItem[] = [
     type: "分布式控制 · 状态管理",
     title: "仿真控制系统",
     description:
-      "将分散的节点操作收敛为可配置、可编排、可追踪的标准流程，形成命令、状态与数据闭环。",
+      "将多节点人工操作固化为阶段化流程，以回执、幂等和两级状态收敛保证跨平台任务可靠推进。",
     tags: ["Java", "Netty", "状态机", "任务编排"],
     image: "/images/projects/simulation-control-960.webp",
     image640: "/images/projects/simulation-control-640.webp",
@@ -55,7 +55,7 @@ const projects: ProjectItem[] = [
     imageHeight: 540,
     eager: true,
     abstract:
-      "围绕异构节点的远程控制与状态收敛，建立命令分发、心跳检测、执行回执和数据采集链路，使分散操作具备统一编排与追踪能力。",
+      "基于 Java、Netty、阶段状态机与节点代理，打通参数准备、软件启停、状态确认、数据采集和多轮调度，让异构节点从分散操作走向统一编排。",
     icon: ServerCog,
   },
   {
@@ -65,7 +65,7 @@ const projects: ProjectItem[] = [
     type: "数据平台 · 联邦查询",
     title: "多源异构数据联邦查询平台",
     description:
-      "以统一 SQL 连接多类数据源，通过查询下推、权限治理与分层缓存优化跨源分析链路。",
+      "以 Presto 统一查询多类数据源，通过 Connector 下推、细粒度权限和可回退缓存治理跨源分析链路。",
     tags: ["Presto", "Connector", "Alluxio", "数据治理"],
     image: "/images/projects/federated-query-960.webp",
     image640: "/images/projects/federated-query-640.webp",
@@ -74,7 +74,7 @@ const projects: ProjectItem[] = [
     imageWidth: 960,
     imageHeight: 540,
     abstract:
-      "面向多源异构数据的统一分析场景，通过 Presto Connector、权限治理、查询下推与分层缓存，降低跨源 JOIN 的访问与计算成本。",
+      "在不搬迁原始数据的前提下，以 Neo4j Connector 补齐图数据接入，并通过 Alluxio 动态路由、准入控制和安全回源优化热点文件访问。",
     icon: Database,
   },
   {
