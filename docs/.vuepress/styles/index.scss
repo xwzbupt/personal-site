@@ -208,19 +208,13 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 
 /* 文章阅读页：统一普通文章和项目详情的阅读壳层。 */
 .vp-page:not(.vp-blog-home):not(:has(.project-portfolio)) {
-  --content-width: 780px;
+  --content-width: clamp(
+    720px,
+    calc(100vw - var(--sidebar-width) - 4rem),
+    1120px
+  );
 
-  background:
-    radial-gradient(
-      circle at 72% 5%,
-      color-mix(in srgb, var(--vp-c-accent) 7%, transparent),
-      transparent 24rem
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--vp-c-bg-alt) 72%, var(--vp-c-bg)),
-      var(--vp-c-bg) 34rem
-    );
+  background: var(--vp-c-bg);
 
   > :is(
       .vp-breadcrumb,
@@ -232,7 +226,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
       .vp-comment
     ) {
     box-sizing: border-box;
-    width: min(var(--content-width), calc(100% - 2rem));
+    width: min(var(--content-width), calc(100% - 3rem));
     max-width: none;
     margin-inline: auto;
   }
@@ -254,19 +248,9 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 
   > .vp-page-title {
-    overflow: hidden;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     margin-bottom: 0;
-    padding: 2rem 2.4rem 1.55rem;
-    border: 1px solid color-mix(in srgb, var(--vp-c-border) 82%, transparent);
-    border-radius: 1rem;
-    background:
-      linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--vp-c-accent) 7%, var(--vp-c-bg-elv)),
-        var(--vp-c-bg-elv) 42%
-      );
-    box-shadow: 0 18px 52px rgb(30 64 49 / 8%);
+    padding: 1.45rem 0 1rem;
 
     &::before {
       display: none;
@@ -312,17 +296,17 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 
   > .vp-toc-placeholder {
-    margin-top: 0.85rem;
+    margin-top: 0.4rem;
     margin-bottom: 0;
     padding-inline: 0;
 
     #toc {
       overflow: hidden;
       margin-bottom: 0;
-      border: 1px solid color-mix(in srgb, var(--vp-c-border) 84%, transparent);
-      border-radius: 0.85rem;
-      background: color-mix(in srgb, var(--vp-c-bg-elv) 94%, var(--vp-c-accent) 6%);
-      box-shadow: 0 12px 32px rgb(30 64 49 / 6%);
+      border: 0;
+      border-radius: 0.65rem;
+      background: color-mix(in srgb, var(--vp-c-accent) 5%, var(--vp-c-bg-alt));
+      box-shadow: none;
     }
   }
 
@@ -338,7 +322,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   .vp-toc-wrapper.open {
     margin-top: 0;
     padding: 0.2rem 0.45rem 0.7rem;
-    border-top: 1px solid color-mix(in srgb, var(--vp-c-border) 70%, transparent);
+    border-top: 0;
   }
 
   .vp-toc-link {
@@ -351,12 +335,12 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 
   > [vp-content]:not(.custom) {
-    margin-top: 0.85rem;
-    padding: 2.35rem 3rem 3.4rem;
-    border: 1px solid color-mix(in srgb, var(--vp-c-border) 82%, transparent);
-    border-radius: 1rem;
-    background: color-mix(in srgb, var(--vp-c-bg-elv) 97%, var(--vp-c-accent) 3%);
-    box-shadow: 0 20px 58px rgb(30 64 49 / 7%);
+    margin-top: 0.25rem;
+    padding: 1.6rem 0 3.4rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     animation: none;
   }
 
@@ -373,8 +357,8 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
     > h2 {
       position: relative;
       margin: 3.5rem 0 1.35rem;
-      padding: 0 0 0.68rem 1rem !important;
-      border-bottom: 1px solid color-mix(in srgb, var(--vp-c-border) 80%, transparent);
+      padding: 0 0 0 1rem !important;
+      border-bottom: 0;
       font-family: var(--weiser-reading-ui-font);
       font-size: 1.62rem;
       font-weight: 740;
@@ -433,9 +417,9 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 
     margin: 1.55rem 0 !important;
     padding: 0.85rem 1.05rem !important;
-    border: 1px solid color-mix(in srgb, var(--weiser-hint-color) 22%, var(--vp-c-border));
-    border-inline-start: 0.25rem solid var(--weiser-hint-color);
-    border-radius: 0.75rem;
+    border: 0;
+    border-inline-start: 0.22rem solid var(--weiser-hint-color);
+    border-radius: 0.25rem;
     color: var(--vp-c-text-subtle);
     background: color-mix(in srgb, var(--weiser-hint-color) 7%, var(--vp-c-bg-elv)) !important;
     box-shadow: none;
@@ -552,18 +536,18 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 
   > :is(.vp-page-meta, .vp-page-nav, .vp-comment) {
-    margin-top: 1rem;
-    padding: 1.15rem 1.35rem;
-    border: 1px solid color-mix(in srgb, var(--vp-c-border) 82%, transparent);
-    border-radius: 0.9rem;
-    background: color-mix(in srgb, var(--vp-c-bg-elv) 96%, var(--vp-c-accent) 4%);
+    margin-top: 0.75rem;
+    padding: 1rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
   }
 
   .vp-page-nav .auto-link {
     min-height: 4.5rem;
-    padding: 0.95rem 1.1rem;
-    border: 1px solid var(--vp-c-border);
-    border-radius: 0.7rem;
+    padding: 0.85rem 0.25rem;
+    border: 0;
+    border-radius: 0.45rem;
     background: transparent;
     transition:
       transform 0.28s var(--weiser-motion-ease),
@@ -572,9 +556,8 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
       box-shadow 0.28s ease;
 
     &:hover {
-      border-color: color-mix(in srgb, var(--vp-c-accent) 52%, var(--vp-c-border));
       background: color-mix(in srgb, var(--vp-c-accent) 6%, var(--vp-c-bg-alt));
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
   }
 }
@@ -593,12 +576,17 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   .vp-sidebar-link.route-link-active {
     color: var(--vp-c-accent);
     background: color-mix(in srgb, var(--vp-c-accent) 10%, transparent);
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vp-c-accent) 20%, transparent);
+    box-shadow: none;
   }
 }
 
 .weiser-reading-page #app {
   --sidebar-width: 15.5rem;
+  --content-width: clamp(
+    720px,
+    calc(100vw - var(--sidebar-width) - 4rem),
+    1120px
+  );
   --weiser-reading-ui-font:
     Inter, "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui,
     -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -630,9 +618,30 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 }
 
 @media (min-width: 1440px) {
+  .weiser-reading-page #app {
+    --content-width: clamp(
+      880px,
+      calc(100vw - var(--sidebar-width) - 24rem),
+      1220px
+    );
+  }
+
   .vp-page:not(.vp-blog-home):not(:has(.project-portfolio)) {
+    --content-width: clamp(
+      880px,
+      calc(100vw - var(--sidebar-width) - 24rem),
+      1220px
+    );
+
     > .vp-toc-placeholder #toc {
+      position: fixed;
+      inset-inline-start: auto;
+      inset-inline-end: clamp(1.25rem, 2.25vw, 2.75rem);
+      top: calc(var(--navbar-height) + 2rem);
       overflow: visible;
+      width: clamp(12rem, 14vw, 16rem);
+      min-width: 0;
+      max-width: none;
       border: 0;
       border-radius: 0;
       background: transparent;
@@ -646,6 +655,7 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 
     .vp-toc-wrapper,
     .vp-toc-wrapper.open {
+      overflow-x: hidden;
       margin: 0;
       padding: 0;
       border-top: 0;
@@ -2575,8 +2585,8 @@ a.hero-background-credit:hover {
     }
 
     > .vp-page-title {
-      padding: 1.45rem 1.25rem 1.2rem;
-      border-radius: 0.85rem;
+      padding: 1.15rem 0 0.85rem;
+      border-radius: 0;
 
       h1 {
         margin-bottom: 0.9rem !important;
@@ -2600,8 +2610,8 @@ a.hero-background-credit:hover {
 
     > [vp-content]:not(.custom) {
       margin-top: 0.65rem;
-      padding: 1.45rem 1.15rem 2.6rem;
-      border-radius: 0.85rem;
+      padding: 1.1rem 0 2.6rem;
+      border-radius: 0;
     }
 
     [vp-content] #markdown-content {
@@ -2624,7 +2634,7 @@ a.hero-background-credit:hover {
     [vp-content] .hint-container {
       margin: 1.35rem 0 !important;
       padding: 0.75rem 0.85rem !important;
-      border-radius: 0.65rem;
+      border-radius: 0.2rem;
 
       p {
         font-size: 0.92rem;
@@ -2638,8 +2648,8 @@ a.hero-background-credit:hover {
     }
 
     > :is(.vp-page-meta, .vp-page-nav, .vp-comment) {
-      padding: 0.95rem;
-      border-radius: 0.8rem;
+      padding: 0.85rem 0;
+      border-radius: 0;
     }
   }
 
@@ -2690,15 +2700,9 @@ a.hero-background-credit:hover {
     }
 
     > .vp-page-title {
-      padding-inline: 1rem;
-
       .page-info :is(.page-author-info, .page-word-info) {
         display: none;
       }
-    }
-
-    > [vp-content]:not(.custom) {
-      padding-inline: 1rem;
     }
   }
 
