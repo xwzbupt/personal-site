@@ -24,12 +24,45 @@ const isChangingBackground = ref(false);
 const footerReady = ref(false);
 
 let requestController: AbortController | undefined;
+let clampFrame: number | undefined;
+let homeResizeObserver: ResizeObserver | undefined;
+
+const clampHomeScroll = (): void => {
+  clampFrame = undefined;
+
+  const footer = document.querySelector<HTMLElement>(".vp-footer-wrapper");
+  if (!footer) return;
+
+  const footerBottom = footer.getBoundingClientRect().bottom + window.scrollY;
+  const maxScroll = Math.max(0, footerBottom - window.innerHeight);
+
+  if (window.scrollY > maxScroll + 1)
+    window.scrollTo({ top: maxScroll, left: 0, behavior: "auto" });
+};
+
+const scheduleHomeScrollClamp = (): void => {
+  if (clampFrame !== undefined) return;
+  clampFrame = window.requestAnimationFrame(clampHomeScroll);
+};
 
 const updateHomeNavbar = (): void => {
   document.documentElement.classList.toggle(
     "weiser-home-scrolled",
     window.scrollY > 48,
   );
+  scheduleHomeScrollClamp();
+};
+
+const observeHomeLayout = (): void => {
+  homeResizeObserver?.disconnect();
+  homeResizeObserver = new ResizeObserver(scheduleHomeScrollClamp);
+
+  const page = document.querySelector<HTMLElement>(".vp-page.vp-blog-home");
+  const footer = document.querySelector<HTMLElement>(".vp-footer-wrapper");
+
+  if (page) homeResizeObserver.observe(page);
+  if (footer) homeResizeObserver.observe(footer);
+  scheduleHomeScrollClamp();
 };
 
 const preloadImage = (src: string): Promise<void> =>
@@ -114,15 +147,20 @@ onMounted(() => {
   void loadInitialBackground();
   void nextTick(() => {
     footerReady.value = document.querySelector("#home-site-uptime") !== null;
+    void nextTick(observeHomeLayout);
   });
+  window.addEventListener("resize", scheduleHomeScrollClamp, { passive: true });
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", updateHomeNavbar);
+  window.removeEventListener("resize", scheduleHomeScrollClamp);
   document.documentElement.classList.remove(
     "weiser-blog-home",
     "weiser-home-scrolled",
   );
+  homeResizeObserver?.disconnect();
+  if (clampFrame !== undefined) window.cancelAnimationFrame(clampFrame);
   requestController?.abort();
 });
 </script>

@@ -167,6 +167,10 @@ body {
 }
 
 /* 首页首屏由封面延伸至导航栏，滚动后再恢复主题导航背景。 */
+html.weiser-blog-home {
+  overflow-anchor: none;
+}
+
 html.weiser-blog-home .vp-page.vp-blog-home {
   padding-top: 0;
 }
