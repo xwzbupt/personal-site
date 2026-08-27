@@ -167,8 +167,13 @@ body {
 }
 
 /* 首页首屏由封面延伸至导航栏，滚动后再恢复主题导航背景。 */
-html.weiser-blog-home {
+html.weiser-scroll-bounded-page {
   overflow-anchor: none;
+  overscroll-behavior-y: none;
+}
+
+html.weiser-scroll-boundary-entering {
+  overflow-y: hidden;
 }
 
 html.weiser-blog-home .vp-page.vp-blog-home {
