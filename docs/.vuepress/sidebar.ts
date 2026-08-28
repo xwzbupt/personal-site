@@ -28,6 +28,22 @@ export const sidebarConfig = sidebar({
       ],
     },
   ],
+  "/basics/system-design/": [
+    {
+      prefix: "",
+      text: "系统设计",
+      icon: "rank",
+      collapsible: true,
+      children: [
+        { text: "理论基础", link: "01-理论基础" },
+        { text: "基础组件", link: "02-基础组件" },
+        { text: "数据存储", link: "03-数据存储" },
+        { text: "服务治理", link: "04-服务治理" },
+        { text: "经典解决方案", link: "05-经典解决方案" },
+        { text: "案例实战", link: "06-系统设计案例" },
+      ],
+    },
+  ],
   "/basics/MySQL/": [
     {
       prefix: "",

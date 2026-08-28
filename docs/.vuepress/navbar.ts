@@ -19,6 +19,11 @@ export const navbarConfig = navbar([
         link: "/language/Java/",
       },
       {
+        text: "系统设计",
+        icon: "rank",
+        link: "system-design/01-理论基础",
+      },
+      {
         text: "MySQL数据库",
         icon: "mysql",
         link: "MySQL/",
