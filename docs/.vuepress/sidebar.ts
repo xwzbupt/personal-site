@@ -401,13 +401,19 @@ export const sidebarConfig = sidebar({
       text: "分析型数据库",
       icon: "mysql",
       collapsible: true,
-      children: ["doris/"],
+      children: ["doris/", "doris/storage-engine", "doris/compute-engine"],
     },
     {
       text: "分布式查询引擎",
       icon: "rank",
       collapsible: true,
-      children: ["trino/", "query-engines/openlookeng"],
+      children: ["trino/"],
+    },
+    {
+      text: "数据缓存与加速",
+      icon: "rank",
+      collapsible: true,
+      children: ["alluxio/"],
     },
     {
       text: "数据仓库",
@@ -422,6 +428,7 @@ export const sidebarConfig = sidebar({
       children: ["security/apache-ranger"],
     },
   ],
+  "/life/": ["", "changsha-zhangjiajie"],
   "/ai/": [
     "",
     {

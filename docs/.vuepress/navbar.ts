@@ -66,9 +66,24 @@ export const navbarConfig = navbar([
         link: "doris/",
       },
       {
+        text: "Doris 存储引擎",
+        icon: "mysql",
+        link: "doris/storage-engine",
+      },
+      {
+        text: "Doris 计算引擎",
+        icon: "rank",
+        link: "doris/compute-engine",
+      },
+      {
         text: "Trino",
         icon: "mysql",
         link: "trino/",
+      },
+      {
+        text: "Alluxio",
+        icon: "rank",
+        link: "alluxio/",
       },
       {
         text: "Hive",
@@ -79,11 +94,6 @@ export const navbarConfig = navbar([
         text: "Apache Ranger",
         icon: "people",
         link: "security/apache-ranger",
-      },
-      {
-        text: "openLooKeng",
-        icon: "rank",
-        link: "query-engines/openlookeng",
       },
     ],
   },
@@ -170,6 +180,23 @@ export const navbarConfig = navbar([
         text: "均线流",
         icon: "chart",
         link: "ema-flow/basics",
+      },
+    ],
+  },
+  {
+    text: "生活",
+    icon: "blog",
+    prefix: "/life/",
+    children: [
+      {
+        text: "生活首页",
+        icon: "blog",
+        link: "/life/",
+      },
+      {
+        text: "长沙—张家界旅行记",
+        icon: "note",
+        link: "changsha-zhangjiajie",
       },
     ],
   },
