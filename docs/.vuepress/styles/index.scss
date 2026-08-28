@@ -166,14 +166,16 @@ body {
   box-shadow: 0 8px 30px rgb(15 48 38 / 10%);
 }
 
-/* 首页首屏由封面延伸至导航栏，滚动后再恢复主题导航背景。 */
-html.weiser-scroll-bounded-page {
-  overflow-anchor: none;
+/* 使用浏览器原生滚动边界，避免脚本回弹和移动端下拉刷新。 */
+html {
   overscroll-behavior-y: none;
+  scroll-behavior: auto !important;
+  scrollbar-gutter: stable;
 }
 
-html.weiser-scroll-boundary-entering {
-  overflow-y: hidden;
+#app,
+.theme-container {
+  min-height: 100dvh;
 }
 
 html.weiser-blog-home .vp-page.vp-blog-home {
@@ -525,15 +527,19 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
   }
 
   [vp-content] table {
-    display: block;
-    overflow-x: auto;
-    width: 100%;
-    margin: 1.6rem 0;
+    overflow: hidden;
+    display: table;
+    width: max-content;
+    max-width: 100%;
+    margin: 1.6rem auto;
     border: 1px solid var(--vp-c-border);
     border-radius: 0.72rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: auto;
     font-size: 0.9em;
     line-height: 1.55;
-    white-space: nowrap;
+    white-space: normal;
 
     th {
       font-family: var(--weiser-reading-ui-font);
@@ -543,6 +549,26 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
 
   [vp-content] :is(th, td) {
     padding: 0.62rem 0.78rem;
+    border: 0;
+    border-inline-end: 1px solid var(--vp-c-border);
+    border-block-end: 1px solid var(--vp-c-border);
+    overflow-wrap: anywhere;
+    word-break: normal;
+    white-space: normal;
+  }
+
+  [vp-content] tr > :last-child {
+    border-inline-end: 0;
+  }
+
+  [vp-content] tbody tr:last-child > td {
+    border-block-end: 0;
+  }
+
+  [vp-content] td :is(code, a) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
   }
 
   [vp-content] hr {
@@ -694,6 +720,11 @@ html.weiser-blog-home.weiser-home-scrolled .vp-navbar {
       margin: 0;
       padding: 0;
       border-top: 0;
+    }
+
+    [vp-content] #markdown-content {
+      box-sizing: border-box;
+      padding-inline-end: clamp(2rem, 2.3vw, 2.75rem);
     }
   }
 }
