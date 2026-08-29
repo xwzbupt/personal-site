@@ -20,8 +20,6 @@ tag:
 
 这是一次从北方到南方、从城市到群山的远行，也是我们本科毕业之后，难得凑齐的一次舍友旅行。当时只顾着赶路、吃饭、爬山和拍照，并没有觉得这几天有什么特别。直到后来重新翻看照片，才发现真正被记录下来的，不只是湖南的山水，还有一段正在离我们远去的共同生活。
 
-<!-- 封面图：全员合照，优先选择橘子洲、天门山或张家界国家森林公园的照片 -->
-
 ## 一、南下：在火车上遇见洞庭湖
 
 我们乘坐的是硬卧。
@@ -69,9 +67,9 @@ tag:
 
 一座城市最容易被记住的，往往不是地图上的坐标，而是第一顿饭的气味。多年以后，我们未必还能说清那天经过了哪一条街，却大概仍会记得刚下火车时的饥饿，记得满桌狼藉，也记得大家坐在一起时，那种**旅程刚刚开始、时间仿佛取之不尽**的兴奋。
 
-当然还要拍一张合照。照片里四个人依次坐在桌后，有人微笑，有人竖起拇指，有人冲镜头比着手势。桌上的杯盘还算整齐，所有人也都精神饱满——那时谁也还没有被山路、暴走和连续几天的早起折磨过。
+吃完当然还要凑在一起留个纪念。四个人依次坐在桌后，有人微笑，有人竖起拇指，有人兴致勃勃地比着手势。桌上的杯盘还算整齐，所有人也都精神饱满——那时谁也还没有被山路、暴走和连续几天的早起折磨过。
 
-![天宝兄弟餐桌前的四人卡通合照](./assets/changsha-zhangjiajie/04-tianbao-group-cartoon.png)
+![天宝兄弟餐桌前的四人合照](./assets/changsha-zhangjiajie/04-tianbao-group-cartoon.png)
 
 *落地长沙后的第一张合照。*
 
@@ -85,9 +83,9 @@ tag:
 
 *湘江对岸灯火次第亮起，楼宇的颜色落入水中。*
 
-在江边，我们以这片灯火为背景拍下合照。照片里的四个人站得并不十分整齐，肩膀却自然地挨在一起。身后的城市很大，楼宇很高，而那一刻，我们只是几个终于一起走到湘江边的老同学。
+在江边，我们以这片灯火为背景拍下合照。四个人站得并不十分整齐，肩膀却自然地挨在一起。身后的城市很大，楼宇很高，而那一刻，我们只是几个终于一起走到湘江边的老同学。
 
-![橘子洲湘江边的四人卡通合照](./assets/changsha-zhangjiajie/11-orange-isle-group-cartoon.png)
+![橘子洲湘江边的四人合照](./assets/changsha-zhangjiajie/11-orange-isle-group-cartoon.png)
 
 *橘子洲上的夜晚，身后是长沙的灯火。*
 
@@ -95,9 +93,9 @@ tag:
 
 ![夜色中的青年毛泽东艺术雕塑](./assets/changsha-zhangjiajie/12-young-mao-sculpture.jpg)
 
-我们也在雕塑前拍了一张合照。照片里有人笑得毫无保留，有人对镜头比着手势；身后游人往来，青年毛泽东的面孔则越过人群，沉静地留在夜色中。个人的欢笑与一座城市的历史，短暂地落进了同一个取景框。
+我们也在雕塑前站到了一起。有人笑得毫无保留，有人兴奋地比着手势；身后游人往来，青年毛泽东的面孔则越过人群，沉静地留在夜色中。几个人的欢笑与一座城市的历史，就这样在同一个夜晚短暂相遇。
 
-![青年毛泽东艺术雕塑前的四人卡通合照](./assets/changsha-zhangjiajie/13-mao-group-cartoon.png)
+![青年毛泽东艺术雕塑前的四人合照](./assets/changsha-zhangjiajie/13-mao-group-cartoon.png)
 
 > 独立寒秋，湘江北去，橘子洲头。
 >
@@ -122,31 +120,31 @@ tag:
 
 *昨夜我们站在江中看城市，今天又从山上越过湘江看它。*
 
-我们在山顶拍了合照，努力把眼前所见和当时的自己一并留住。照片里的背景很开阔，四个人却把画面挤得满满当当。后来再看，会觉得所谓登顶的意义，未必只是看到了多远的风景，也是终于可以站在一起说一句：这段路，我们确实走上来了。
+到了山顶，四个人又挤在一起拍了张合照。身后的城市铺得很远，大家却只顾着往彼此身边靠。所谓登顶的意义，未必只是看到了多远的风景，也是终于可以站在一起说一句：这段路，我们确实走上来了。
 
-![岳麓山顶的四人卡通合照](./assets/changsha-zhangjiajie/16-yuelu-summit-group-cartoon.png)
+![岳麓山顶的四人合照](./assets/changsha-zhangjiajie/16-yuelu-summit-group-cartoon.png)
 
 ### 书院深处
 
 从山上下来，我们走进岳麓书院。院中有一株古树，树干粗壮而斑驳，枝桠向四面伸展，几乎撑起了头顶的一整片天空。阳光从叶隙间落下来，照亮竹林、青瓦和来往的人。与山顶开阔的城市不同，书院里的时间像被树荫收拢了，脚步也不由得慢下来。
 
-<div style="text-align: center; margin: 20px 0;">
-  <img src="./assets/changsha-zhangjiajie/18-yuelu-academy-ancient-tree.jpg" alt="岳麓书院中的参天古树" style="width: 100%; max-height: 820px; object-fit: contain; border-radius: 8px;" />
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/18-yuelu-academy-ancient-tree.jpg" alt="岳麓书院中的参天古树" style="display: inline-block; width: auto; max-width: 100%; max-height: 820px; height: auto; border-radius: 8px;" />
 </div>
 
 *古树的枝叶越过屋檐，替书院遮住了大半日光。*
 
-我们还拍下了一整面端正的楷书。整理照片时才看清，右上题着五个字：**《岳麓书院记》**。
+书院里还有一整面端正的楷书，右上题着五个字：**《岳麓书院记》**。
 
 ![岳麓书院内展示的《岳麓书院记》](./assets/changsha-zhangjiajie/19-yuelu-academy-record.jpg)
 
-这是南宋理学家张栻为岳麓书院所作的记文，写于乾道二年，也就是1166年；照片左下的落款则说明，我们眼前这一版由长沙周昭怡于1983年敬书。文章前半追述书院兴废，后半却把话题落到了“为何而学”上：书院不应只教人追逐功名，也不应只训练辞章，而应当成就真正的人才。
+这是南宋理学家张栻为岳麓书院所作的记文，写于乾道二年，也就是1166年；左下的落款则说明，眼前这一版由长沙周昭怡于1983年敬书。文章前半追述书院兴废，后半却把话题落到了“为何而学”上：书院不应只教人追逐功名，也不应只训练辞章，而应当成就真正的人才。
 
 > 盖欲成就人才，以传道而济斯民也。
 >
 > ——张栻[《岳麓书院记》](https://www.gushiwen.cn/shiwenv.aspx?id=cf783f084afe)
 
-八百多年前写下的文字，就这样留在书院的一面墙上。我们当时匆匆拍下，甚至不知道它是什么；直到旅行结束以后重新辨认，才算真正读到。**有些风景是在现场看见的，有些风景却要回到生活以后，才慢慢显影。**
+八百多年前写下的文字，就这样留在书院的一面墙上。我们当时只是匆匆经过，甚至没有真正读懂；直到旅行结束以后再去查找，才明白其中的来历。**有些风景是在现场看见的，有些风景却要回到生活以后，才慢慢显影。**
 
 走出书院后，我们从湖南大学出来。山林忽然接上了校园，岳麓山的树影、书院的旧意和年轻学生的身影交织在一起：一边是千年文脉，一边是仍在继续的青春。
 
@@ -168,7 +166,7 @@ tag:
 
 ![一碗长沙臭豆腐](./assets/changsha-zhangjiajie/22-stinky-tofu-closeup.jpg)
 
-有人吃得豪迈，也有人吃出了几分命运多舛的气质：蹲在街边，抱着背包，面前只剩半碗臭豆腐，眼神越过熙攘的人群，像是在思考人生将把自己带向何方。于是这张照片很快拥有了自己的“新闻标题”。
+有人吃得豪迈，也有人吃出了几分命运多舛的气质：蹲在街边，抱着背包，面前只剩半碗臭豆腐，眼神越过熙攘的人群，像是在思考人生将把自己带向何方。大家看着好笑，顺手给这一幕编了个“新闻标题”。
 
 ![旅行玩笑：某北京男子在长沙街头认真品尝臭豆腐](./assets/changsha-zhangjiajie/21-stinky-tofu-newspaper.png)
 
@@ -180,11 +178,9 @@ tag:
 
 ![国庆装点中的长沙步行街](./assets/changsha-zhangjiajie/24-changsha-golden-facade.jpg)
 
-后来还吃到了一份剁椒鱼头。至于店名，暂时被我们遗失在了那天过于密集的味觉记忆里；等照片和名字补齐，再把这顿饭从记忆里好好捞回来。
+后来还吃到了一份剁椒鱼头。至于店名，早已被我们遗失在那天过于密集的味觉记忆里；只剩鲜辣的滋味还很清楚，和长沙街头蒸腾的热气混在一起。
 
-<!-- 待补：剁椒鱼头照片及饭店名称 -->
-
-茶饮的杯子在人手一个的照片里显得格外整齐。我们在人群中边走边吃，把长沙最具烟火气的一面一点点收进记忆。名胜古迹属于城市漫长的历史，而街边小吃属于我们自己的当下。
+茶饮几乎人手一杯，远远看去竟显得格外整齐。我们在人群中边走边吃，把长沙最具烟火气的一面一点点收进记忆。名胜古迹属于城市漫长的历史，而街边小吃属于我们自己的当下。
 
 后来回忆一座城，最先想起的也许不是它的建筑，而是某个人举着杯子问：
 
@@ -242,25 +238,146 @@ tag:
 
 吃饱之后，我们从长沙出发前往张家界。城市的楼宇逐渐退后，窗外重新被山色占据，湖南之行也由此翻开了另一章：**长沙是热辣、拥挤而明亮的；张家界则以夜色和群山迎接我们。**
 
-抵达后的第一顿，是土家三下锅。几个人围桌坐下，一边吃饭，一边盘算第二天的路线。那时我们尚不知道，等待我们的不仅有天门山的云雾与绝壁，还有之后金鞭溪漫长得仿佛没有尽头的路。
+抵达张家界后的第一顿饭，仍旧延续着湖南菜毫不收敛的热烈。先上桌的是**小炒黄牛肉**：薄切牛肉、青红椒和蒜香挤在一口黑色铁锅里，红亮的汤汁还在锅底微微翻滚。牛肉吸足了咸、辣、鲜，筷子刚伸进去，辣椒与热气便一起扑上来。长途转场留下的疲惫，就这样被一锅热辣迅速驱散。
 
-<!-- 待补：前往张家界途中 / 土家三下锅 -->
+![抵达张家界后吃的小炒黄牛肉](./assets/changsha-zhangjiajie/35-zhangjiajie-stir-fried-beef.jpg)
+
+真正有张家界地方辨识度的，是随后端来的**土家三下锅**。锤纹铁锅里堆着切成细条的肉、内脏和豆制品，洋葱铺在中央，辣椒与酱汁把所有食材炒成浓重的褐红色。它不像一道讲究边界的菜，更像把不同口感一股脑聚进锅里：有软糯，有筋道，也有豆制品吸饱汤汁后的厚实。几个人围桌坐下，一边吃，一边盘算第二天的路线，锅里的热气把尚未熟悉的张家界之夜烘得格外踏实。
+
+![张家界的土家三下锅](./assets/changsha-zhangjiajie/36-zhangjiajie-sanxiaguo.jpg)
+
+店里的介绍还专门讲了“三下锅”的由来。按照这段民间传说，明代嘉靖年间，湘鄂西土司兵赶赴前线抗倭，因出征在即，便把腊肉、豆腐、萝卜合在一锅里提前过年，这道“合菜”后来逐渐演变成“三下锅”。今天的做法早已更加丰富，常从肥肠、猪肚、牛肚、羊肚、猪蹄或猪头肉等食材中选取数样合烹，也分干锅和汤锅。无论传说究竟经历了多少次转述，至少在这一晚，它确实把一段地方故事和一桌人的胃口，一起留进了我们的旅程。
+
+![店内关于土家三下锅由来的介绍](./assets/changsha-zhangjiajie/37-sanxiaguo-introduction.jpg)
+
+那时我们尚不知道，等待我们的不仅有天门山的云雾与绝壁，还有之后金鞭溪漫长得仿佛没有尽头的路。旅行进入群山之后，尺度会忽然改变：一顿饭只是短暂的停靠，第二天抬头时，真正的张家界才从雾里慢慢显出轮廓。
 
 ## 七、次日，天门洞开，人在云上
 
 在张家界住下后的次日，我们去了天门山。
 
-关于天门山，照片大概比语言更有说服力。群峰从云雾中升起，山路在绝壁间盘旋，眼前的景色往往还没来得及看完，转过一个弯，又是另一重天地。我们一路拍照，试图把辽阔的山色装进小小的取景框里，却总觉得镜头太窄，装不下真正站在山中时的震撼。
+还在山脚的游客集散地时，天门山就没有把全貌交给我们。抬头望去，苍翠山体从建筑背后陡然升起，峰顶却被低云严严实实地藏住；雾沿着山脊缓慢流动，时而露出一段灰白岩壁，时而又把它重新抹去。那不是明信片里轮廓清晰的山，而是一座正在呼吸、也正在变化的山。
 
-<!-- 图片组 10：天门山全景 / 盘山公路 / 天门洞 / 索道或栈道 -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0;">
+  <img src="./assets/changsha-zhangjiajie/38-tianmen-base-mist-01.jpg" alt="从天门山脚仰望云雾中的群峰" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/39-tianmen-base-mist-02.jpg" alt="游客集散地建筑与背后的天门山" style="width: 100%; border-radius: 8px;" />
+</div>
 
-旅行中总有一些时刻，人会突然变得很小。
+*山脚的楼阁仍在人间，山腰以上却已经隐进云里。*
 
-站在高处向远方望去时，城市里的烦恼、尚未完成的事情，以及那些原本以为十分重要的情绪，似乎都被群山暂时接了过去。风从山谷中升上来，云雾在脚下聚散，我们难得同时安静了一会儿。
+缆车离开地面后，视线也随之被拔高。脚下的树林迅速连成深绿色的海，灰白色岩峰从林海中直立起来；对面的轿厢沿着钢索驶进雾里，几秒后就只剩一个模糊的色块。缆车像在峡谷上空穿针，钢索伸向看不见的地方，我们也在升高与失重之间，一点点进入云层。
 
-当然，这份安静通常持续不了太久。很快就会有人招呼拍照，有人研究动作，有人嫌弃前一张没拍好。于是一群人在群山之间反复站位，把庄严的自然风光重新变回了熟悉的宿舍日常。
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/40-tianmen-cableway-mist.jpg" alt="缆车穿行在云雾与峰林之间" style="display: inline-block; width: auto; max-width: 100%; max-height: 860px; height: auto; border-radius: 8px;" />
+</div>
 
-<!-- 图片组 11：天门山个人照 / 舍友合照 / 有趣抓拍 -->
+到了天门洞下方，雾比山脚更浓。第一次抬头时，洞口只是乳白色天幕里一道若有若无的竖缝，巨大的山体反而退成了影子；等风把云稍稍推开，峭壁、洞口与栈道才渐渐恢复层次。眼前的景色一直在“看见”与“看不见”之间切换，仿佛天门并非固定在岩壁上，而是由雾临时打开的。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/41-tianmen-cave-in-mist.jpg" alt="浓雾中若隐若现的天门洞" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/42-tianmen-cave-visible.jpg" alt="云雾稍散后显露的天门洞" style="width: 100%; border-radius: 8px;" />
+</div>
+
+真正走到洞前，仰望的感觉又和远处完全不同。石阶从人群脚下笔直向上，越往高处越窄，最后收进巨大的洞口。游客在台阶上连成一条缓慢移动的线，远看不过是山壁间细小的色点。山体几乎垂直立在面前，抬头望不到尽头，而人只能一步一步向上。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/46-tianmen-stairway.jpg" alt="通往天门洞的漫长石阶" style="display: inline-block; width: auto; max-width: 100%; max-height: 900px; height: auto; border-radius: 8px;" />
+</div>
+
+抵达高处以后，雾并没有散尽，却忽然给我们让出一片云海。近处的山峰像岛屿一样从白云中露出尖顶，远处的村落和道路只在云隙中短暂显影；再向上看，云层边缘裂开一小片蓝天，阳光落下来，整片世界便从灰白转成清亮。刚才还包围着我们的雾，此刻已经铺在脚下。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/43-tianmen-cloud-sea-peaks.jpg" alt="山峰从天门山云海中露出" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/44-tianmen-cloud-sea-blue.jpg" alt="云海上方露出的蓝天" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/45-tianmen-cloud-sea-railing.jpg" alt="山顶栏杆外翻涌的云海" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/47-tianmen-cloud-sea-overlook.jpg" alt="从山顶栏杆旁俯瞰云海与远山" style="width: 100%; border-radius: 8px;" />
+</div>
+
+*云从谷底漫上来，群峰只露出几笔轮廓，像一幅尚未干透的水墨。*
+
+旅行中总有一些时刻，人会突然变得很小。站在高处向远方望去时，城市里的烦恼、尚未完成的事情，以及那些原本以为十分重要的情绪，似乎都被群山暂时接了过去。风从山谷中升上来，云雾在脚下聚散，我们难得同时安静了一会儿。那天的天门山没有给出无遮无挡的远景，却用不断开合的云层，让每一次看见都变得格外珍贵。
+
+当然，这份安静通常持续不了太久。很快就会有人招呼拍照，有人研究动作，有人嫌弃前一张没拍好。四个人在山顶栏杆前重新排好位置，肩膀挨着肩膀，背后是几乎被云雾擦成空白的天空。庄严的云海就这样重新变回了熟悉的同学日常。
+
+![天门山顶的四人合照](./assets/changsha-zhangjiajie/48-tianmen-summit-group-cartoon-stylized.png)
+
+*山顶的合影：背景几乎被云雾擦成空白，四个人却因此显得格外清晰。*
+
+在同一段栏杆前，大家又各自站了一回。黑衣的人倚着栏杆，蓝外套的人竖起拇指，白衣的人握着登山杖，彩色运动衫的人笑着比出手势。身后是相同的云海与山峰，四个人却各有各的神情。
+
+![四人在天门山顶栏杆前的单人留影](./assets/changsha-zhangjiajie/49-tianmen-four-portraits-cartoon-grid-stylized.png)
+
+后来再看这些照片，最先想起的未必是哪一段路线，而是缆车钻进雾里的轻微晃动、石阶上缓慢向前的人流，以及云层忽然裂开时大家同时发出的惊叹。风景宏大到让人失语，记忆却总由这些细小的声音保存下来。
+
+后来，我们又坐上了天门山里的开放式索道。它不像先前那段封闭缆车，更像一排悬在空中的座椅：钢索从一座山跨向另一座山，脚下没有车厢地板隔开视线，千沟万壑便毫无遮拦地铺展开来。索道越过林梢时尚且平缓，一旦驶到两山之间，近处的树冠忽然退到脚下，迎面只剩直立的岩壁和深不见底的峡谷。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/50-tianmen-chairlift-valley-01.jpg" alt="从天门山山内索道俯瞰云雾中的深谷" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/51-tianmen-chairlift-cliff-walkway.jpg" alt="索道旁的悬崖与贴壁栈道" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/52-tianmen-chairlift-cliff.jpg" alt="云雾中直立的天门山绝壁" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/53-tianmen-chairlift-forest.jpg" alt="越过密林的天门山开放式索道" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/54-tianmen-chairlift-foggy-valley.jpg" alt="钢索下方被云雾遮掩的群山" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/55-tianmen-chairlift-tower.jpg" alt="索道座椅穿过云雾与山林" style="width: 100%; border-radius: 8px;" />
+</div>
+
+*人在索道上只是山谷间缓慢移动的一个小点，脚下却是层层下坠的峰林与深渊。*
+
+风迎面吹来时，我们仍不忘举起手机留下一张合影。两个人挤在索道座椅上，一个背着深蓝色背包，一个抱着浅色行囊、握着登山杖，还腾出手比了个拇指。脚下明明是让人不敢多看的深谷，两个人却还是努力装出一副轻松的样子。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/56-tianmen-chairlift-two-friends-cartoon-stylized.png" alt="两人在天门山山内索道上的合影" style="display: inline-block; width: auto; max-width: min(100%, 760px); height: auto; border-radius: 8px;" />
+</div>
+
+到了下午，天气像突然换了一副面孔。盘踞了一上午的雾气开始从山谷中退去，蓝天一点点露出来，阳光也越过云层照在山脊上。原本只有几步远的能见度被迅速拉开，近处的绝壁、远处层叠的群山，以及谷底细小的村落和道路，都重新获得了清晰的轮廓。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/57-tianmen-afternoon-mountains-01.jpg" alt="午后放晴后的天门山群峰" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/58-tianmen-afternoon-mountains-02.jpg" alt="蓝天下层叠展开的天门山" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/59-tianmen-afternoon-mountains-03.jpg" alt="阳光照亮山脊与峡谷" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/60-tianmen-afternoon-valley.jpg" alt="从高处俯瞰谷底的村落与山路" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/61-tianmen-cliffside-photographer.jpg" alt="在悬崖栈道上拍摄远山的游客" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/62-tianmen-sunlit-cliffs.jpg" alt="午后阳光下的天门山绝壁" style="width: 100%; border-radius: 8px;" />
+</div>
+
+视野变得开阔，体感也随之改变。上午在雾里还觉得潮湿微凉，午后的太阳一出来，山路很快就燥热起来。走在贴着岩壁的栈道上，背阴处仍带着一点凉意，转过弯进入日照，热气便立刻从石壁和地面反上来。同一座山，在短短几个小时里从水墨变成了颜色饱满的风景照。
+
+从侧面再看天门洞，熟悉的洞口也有了完全不同的形状。岩壁在视线中斜着向谷底坠去，洞口不再是正面望去的高大门扉，而像整座山被掏空的一部分；午后阳光落在山顶，洞内却仍保留着深沉的阴影。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/63-tianmen-cave-side-view.jpg" alt="从侧面高处看到的天门洞与绝壁" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+</div>
+
+下山时，我们进入了穿山扶梯。封闭的拱形通道、连续向下的灯光和不断移动的台阶，把刚才开阔的山景一下收束起来。四个人沿着扶梯一前一后地站着，前面的人举起手机，后面的人努力探出头来，还有人隔着几级台阶不忘比个手势。走了一整天，大家依然能在这种时候迅速凑齐。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/64-tianmen-descending-escalator-group-cartoon.png" alt="四人在天门山下山扶梯上的合影" style="display: inline-block; width: auto; max-width: min(100%, 760px); height: auto; border-radius: 8px;" />
+</div>
+
+重新来到天门洞下方，洞口已经不再躲在早晨的浓雾里。两侧岩壁的纹理、左侧细长的瀑布和直抵洞口的石阶都清清楚楚，游客沿着阶梯排成一条醒目的线。早上我们在同一位置看见的是若隐若现的天门，傍晚再看，它却沉静、坚硬而具体。位置没有改变，光线和云雾一换，感受便像面对两座不同的山。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/68-tianmen-cave-clear-descent.jpg" alt="下山时在晴朗视野中拍摄的天门洞" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+</div>
+
+真正离开景区时，天色已经滑向傍晚。月亮升到峰林之间，索道轿厢从它附近缓慢掠过；山体逐渐沉进深蓝色的剪影里，景观灯则把某一段绝壁照成暖金色。白天蜿蜒在山中的公路，此刻只剩一条淡淡的银灰曲线，在幽暗峡谷里一圈圈下降。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/65-tianmen-moon-cablecars.jpg" alt="月色下掠过群峰的索道轿厢" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/66-tianmen-moon-lit-peak-road.jpg" alt="月亮、灯光照亮的山峰与盘山公路" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/67-tianmen-moon-cliff.jpg" alt="傍晚月光下的天门山峭壁" style="width: 100%; border-radius: 8px;" />
+</div>
+
+*清晨从雾里上山，傍晚跟着月色下山；一天的天气与光线，恰好把天门山的两副面孔都留给了我们。*
+
+回到酒店附近以后，我们找了一家土菜馆坐下。菜单上的具体菜名后来已经记不全了，只记得分量很足：一大锅裹满蒜末与辣椒的带骨肉，酱汁红亮浓稠；一锅青红椒炒土鸡，端上桌时还冒着热气；还有辣椒红汤焖鱼块，鱼肉、豆腐与辣椒浸在一起。走了一整天以后，没有人再需要精巧的摆盘，只需要足够热、足够香，也足够下饭。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/69-hotel-nearby-local-bones.jpg" alt="酒店附近土菜馆的蒜香辣味带骨肉" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/70-hotel-nearby-local-chicken.jpg" alt="酒店附近土菜馆的青红椒炒土鸡" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/71-hotel-nearby-local-fish.jpg" alt="酒店附近土菜馆的辣椒红汤焖鱼块" style="width: 100%; border-radius: 8px;" />
+</div>
+
+群山负责把人的视线抬到极高处，一桌土菜又把疲惫的人稳稳接回地面。天门山这一天，便在辣椒、蒜香和重新盛满的米饭中结束了。
 
 ## 八、三千奇峰，以及走不完的金鞭溪
 
@@ -268,23 +385,17 @@ tag:
 
 如果说天门山让人感受到“高”，那么张家界国家森林公园更像一个由峰林构成的世界。石峰从大地上密集地生长出来，形态各异，云雾在峰与峰之间游走。眼前的风景既真实，又带着某种不真实感，仿佛走进了古画，也仿佛进入了另一个不受日常规则约束的世界。
 
-<!-- 图片组 12：张家界峰林大景 / 云雾 / 森林步道 / 全员合照 -->
-
-一路上，我们拍了很多照片。最初还认真选择角度，后来随着体力下降，对照片的要求逐渐变成“人都在画面里就行”。那些照片未必每一张都构图完美，却忠实记录了我们从精神抖擞到满脸疲惫的全过程。
+一路上，大家最初还有心思挑角度、找背景，后来随着体力下降，要求逐渐变成“人都站齐就行”。进山时还精神抖擞，走到后面已经满脸疲惫，连摆个动作都要先喘口气。
 
 傍晚，我们从金鞭溪一路**暴走**回酒店。
 
 “暴走”二字，是那一天最准确的注脚。天色渐晚，溪水还在身边不紧不慢地流，脚下的路却像没有尽头。大家从谈笑风生走到沉默不语，又从沉默不语走到互相打气。山水审美逐渐让位于一个朴素的愿望：**赶紧回酒店。**
-
-<!-- 图片组 13：金鞭溪溪水 / 暴走途中 / 疲惫抓拍 / 暮色 -->
 
 可也正是这段疲惫的路，后来最容易被反复提起。旅行中的舒适会变成模糊的背景，那些一起赶过的路、酸痛的双腿和互相催促的声音，反而会在记忆里越来越清晰。
 
 终于走回酒店，我们在外面的土菜馆坐下。热菜端上桌的那一刻，所有人重新恢复了说话的力气。一天的山川奇景，最后都落在一顿踏实的晚饭里。
 
 **群山负责令人惊叹，饭菜负责把人带回人间。**
-
-<!-- 图片组 14：酒店外土菜 / 晚餐合照 -->
 
 ## 九、回到长沙，旅程开始倒数
 
@@ -293,8 +404,6 @@ tag:
 离开群山之后，长沙的街道重新出现在眼前，竟然已经有了一点熟悉感。几天前初到时，这里还是一座等待探索的陌生城市；如今再回来，已经能够凭借某些味道、某些路口和某几家店，确认自己曾经在这里生活过几天。
 
 我们去吃了**瞿记**，又继续喝**古德莫宁**。旅程走到后半段，大家点单、找路、安排时间都比刚来时默契许多。只是返程意味着一切已经开始倒数。每完成一件事情，便少一件可以共同期待的事情。
-
-<!-- 图片组 15：瞿记菜品 / 古德莫宁 / 重返长沙的街景 / 合照 -->
 
 旅行最残忍的地方，大概就在这里：**它让人暂时忘记时间，又在临近结束时，把时间的存在提醒得格外清楚。**
 
@@ -307,8 +416,6 @@ tag:
 可我们心里多少明白：**以后未必再有这样一次旅行了。**
 
 不是湖南不会再来，也不是张家界的山只开放这一次，而是很难再有同样的一群人，处在同样的人生阶段，恰好都有时间，又恰好愿意一起坐上那趟硬卧。毕业以后，大家会去往不同的城市，有各自的工作、生活和不得不优先处理的事情。“下次一起出去玩”依然可以说出口，只是再也不像从前那样容易兑现。
-
-<!-- 图片组 16：长沙分别前的最后一张合照 / 车站 / 行李与背影 -->
 
 我们曾经以为，本科宿舍里那些混乱又普通的日子不会结束。一起上课、吃饭、熬夜，推开门就能看见彼此，仿佛只是生活理所当然的样子。直到后来才发现，那其实是一段极其有限、并且不会重来的时光。
 
