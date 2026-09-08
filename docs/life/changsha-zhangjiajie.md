@@ -456,11 +456,75 @@ tag:
 
 *在山顶俯看时，石柱像散落谷中的盆景；回到山下仰望，它们又重新成为直抵天空的高墙。*
 
-如果说天门山的一天是在雾里不断寻找一座山，那么森林公园的这一天，就是在无数座山之间反复确认自己的渺小。索道把我们送上峰顶，百龙天梯又把我们交还谷底；上升与下降只用了很短的时间，夹在中间的那些峰林，却像延伸到了视线之外。
+### 金鞭溪：把四五个小时走成一个半小时
 
-**山没有真的悬浮起来。只是当云气填满谷底，人站在绝壁边缘时，大地暂时从视野里消失了。**
+百龙天梯把我们从袁家界交还谷底，金鞭溪则从这里接过了后半程。
 
-<!-- 金鞭溪段落与照片待补。 -->
+刚到入口附近，最先迎面立起的仍是一根石峰。它从密林深处直直穿出来，岩壁上的“张家界森林公园”几字被树影遮去一半。白天在山顶时，我们总隔着护栏俯看峰林；到了溪谷，视角彻底翻转，山重新变成一堵需要仰头才能看清的高墙。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/87-golden-whip-entrance-enhanced.webp" alt="金鞭溪入口附近写有张家界森林公园字样的石峰" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+</div>
+
+*百龙天梯之后，我们从峰顶回到密林，也从俯视群山重新变成被群山俯视。*
+
+没走多远，溪边出现了一只小猴子。它蹲在浅水中的石头上，低着头拨弄什么，身后是被溪水冲得发亮的卵石，头顶枝叶横斜。它没有因为我们的镜头显得紧张，也没有刻意靠近，只是安静地待在自己的山谷里。我们这些匆匆赶路的人，反倒像偶然闯进画面的一方。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/88-golden-whip-young-macaque-enhanced.webp" alt="金鞭溪浅水与溪石之间的一只小猴子" style="display: inline-block; width: auto; max-width: min(100%, 760px); max-height: 900px; height: auto; border-radius: 8px;" />
+</div>
+
+金鞭溪的水并不张扬。它沿着谷底绕过青苔覆盖的石块，在枝叶与山影之间断断续续地闪光；两侧的林木几乎把溪谷填满，只有顺着水流抬头，才能从树冠的缝隙里看见高处直立的峰柱。山在上面，水在下面，我们夹在两者之间，沿着唯一向前的路不断深入。
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/89-golden-whip-stream-valley-enhanced.webp" alt="金鞭溪的溪流、苔石、密林与远处峰柱" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+</div>
+
+*溪水负责指出方向，头顶偶尔露出的石峰则提醒我们：这条路始终走在群山最深的缝隙里。*
+
+正常走完整段金鞭溪，大约需要四到五个小时。我们留给它的时间，却只有一个半小时。
+
+这已经不能算通常意义上的游览。别人沿溪慢慢看景，我们几乎是在山谷里赶路：能并排时快走，遇到转弯便一前一后穿过去；看见值得拍的山峰，停下、抬头、按一次快门，然后立刻继续。最开始还有人边走边说话，后来只剩越来越急的脚步声、呼吸声，以及身旁始终没有停下来的水声。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/90-golden-whip-layered-peaks-enhanced.webp" alt="从金鞭溪谷底仰望层叠的砂岩峰林" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/91-golden-whip-sandstone-needle-enhanced.webp" alt="树冠之间独立直立的细长砂岩石峰" style="width: 100%; border-radius: 8px;" />
+</div>
+
+山峰也在赶路中一座接一座地出现。有的像一根孤立的石柱，只在顶端托着一株小树；有的从近处几乎垂直地压下来，岩层与凹槽一直沉进林木遮住的暗处。我们来不及替它们一一寻找名字，只能在照片里留下最直接的样子：一片亮起来的岩壁、一块被天空勾出的轮廓，以及树梢之上短暂露出的峰顶。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/92-golden-whip-cliff-closeup-enhanced.webp" alt="从金鞭溪谷底近距离仰望高大的砂岩绝壁" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/93-golden-whip-journey-west-marker-enhanced.webp" alt="金鞭溪沿途的西游记外景拍摄地石刻" style="width: 100%; border-radius: 8px;" />
+</div>
+
+途中还经过了“西游记外景拍摄地”的石刻。若是在更从容的时候，我们大概会停下来讨论这里对应哪一段镜头，再认真找一找熟悉的取景角度。可那天只来得及匆匆拍下石碑，便继续向前。后来再看，倒觉得这块石刻很适合留在这段记忆里：小时候以为妖怪与仙山只存在于电视中，长大以后真正走进取景的山谷，却正忙着和天黑赛跑。
+
+阳光从高处一点点退出去。先是峰顶还留着暖色，谷底已经发暗；再后来，连最高的岩壁也只剩最后一层斜光。照片里的天空依旧明亮，林中的路却越来越看不清细节。我们不需要看时间，只要观察两侧山体上那条不断上移的阴影，就知道还能留给脚下多少路。
+
+![傍晚暖光照亮金鞭溪上方并立的砂岩峰柱](./assets/changsha-zhangjiajie/94-golden-whip-sunlit-towers-enhanced.webp)
+
+<div style="text-align: center; margin: 20px 0; line-height: 0;">
+  <img src="./assets/changsha-zhangjiajie/95-golden-whip-evening-cliff-enhanced.webp" alt="金鞭溪傍晚最后的阳光照在高处峰壁上" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+</div>
+
+真正替我们计时的，是月亮。
+
+它最初只是从峰壁旁露出的一团白光，被横斜的枝干切成零碎的形状；再走一段，天空向蓝紫色沉下去，月亮反而越来越完整；等它终于显出暖黄的颜色，近处的树木已经只剩黑色剪影，远处山壁最后一点余光也快要消失了。
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
+  <img src="./assets/changsha-zhangjiajie/96-golden-whip-moonrise-01-enhanced.webp" alt="月亮初升在金鞭溪峰壁与枝叶之间" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/97-golden-whip-moonrise-02-enhanced.webp" alt="天色渐暗时月亮从金鞭溪山谷上方升起" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/98-golden-whip-moonrise-03-enhanced.webp" alt="暮色深沉后金鞭溪枝干剪影中的暖色月亮" style="width: 100%; border-radius: 8px;" />
+</div>
+
+*同一轮月亮，在一路加深的暮色里越来越亮；照片替我们保存了这一个半小时最准确的刻度。*
+
+最后，我们真的只用一个半小时走完了别人通常需要四五个小时才能走完的全程。抵达终点时，疲惫当然已经追了上来，腿脚也不会因为这个数字变得轻松。但回头想想，那段路最鲜明的部分恰恰来自这种仓促：没有充裕时间，没有慢慢挑选机位，只有四个人在越来越暗的山谷里一路向前，谁也没有落下。
+
+如果说天门山的一天是在雾里不断寻找一座山，那么森林公园的这一天，就是在无数座山之间反复确认自己的渺小。索道把我们送上峰顶，百龙天梯把我们放回谷底，最后又由金鞭溪带着我们从白昼一直走进月色。上升与下降只用了很短的时间，真正留在身体里的，却是脚下一步接一步走完的路。
+
+**山没有真的悬浮起来，月亮也只是照常升起。只是那天，我们把四五个小时的山谷压缩进一个半小时，也把一整个傍晚留在了照片里。**
 
 ## 九、回到长沙：吃喝玩乐，把旅程拖慢一点
 
