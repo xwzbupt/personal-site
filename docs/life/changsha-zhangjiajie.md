@@ -28,7 +28,7 @@ tag:
 
 列车一路向南，窗外的景色也在不知不觉中变化。到了华容县一带，北方的平阔已经退远，山势在窗外渐渐合拢，树木也突然丰茂起来。近处的枝叶几乎要漫过车窗，远处一排楼房灰暗地倚在山脚，隔着疾驰的列车看不见灯火，也看不见人影，像是尚未从阴翳里醒来。天空一半晦暗，一半透着微光，山林却兀自蓬勃——**不愧是湖南，连阴沉里都有压不住的绿意。**
 
-![列车经过华容县，山林与远处的楼房从车窗外掠过](./assets/changsha-zhangjiajie/01-huarong-from-train.jpg)
+![列车经过华容县，山林与远处的楼房从车窗外掠过](./assets/changsha-zhangjiajie/01-huarong-from-train-enhanced.webp)
 
 *列车经过华容县，山脚的楼房沉在阴影里，草木却已十分丰茂。*
 
@@ -41,8 +41,8 @@ tag:
 > ——范仲淹《岳阳楼记》
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0;">
-  <img src="./assets/changsha-zhangjiajie/02-dongting-lake.jpg" alt="从火车上望见的洞庭湖与近岸树木" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/03-dongting-lake-mist.jpg" alt="烟波浩渺的洞庭湖水面" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/02-dongting-lake-enhanced.webp" alt="从火车上望见的洞庭湖与近岸树木" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/03-dongting-lake-mist-enhanced.webp" alt="烟波浩渺的洞庭湖水面" style="width: 100%; border-radius: 8px;" />
 </div>
 
 *烟波漫过水面，湖岸隐入远方——洞庭湖真如课本里写的那样。*
@@ -79,7 +79,7 @@ tag:
 
 站在橘子洲上向对岸望去，长沙的CBD沿湘江一字排开。高楼的灯光在夜色里不断变换，红与蓝铺满楼身，又被江水揉成一片摇晃的倒影。白天的长沙热烈而喧闹，到了夜里，却把自己的繁华隔着一条江摆在我们面前。我们站在洲上，城市站在水的另一边，中间只剩晚风和不停流动的光。
 
-![从橘子洲眺望湘江对岸的长沙CBD](./assets/changsha-zhangjiajie/10-orange-isle-cbd-night.jpg)
+![从橘子洲眺望湘江对岸的长沙CBD](./assets/changsha-zhangjiajie/10-orange-isle-cbd-night-enhanced.webp)
 
 *湘江对岸灯火次第亮起，楼宇的颜色落入水中。*
 
@@ -91,7 +91,7 @@ tag:
 
 继续沿着洲头向前，青年毛泽东艺术雕塑从夜色里渐渐显现出来。山石般的基座与青年人的面庞连成一体，灯光从下方照上去，黑夜因此显得更深。远远望去，那张年轻的面孔越过树梢，仍旧注视着湘江与长沙。
 
-![夜色中的青年毛泽东艺术雕塑](./assets/changsha-zhangjiajie/12-young-mao-sculpture.jpg)
+![夜色中的青年毛泽东艺术雕塑](./assets/changsha-zhangjiajie/12-young-mao-sculpture-enhanced.webp)
 
 我们也在雕塑前站到了一起。有人笑得毫无保留，有人兴奋地比着手势；身后游人往来，青年毛泽东的面孔则越过人群，沉静地留在夜色中。几个人的欢笑与一座城市的历史，就这样在同一个夜晚短暂相遇。
 
@@ -107,15 +107,15 @@ tag:
 
 第二天，我们去爬岳麓山。山脚下已经人潮涌动，入口上方“岳麓山”三个大字嵌在灰色石墙上，红旗沿着檐角迎风展开。烈日、鲜花、举着遮阳伞的游客和青瓦红柱叠在一起，长沙明亮的白昼就这样开始了。
 
-![岳麓山脚下的入口](./assets/changsha-zhangjiajie/14-yuelu-mountain-gate.jpg)
+![岳麓山脚下的入口](./assets/changsha-zhangjiajie/14-yuelu-mountain-gate-enhanced.webp)
 
 既然说是爬山，便没有用更轻松的方式敷衍过去。大家从山脚一路向上，刚开始还有闲情聊天拍照，后来话越来越少，喘气声越来越明显。谁走在最前面，谁又落在最后；谁嘴上说着“不行了”，却始终没有真正停下来——这些细节，现在看来或许比山顶的风景更值得怀念。
 
 登高之后再回望长沙，城市从脚下铺展开来。近处是岳麓山浓密的树冠，再往外是湖南大学的楼房与操场；湘江横在城市中间，橘子洲像一叶狭长的绿舟浮在水上，江对岸则是昨夜还闪着霓虹的高楼。到了白天，那些楼宇褪去灯光，只在薄雾中显出密密的轮廓。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0;">
-  <img src="./assets/changsha-zhangjiajie/15-yuelu-overlook-city.jpg" alt="从岳麓山俯瞰长沙城区" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/17-yuelu-summit-city.jpg" alt="从岳麓山远眺湘江、橘子洲与长沙天际线" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/15-yuelu-overlook-city-enhanced.webp" alt="从岳麓山俯瞰长沙城区" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/17-yuelu-summit-city-enhanced.webp" alt="从岳麓山远眺湘江、橘子洲与长沙天际线" style="width: 100%; border-radius: 8px;" />
 </div>
 
 *昨夜我们站在江中看城市，今天又从山上越过湘江看它。*
@@ -129,7 +129,7 @@ tag:
 从山上下来，我们走进岳麓书院。院中有一株古树，树干粗壮而斑驳，枝桠向四面伸展，几乎撑起了头顶的一整片天空。阳光从叶隙间落下来，照亮竹林、青瓦和来往的人。与山顶开阔的城市不同，书院里的时间像被树荫收拢了，脚步也不由得慢下来。
 
 <div style="text-align: center; margin: 20px 0; line-height: 0;">
-  <img src="./assets/changsha-zhangjiajie/18-yuelu-academy-ancient-tree.jpg" alt="岳麓书院中的参天古树" style="display: inline-block; width: auto; max-width: 100%; max-height: 820px; height: auto; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/18-yuelu-academy-ancient-tree-enhanced.webp" alt="岳麓书院中的参天古树" style="display: inline-block; width: auto; max-width: 100%; max-height: 820px; height: auto; border-radius: 8px;" />
 </div>
 
 *古树的枝叶越过屋檐，替书院遮住了大半日光。*
@@ -152,7 +152,7 @@ tag:
 
 过去读来像一句典故，走到这里才发现，它也可以是一种日常。只是对已经逐渐走出校园的我们而言，再经过一所大学，总会忍不住多看几眼。
 
-![蓝天下的湖南大学操场](./assets/changsha-zhangjiajie/20-hunan-university-field.jpg)
+![蓝天下的湖南大学操场](./assets/changsha-zhangjiajie/20-hunan-university-field-enhanced.webp)
 
 操场安静地躺在蓝天与岳麓山之间，球门、跑道和看台都再普通不过。可对于已经离开本科校园的我们来说，这种普通反而最容易令人恍惚：仿佛只要沿着跑道再走几步，就还能回到那些推开宿舍门便能见到彼此的日子。
 
@@ -172,11 +172,11 @@ tag:
 
 当然，所谓“流落街头”纯属舍友之间的玩笑。真实情况不过是：**国庆的长沙人太多，能在街边找到一小块落脚的地方，已经近乎一种幸运。**
 
-![步行街楼宇之间的北京银行招牌](./assets/changsha-zhangjiajie/23-changsha-pedestrian-street.jpg)
+![步行街楼宇之间的北京银行招牌](./assets/changsha-zhangjiajie/23-changsha-pedestrian-street-enhanced.webp)
 
 步行街是一种很奇妙的城市切片。抬头是玻璃幕墙和银行大楼，低头是麻辣、甜饮与攒动的人群；现代城市的冷峻线条，被招牌、叫卖声和一阵阵食物香气重新焐热。再往前走，一座金灿灿的门楼几乎把“热闹”两个字写在了立面上，红灯笼、花饰与国庆装点层层叠叠，恨不得让每一个路过的人都停下来拍一张。
 
-![国庆装点中的长沙步行街](./assets/changsha-zhangjiajie/24-changsha-golden-facade.jpg)
+![国庆装点中的长沙步行街](./assets/changsha-zhangjiajie/24-changsha-golden-facade-enhanced.webp)
 
 后来还吃到了一份剁椒鱼头。至于店名，早已被我们遗失在那天过于密集的味觉记忆里；只剩鲜辣的滋味还很清楚，和长沙街头蒸腾的热气混在一起。
 
@@ -259,8 +259,8 @@ tag:
 还在山脚的游客集散地时，天门山就没有把全貌交给我们。抬头望去，苍翠山体从建筑背后陡然升起，峰顶却被低云严严实实地藏住；雾沿着山脊缓慢流动，时而露出一段灰白岩壁，时而又把它重新抹去。那不是明信片里轮廓清晰的山，而是一座正在呼吸、也正在变化的山。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 20px 0;">
-  <img src="./assets/changsha-zhangjiajie/38-tianmen-base-mist-01.jpg" alt="从天门山脚仰望云雾中的群峰" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/39-tianmen-base-mist-02.jpg" alt="游客集散地建筑与背后的天门山" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/38-tianmen-base-mist-01-enhanced.webp" alt="从天门山脚仰望云雾中的群峰" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/39-tianmen-base-mist-02-enhanced.webp" alt="游客集散地建筑与背后的天门山" style="width: 100%; border-radius: 8px;" />
 </div>
 
 *山脚的楼阁仍在人间，山腰以上却已经隐进云里。*
@@ -268,29 +268,29 @@ tag:
 缆车离开地面后，视线也随之被拔高。脚下的树林迅速连成深绿色的海，灰白色岩峰从林海中直立起来；对面的轿厢沿着钢索驶进雾里，几秒后就只剩一个模糊的色块。缆车像在峡谷上空穿针，钢索伸向看不见的地方，我们也在升高与失重之间，一点点进入云层。
 
 <div style="text-align: center; margin: 20px 0; line-height: 0;">
-  <img src="./assets/changsha-zhangjiajie/40-tianmen-cableway-mist.jpg" alt="缆车穿行在云雾与峰林之间" style="display: inline-block; width: auto; max-width: 100%; max-height: 860px; height: auto; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/40-tianmen-cableway-mist-enhanced.webp" alt="缆车穿行在云雾与峰林之间" style="display: inline-block; width: auto; max-width: 100%; max-height: 860px; height: auto; border-radius: 8px;" />
 </div>
 
 到了天门洞下方，雾比山脚更浓。第一次抬头时，洞口只是乳白色天幕里一道若有若无的竖缝，巨大的山体反而退成了影子；等风把云稍稍推开，峭壁、洞口与栈道才渐渐恢复层次。眼前的景色一直在“看见”与“看不见”之间切换，仿佛天门并非固定在岩壁上，而是由雾临时打开的。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
-  <img src="./assets/changsha-zhangjiajie/41-tianmen-cave-in-mist.jpg" alt="浓雾中若隐若现的天门洞" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/42-tianmen-cave-visible.jpg" alt="云雾稍散后显露的天门洞" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/41-tianmen-cave-in-mist-enhanced.webp" alt="浓雾中若隐若现的天门洞" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/42-tianmen-cave-visible-enhanced.webp" alt="云雾稍散后显露的天门洞" style="width: 100%; border-radius: 8px;" />
 </div>
 
 真正走到洞前，仰望的感觉又和远处完全不同。石阶从人群脚下笔直向上，越往高处越窄，最后收进巨大的洞口。游客在台阶上连成一条缓慢移动的线，远看不过是山壁间细小的色点。山体几乎垂直立在面前，抬头望不到尽头，而人只能一步一步向上。
 
 <div style="text-align: center; margin: 20px 0; line-height: 0;">
-  <img src="./assets/changsha-zhangjiajie/46-tianmen-stairway.jpg" alt="通往天门洞的漫长石阶" style="display: inline-block; width: auto; max-width: 100%; max-height: 900px; height: auto; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/46-tianmen-stairway-enhanced.webp" alt="通往天门洞的漫长石阶" style="display: inline-block; width: auto; max-width: 100%; max-height: 900px; height: auto; border-radius: 8px;" />
 </div>
 
 抵达高处以后，雾并没有散尽，却忽然给我们让出一片云海。近处的山峰像岛屿一样从白云中露出尖顶，远处的村落和道路只在云隙中短暂显影；再向上看，云层边缘裂开一小片蓝天，阳光落下来，整片世界便从灰白转成清亮。刚才还包围着我们的雾，此刻已经铺在脚下。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
-  <img src="./assets/changsha-zhangjiajie/43-tianmen-cloud-sea-peaks.jpg" alt="山峰从天门山云海中露出" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/44-tianmen-cloud-sea-blue.jpg" alt="云海上方露出的蓝天" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/45-tianmen-cloud-sea-railing.jpg" alt="山顶栏杆外翻涌的云海" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/47-tianmen-cloud-sea-overlook.jpg" alt="从山顶栏杆旁俯瞰云海与远山" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/43-tianmen-cloud-sea-peaks-enhanced.webp" alt="山峰从天门山云海中露出" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/44-tianmen-cloud-sea-blue-enhanced.webp" alt="云海上方露出的蓝天" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/45-tianmen-cloud-sea-railing-enhanced.webp" alt="山顶栏杆外翻涌的云海" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/47-tianmen-cloud-sea-overlook-enhanced.webp" alt="从山顶栏杆旁俯瞰云海与远山" style="width: 100%; border-radius: 8px;" />
 </div>
 
 *云从谷底漫上来，群峰只露出几笔轮廓，像一幅尚未干透的水墨。*
@@ -312,12 +312,12 @@ tag:
 后来，我们又坐上了天门山里的开放式索道。它不像先前那段封闭缆车，更像一排悬在空中的座椅：钢索从一座山跨向另一座山，脚下没有车厢地板隔开视线，千沟万壑便毫无遮拦地铺展开来。索道越过林梢时尚且平缓，一旦驶到两山之间，近处的树冠忽然退到脚下，迎面只剩直立的岩壁和深不见底的峡谷。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
-  <img src="./assets/changsha-zhangjiajie/50-tianmen-chairlift-valley-01.jpg" alt="从天门山山内索道俯瞰云雾中的深谷" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/51-tianmen-chairlift-cliff-walkway.jpg" alt="索道旁的悬崖与贴壁栈道" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/52-tianmen-chairlift-cliff.jpg" alt="云雾中直立的天门山绝壁" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/53-tianmen-chairlift-forest.jpg" alt="越过密林的天门山开放式索道" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/54-tianmen-chairlift-foggy-valley.jpg" alt="钢索下方被云雾遮掩的群山" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/55-tianmen-chairlift-tower.jpg" alt="索道座椅穿过云雾与山林" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/50-tianmen-chairlift-valley-01-enhanced.webp" alt="从天门山山内索道俯瞰云雾中的深谷" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/51-tianmen-chairlift-cliff-walkway-enhanced.webp" alt="索道旁的悬崖与贴壁栈道" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/52-tianmen-chairlift-cliff-enhanced.webp" alt="云雾中直立的天门山绝壁" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/53-tianmen-chairlift-forest-enhanced.webp" alt="越过密林的天门山开放式索道" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/54-tianmen-chairlift-foggy-valley-enhanced.webp" alt="钢索下方被云雾遮掩的群山" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/55-tianmen-chairlift-tower-enhanced.webp" alt="索道座椅穿过云雾与山林" style="width: 100%; border-radius: 8px;" />
 </div>
 
 *人在索道上只是山谷间缓慢移动的一个小点，脚下却是层层下坠的峰林与深渊。*
@@ -331,12 +331,12 @@ tag:
 到了下午，天气像突然换了一副面孔。盘踞了一上午的雾气开始从山谷中退去，蓝天一点点露出来，阳光也越过云层照在山脊上。原本只有几步远的能见度被迅速拉开，近处的绝壁、远处层叠的群山，以及谷底细小的村落和道路，都重新获得了清晰的轮廓。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
-  <img src="./assets/changsha-zhangjiajie/57-tianmen-afternoon-mountains-01.jpg" alt="午后放晴后的天门山群峰" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/58-tianmen-afternoon-mountains-02.jpg" alt="蓝天下层叠展开的天门山" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/59-tianmen-afternoon-mountains-03.jpg" alt="阳光照亮山脊与峡谷" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/60-tianmen-afternoon-valley.jpg" alt="从高处俯瞰谷底的村落与山路" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/61-tianmen-cliffside-photographer.jpg" alt="在悬崖栈道上拍摄远山的游客" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/62-tianmen-sunlit-cliffs.jpg" alt="午后阳光下的天门山绝壁" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/57-tianmen-afternoon-mountains-01-enhanced.webp" alt="午后放晴后的天门山群峰" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/58-tianmen-afternoon-mountains-02-enhanced.webp" alt="蓝天下层叠展开的天门山" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/59-tianmen-afternoon-mountains-03-enhanced.webp" alt="阳光照亮山脊与峡谷" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/60-tianmen-afternoon-valley-enhanced.webp" alt="从高处俯瞰谷底的村落与山路" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/61-tianmen-cliffside-photographer-enhanced.webp" alt="在悬崖栈道上拍摄远山的游客" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/62-tianmen-sunlit-cliffs-enhanced.webp" alt="午后阳光下的天门山绝壁" style="width: 100%; border-radius: 8px;" />
 </div>
 
 视野变得开阔，体感也随之改变。上午在雾里还觉得潮湿微凉，午后的太阳一出来，山路很快就燥热起来。走在贴着岩壁的栈道上，背阴处仍带着一点凉意，转过弯进入日照，热气便立刻从石壁和地面反上来。同一座山，在短短几个小时里从水墨变成了颜色饱满的风景照。
@@ -344,7 +344,7 @@ tag:
 从侧面再看天门洞，熟悉的洞口也有了完全不同的形状。岩壁在视线中斜着向谷底坠去，洞口不再是正面望去的高大门扉，而像整座山被掏空的一部分；午后阳光落在山顶，洞内却仍保留着深沉的阴影。
 
 <div style="text-align: center; margin: 20px 0; line-height: 0;">
-  <img src="./assets/changsha-zhangjiajie/63-tianmen-cave-side-view.jpg" alt="从侧面高处看到的天门洞与绝壁" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/63-tianmen-cave-side-view-enhanced.webp" alt="从侧面高处看到的天门洞与绝壁" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
 </div>
 
 下山时，我们进入了穿山扶梯。封闭的拱形通道、连续向下的灯光和不断移动的台阶，把刚才开阔的山景一下收束起来。四个人沿着扶梯一前一后地站着，前面的人举起手机，后面的人努力探出头来，还有人隔着几级台阶不忘比个手势。走了一整天，大家依然能在这种时候迅速凑齐。
@@ -356,15 +356,15 @@ tag:
 重新来到天门洞下方，洞口已经不再躲在早晨的浓雾里。两侧岩壁的纹理、左侧细长的瀑布和直抵洞口的石阶都清清楚楚，游客沿着阶梯排成一条醒目的线。早上我们在同一位置看见的是若隐若现的天门，傍晚再看，它却沉静、坚硬而具体。位置没有改变，光线和云雾一换，感受便像面对两座不同的山。
 
 <div style="text-align: center; margin: 20px 0; line-height: 0;">
-  <img src="./assets/changsha-zhangjiajie/68-tianmen-cave-clear-descent.jpg" alt="下山时在晴朗视野中拍摄的天门洞" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/68-tianmen-cave-clear-descent-enhanced.webp" alt="下山时在晴朗视野中拍摄的天门洞" style="display: inline-block; width: auto; max-width: 100%; max-height: 920px; height: auto; border-radius: 8px;" />
 </div>
 
 真正离开景区时，天色已经滑向傍晚。月亮升到峰林之间，索道轿厢从它附近缓慢掠过；山体逐渐沉进深蓝色的剪影里，景观灯则把某一段绝壁照成暖金色。白天蜿蜒在山中的公路，此刻只剩一条淡淡的银灰曲线，在幽暗峡谷里一圈圈下降。
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 20px 0; align-items: start;">
-  <img src="./assets/changsha-zhangjiajie/65-tianmen-moon-cablecars.jpg" alt="月色下掠过群峰的索道轿厢" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/66-tianmen-moon-lit-peak-road.jpg" alt="月亮、灯光照亮的山峰与盘山公路" style="width: 100%; border-radius: 8px;" />
-  <img src="./assets/changsha-zhangjiajie/67-tianmen-moon-cliff.jpg" alt="傍晚月光下的天门山峭壁" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/65-tianmen-moon-cablecars-enhanced.webp" alt="月色下掠过群峰的索道轿厢" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/66-tianmen-moon-lit-peak-road-enhanced.webp" alt="月亮、灯光照亮的山峰与盘山公路" style="width: 100%; border-radius: 8px;" />
+  <img src="./assets/changsha-zhangjiajie/67-tianmen-moon-cliff-enhanced-v2.webp" alt="傍晚月光下的天门山峭壁" style="width: 100%; border-radius: 8px;" />
 </div>
 
 *清晨从雾里上山，傍晚跟着月色下山；一天的天气与光线，恰好把天门山的两副面孔都留给了我们。*
